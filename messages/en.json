@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "title": "ARMATIS — Motor Yachts",
+    "description": "ARMATIS 107 — an Italian motor yacht engineered for performance, comfort, durability and refined simplicity."
+  },
+  "brand": {
+    "positioning": "ARMATIS is an Italian yacht builder focused on creating high-quality motor yachts through a modern and industrial approach to yacht manufacturing.",
+    "vision": "Our vision is built around in-house production, process control, and sustainable long-term quality. By combining advanced composite technologies, engineering-driven development, and carefully structured production methods, we aim to deliver yachts with consistent build quality and exceptional reliability.",
+    "spaces": "ARMATIS is also focused on rethinking onboard living spaces. Our yachts are designed to offer exceptional volumes, intelligent layouts, and a new interpretation of comfort and usability — moving beyond conventional standards in their category while maintaining elegant and balanced proportions.",
+    "production": "Rather than relying only on traditional craftsmanship, ARMATIS is developing a scalable production system designed to maintain the same level of precision, finish, and engineering quality from the first yacht to every yacht that follows.",
+    "closing": "Based in Italy, ARMATIS combines timeless design, modern engineering, and manufacturing expertise to create yachts that offer performance, comfort, durability, and refined simplicity."
+  },
+  "home": {
+    "eyebrow": "Italian Motor Yachts",
+    "subtitle": "Select an experience",
+    "enter": "Enter",
+    "variants": {
+      "industrial": { "name": "Industrial", "note": "Engineering-driven, technical" },
+      "wave": { "name": "Wave", "note": "Interactive signature motion" },
+      "cinematic": { "name": "Cinematic", "note": "Immersive depth gallery" },
+      "voyage": { "name": "Voyage", "note": "Scroll-led composition" },
+      "film": { "name": "Film", "note": "Title sequence" }
+    }
+  },
+  "industrial": {
+    "category": "Motor Yachts",
+    "tagline": "Surface tension & engineered light",
+    "archiveLabel": "Series 2026",
+    "archiveLine": "Designed, engineered & built in-house in Italy",
+    "cta": "Discover the 107",
+    "scroll": "Scroll",
+    "readout": {
+      "latitude": "Latitude",
+      "loa": "Length overall",
+      "beam": "Max beam"
+    },
+    "vision": {
+      "index": "01",
+      "label": "Vision",
+      "title": "Engineered in Italy. Built in-house.",
+      "body": "ARMATIS creates high-quality motor yachts through a modern, industrial approach — advanced composite technologies, engineering-driven development and a scalable production system that holds the same precision, finish and reliability from the first yacht to every yacht that follows."
+    },
+    "spec": {
+      "index": "02",
+      "label": "Specifications",
+      "items": {
+        "loa": "Length overall",
+        "beam": "Max beam",
+        "draught": "Draught at full load",
+        "guests": "Guest accommodation",
+        "crew": "Crew accommodation",
+        "engines": "Engines",
+        "speed": "Maximum speed",
+        "fuel": "Fuel capacity",
+        "built": "Built in",
+        "builtValue": "Italy"
+      }
+    },
+    "salon": {
+      "label": "Interiors — Main salon",
+      "caption": "An open main-deck salon framed by full-height panoramic glazing."
+    },
+    "gallery": {
+      "index": "03",
+      "label": "Gallery",
+      "captions": {
+        "profile": "Profile",
+        "underway": "Underway",
+        "stern": "Stern",
+        "foredeck": "Foredeck",
+        "terrace": "Beach terrace",
+        "master": "Master suite",
+        "guest": "Guest cabin"
+      }
+    },
+    "beachclub": {
+      "label": "Interiors — Beach club",
+      "caption": "A sea-level beach club that opens the hull directly to the water."
+    },
+    "footer": {
+      "hq": "Headquarters",
+      "yard": "Shipyard",
+      "web": "Web",
+      "rights": "All rights reserved"
+    }
+  },
+  "common": {
+    "back": "Back",
+    "language": "Language"
+  }
+}

@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+/* manual dark-mode toggle: `dark:` utilities activate under .dark on <html> */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ============================================================
+   ARMATIS — shared design system
+   Monochrome base + light/dark theming.
+   ============================================================ */
+
+@theme {
+  /* Raw palette (fixed, never flips) */
+  --color-bone: #f4f4f2;
+  --color-bone-dim: #e9e9e6;
+  --color-ink: #0e0e0e;
+  --color-ink-soft: #1b1b1a;
+  --color-graphite: #6b6b68;
+  --color-mist: #a9a9a4;
+  --color-line: rgba(14, 14, 14, 0.12);
+  --color-line-strong: rgba(14, 14, 14, 0.28);
+
+  /* Typography */
+  --font-display: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-mono), ui-monospace, monospace;
+
+  /* Motion */
+  --ease-out-luxe: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Semantic theme tokens — these flip between light and dark. */
+@theme inline {
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-fg: var(--fg);
+  --color-fg-soft: var(--fg-soft);
+  --color-fg-mute: var(--fg-mute);
+  --color-fg-faint: var(--fg-faint);
+  --color-hairline: var(--hairline);
+  --color-hairline-strong: var(--hairline-strong);
+}
+
+:root {
+  --surface: #f4f4f2;
+  --surface-2: #ffffff;
+  --fg: #0e0e0e;
+  --fg-soft: #1b1b1a;
+  --fg-mute: #6b6b68;
+  --fg-faint: #a9a9a4;
+  --hairline: rgba(14, 14, 14, 0.12);
+  --hairline-strong: rgba(14, 14, 14, 0.28);
+
+  --background: var(--surface);
+  --foreground: var(--fg);
+}
+
+.dark {
+  --surface: #0d0d0d;
+  --surface-2: #161615;
+  --fg: #f4f4f2;
+  --fg-soft: #d8d8d4;
+  --fg-mute: #8d8d88;
+  --fg-faint: #5c5c58;
+  --hairline: rgba(244, 244, 242, 0.14);
+  --hairline-strong: rgba(244, 244, 242, 0.32);
+}
+
+* {
+  border-color: var(--hairline);
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-display);
+  transition: background-color 0.5s var(--ease-out-luxe),
+    color 0.5s var(--ease-out-luxe);
+}
+
+::selection {
+  background: var(--fg);
+  color: var(--surface);
+}

@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "title": "ARMATIS — Motor Yacht",
+    "description": "ARMATIS 107 — un motor yacht italiano progettato per prestazioni, comfort, durabilità e una raffinata semplicità."
+  },
+  "brand": {
+    "positioning": "ARMATIS è un cantiere navale italiano dedicato alla creazione di motor yacht di alta qualità attraverso un approccio moderno e industriale alla produzione nautica.",
+    "vision": "La nostra visione si fonda sulla produzione in-house, sul controllo dei processi e su una qualità sostenibile nel tempo. Combinando tecnologie compositi avanzate, sviluppo guidato dall'ingegneria e metodi produttivi accuratamente strutturati, vogliamo offrire yacht con una qualità costruttiva costante e un'affidabilità eccezionale.",
+    "spaces": "ARMATIS si dedica inoltre a ripensare gli spazi di vita a bordo. I nostri yacht sono progettati per offrire volumi eccezionali, layout intelligenti e una nuova interpretazione del comfort e della fruibilità — superando gli standard convenzionali della categoria pur mantenendo proporzioni eleganti ed equilibrate.",
+    "production": "Piuttosto che affidarsi solo all'artigianato tradizionale, ARMATIS sta sviluppando un sistema produttivo scalabile, concepito per mantenere lo stesso livello di precisione, finitura e qualità ingegneristica dal primo yacht a ogni yacht successivo.",
+    "closing": "Con sede in Italia, ARMATIS unisce design senza tempo, ingegneria moderna e competenza manifatturiera per creare yacht che offrono prestazioni, comfort, durabilità e raffinata semplicità."
+  },
+  "home": {
+    "eyebrow": "Motor Yacht Italiani",
+    "subtitle": "Seleziona un'esperienza",
+    "enter": "Entra",
+    "variants": {
+      "industrial": { "name": "Industrial", "note": "Tecnico, guidato dall'ingegneria" },
+      "wave": { "name": "Wave", "note": "Movimento interattivo distintivo" },
+      "cinematic": { "name": "Cinematic", "note": "Galleria immersiva in profondità" },
+      "voyage": { "name": "Voyage", "note": "Composizione guidata dallo scorrimento" },
+      "film": { "name": "Film", "note": "Sequenza d'apertura" }
+    }
+  },
+  "industrial": {
+    "category": "Motor Yacht",
+    "tagline": "Tensione superficiale & luce ingegnerizzata",
+    "archiveLabel": "Serie 2026",
+    "archiveLine": "Progettato, ingegnerizzato e costruito in-house in Italia",
+    "cta": "Scopri il 107",
+    "scroll": "Scorri",
+    "readout": {
+      "latitude": "Latitudine",
+      "loa": "Lunghezza f.t.",
+      "beam": "Baglio massimo"
+    },
+    "vision": {
+      "index": "01",
+      "label": "Visione",
+      "title": "Progettati in Italia. Costruiti in-house.",
+      "body": "ARMATIS realizza motor yacht di alta qualità con un approccio moderno e industriale — tecnologie compositi avanzate, sviluppo guidato dall'ingegneria e un sistema produttivo scalabile che mantiene la stessa precisione, finitura e affidabilità dal primo yacht a ogni yacht successivo."
+    },
+    "spec": {
+      "index": "02",
+      "label": "Specifiche",
+      "items": {
+        "loa": "Lunghezza fuori tutto",
+        "beam": "Baglio massimo",
+        "draught": "Pescaggio a pieno carico",
+        "guests": "Ospiti",
+        "crew": "Equipaggio",
+        "engines": "Motori",
+        "speed": "Velocità massima",
+        "fuel": "Capacità carburante",
+        "built": "Costruito in",
+        "builtValue": "Italia"
+      }
+    },
+    "salon": {
+      "label": "Interni — Salone",
+      "caption": "Un salone sul ponte principale incorniciato da vetrate panoramiche a tutta altezza."
+    },
+    "gallery": {
+      "index": "03",
+      "label": "Galleria",
+      "captions": {
+        "profile": "Profilo",
+        "underway": "In navigazione",
+        "stern": "Poppa",
+        "foredeck": "Prua",
+        "terrace": "Terrazza beach",
+        "master": "Suite armatoriale",
+        "guest": "Cabina ospiti"
+      }
+    },
+    "beachclub": {
+      "label": "Interni — Beach club",
+      "caption": "Un beach club a livello del mare che apre lo scafo direttamente all'acqua."
+    },
+    "footer": {
+      "hq": "Sede legale",
+      "yard": "Cantiere",
+      "web": "Web",
+      "rights": "Tutti i diritti riservati"
+    }
+  },
+  "common": {
+    "back": "Indietro",
+    "language": "Lingua"
+  }
+}
