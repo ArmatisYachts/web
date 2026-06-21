@@ -70,31 +70,33 @@ export function CookieBanner() {
       role="region"
       aria-label={t("title")}
       className={cn(
-        "fixed bottom-5 left-1/2 z-[90] w-[min(92vw,22rem)] -translate-x-1/2 overflow-hidden border shadow-2xl transition-colors duration-500",
+        "fixed inset-x-0 bottom-0 z-[90] overflow-hidden border-t shadow-2xl transition-colors duration-500",
         light ? "border-black/15 bg-bone text-ink" : "border-white/15 bg-[#0a0a0a] text-bone"
       )}
     >
-      <WavePattern variant={light ? "dark" : "light"} className="z-0 opacity-[0.06]" size={300} />
-      <div className="relative z-10 p-5">
-        <ArmatisWordmark variant={light ? "dark" : "light"} height={13} />
-        <p className="mt-3 text-[12px] leading-relaxed opacity-80">{t("body")}</p>
-        <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-3">
-          <button
-            type="button"
-            onClick={accept}
-            className={cn(
-              "armatis-cta px-6 py-2.5 font-mono text-[10px] font-medium uppercase tracking-[0.18em] transition-opacity hover:opacity-80",
-              light ? "bg-ink text-bone" : "bg-bone text-ink"
-            )}
-          >
-            {t("accept")}
-          </button>
+      <WavePattern variant={light ? "dark" : "light"} className="z-0 opacity-[0.06]" size={320} />
+      <div className="relative z-10 mx-auto flex max-w-7xl flex-col gap-4 px-6 py-5 md:flex-row md:items-center md:justify-between md:gap-8 md:px-10">
+        <div className="flex items-center gap-5">
+          <ArmatisWordmark variant={light ? "dark" : "light"} height={14} className="hidden shrink-0 sm:block" />
+          <p className="max-w-3xl text-[12px] leading-relaxed opacity-80">{t("body")}</p>
+        </div>
+        <div className="flex shrink-0 items-center gap-6">
           <button
             type="button"
             onClick={openPrivacy}
             className="font-mono text-[10px] uppercase tracking-[0.18em] opacity-70 transition-opacity hover:opacity-100"
           >
             {t("privacy")}
+          </button>
+          <button
+            type="button"
+            onClick={accept}
+            className={cn(
+              "armatis-cta px-7 py-2.5 font-mono text-[10px] font-medium uppercase tracking-[0.18em] transition-opacity hover:opacity-80",
+              light ? "bg-ink text-bone" : "bg-bone text-ink"
+            )}
+          >
+            {t("accept")}
           </button>
         </div>
       </div>
