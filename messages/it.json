@@ -84,7 +84,9 @@
       "rights": "Tutti i diritti riservati",
       "vat": "P.IVA",
       "contact": "Contatti",
-      "linkedin": "Linkedin"
+      "linkedin": "Linkedin",
+      "privacy": "Privacy Policy",
+      "design": "Disegno UE registrato n.:"
     }
   },
   "contact": {
@@ -144,6 +146,12 @@
       "head": "Contatti",
       "body": "Per esercitare i tuoi diritti o per qualsiasi domanda relativa alla presente informativa, scrivi a info@armatisyachts.com."
     }
+  },
+  "cookies": {
+    "title": "Avviso sui cookie",
+    "body": "Utilizziamo solo i cookie essenziali necessari per le preferenze di lingua e visualizzazione — nessun tracciamento o pubblicità. Consulta la nostra Privacy Policy per i dettagli.",
+    "accept": "Accetta",
+    "privacy": "Privacy Policy"
   },
   "common": {
     "back": "Indietro",

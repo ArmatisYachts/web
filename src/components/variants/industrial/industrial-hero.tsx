@@ -56,7 +56,7 @@ export function IndustrialHero() {
   ];
 
   return (
-    <section className="relative h-svh w-full overflow-hidden bg-[#0a0a0a] text-bone select-none">
+    <section data-armatis-dark className="relative h-svh w-full overflow-hidden bg-[#0a0a0a] text-bone select-none">
       {/* brand wave texture (light lines on the dark stage) */}
       <WavePattern variant="light" className="z-0 opacity-[0.06]" />
 

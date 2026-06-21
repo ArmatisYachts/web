@@ -19,6 +19,7 @@ export const ARMATIS_107 = {
   web: "armatisyachts.com",
   email: "info@armatisyachts.com",
   vat: "14497620964",
+  euDesign: "015141162 - 0001",
   // TODO: confirm official LinkedIn URL with client (placeholder for now).
   linkedin: "https://www.linkedin.com/company/armatis-yachts",
 } as const;

@@ -7,6 +7,7 @@ import { routing } from "@/i18n/routing";
 import { ThemeScript } from "@/components/shared/theme-script";
 import { ContactDialog } from "@/components/shared/contact-dialog";
 import { PrivacyDialog } from "@/components/shared/privacy-dialog";
+import { CookieBanner } from "@/components/shared/cookie-banner";
 import "../globals.css";
 
 const display = Jost({
@@ -65,6 +66,7 @@ export default async function LocaleLayout({
           {children}
           <ContactDialog />
           <PrivacyDialog />
+          <CookieBanner />
         </NextIntlClientProvider>
       </body>
     </html>

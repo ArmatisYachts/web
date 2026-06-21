@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 import { ArmatisWordmark } from "@/components/shared/armatis-wordmark";
 import { LanguageSwitcher } from "@/components/shared/language-switcher";
 import { ContactTrigger } from "@/components/shared/contact-trigger";
+import { PrivacyTrigger } from "@/components/shared/privacy-trigger";
 import { WavePattern } from "@/components/shared/wave-pattern";
 import { ARMATIS_107 } from "@/lib/yacht";
 
@@ -16,7 +17,7 @@ export function IndustrialFooter() {
   ];
 
   return (
-    <footer className="relative overflow-hidden bg-[#0a0a0a] px-6 py-20 text-bone md:px-12 md:py-28">
+    <footer data-armatis-dark className="relative overflow-hidden bg-[#0a0a0a] px-6 py-20 text-bone md:px-12 md:py-28">
       <WavePattern variant="light" className="z-0 opacity-[0.06]" />
       <div className="relative z-10 mx-auto max-w-6xl">
         <ArmatisWordmark variant="light" height={26} />
@@ -62,9 +63,11 @@ export function IndustrialFooter() {
           </div>
         </div>
 
-        <p className="mt-14 font-mono text-[10px] uppercase tracking-[0.2em] text-bone/40">
+        <p className="mt-14 font-mono text-[10px] uppercase leading-relaxed tracking-[0.2em] text-bone/40">
           © {new Date().getFullYear()} {ARMATIS_107.brand} S.R.L · {t("vat")}{" "}
-          {ARMATIS_107.vat} · {t("rights")}
+          {ARMATIS_107.vat} · {t("rights")} ·{" "}
+          <PrivacyTrigger className="uppercase tracking-[0.2em] hover:text-bone">{t("privacy")}</PrivacyTrigger> ·{" "}
+          {t("design")} {ARMATIS_107.euDesign}
         </p>
       </div>
     </footer>
