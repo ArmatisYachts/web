@@ -97,3 +97,14 @@ body {
 .armatis-cta {
   clip-path: polygon(0 0, 100% 0, 100% 70%, 86% 100%, 0 100%);
 }
+
+/* Interactive elements show the hand cursor (native <button> defaults to arrow) */
+button:not(:disabled),
+[role="button"]:not(:disabled),
+label,
+summary {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: not-allowed;
+}

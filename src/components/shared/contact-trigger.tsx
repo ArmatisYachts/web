@@ -44,7 +44,7 @@ export function ContactTrigger({
       >
         <svg
           aria-hidden
-          className="absolute inset-0 h-full w-full overflow-visible"
+          className="pointer-events-none absolute inset-0 h-full w-full overflow-visible"
           preserveAspectRatio="none"
           viewBox="0 0 100 100"
         >
