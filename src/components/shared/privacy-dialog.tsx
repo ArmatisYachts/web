@@ -33,11 +33,15 @@ export function PrivacyDialog() {
     if (!open) return;
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
     document.addEventListener("keydown", onKey);
-    const prev = document.body.style.overflow;
+    const prevOverflow = document.body.style.overflow;
+    const prevPad = document.body.style.paddingRight;
+    const sbw = window.innerWidth - document.documentElement.clientWidth;
     document.body.style.overflow = "hidden";
+    if (sbw > 0) document.body.style.paddingRight = `${sbw}px`;
     return () => {
       document.removeEventListener("keydown", onKey);
-      document.body.style.overflow = prev;
+      document.body.style.overflow = prevOverflow;
+      document.body.style.paddingRight = prevPad;
     };
   }, [open]);
 
