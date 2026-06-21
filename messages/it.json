@@ -96,6 +96,7 @@
     "phone": "Telefono",
     "optional": "facoltativo",
     "enquiryType": "Tipo di richiesta",
+    "message": "Messaggio",
     "enquiry": {
       "general": "Richiesta generale",
       "purchase": "Richiesta d'acquisto",

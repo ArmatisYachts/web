@@ -54,9 +54,10 @@ export function ContactDialog() {
       email: String(fd.get("email") || "").trim(),
       phone: String(fd.get("phone") || "").trim(),
       enquiryType: String(fd.get("enquiryType") || "").trim(),
+      message: String(fd.get("message") || "").trim(),
       gdpr: fd.get("gdpr") === "on",
     };
-    if (!payload.firstName || !payload.lastName || !payload.email || !payload.enquiryType || !payload.gdpr) {
+    if (!payload.firstName || !payload.lastName || !payload.email || !payload.enquiryType || !payload.message || !payload.gdpr) {
       setInvalid(true);
       return;
     }
@@ -166,6 +167,17 @@ export function ContactDialog() {
                       </option>
                     ))}
                   </select>
+                </div>
+
+                <div className="space-y-2">
+                  <label className={label} htmlFor="message">{t("message")}</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    required
+                    rows={3}
+                    className={`${field} resize-none`}
+                  />
                 </div>
 
                 <label className="flex items-start gap-3 text-xs leading-relaxed text-fg-mute">

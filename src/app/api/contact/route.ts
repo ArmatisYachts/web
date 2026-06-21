@@ -29,9 +29,10 @@ export async function POST(req: Request) {
   const email = String(data.email ?? "").trim();
   const phone = String(data.phone ?? "").trim();
   const enquiryType = String(data.enquiryType ?? "").trim();
+  const message = String(data.message ?? "").trim();
   const gdpr = data.gdpr === true;
 
-  if (!firstName || !lastName || !email || !enquiryType || !gdpr) {
+  if (!firstName || !lastName || !email || !enquiryType || !message || !gdpr) {
     return NextResponse.json({ error: "missing_fields" }, { status: 422 });
   }
 
@@ -48,7 +49,8 @@ export async function POST(req: Request) {
         `Name: ${fullName}\n` +
         `E-mail: ${email}\n` +
         `Phone: ${phone || "—"}\n` +
-        `Enquiry type: ${enquiryType}\n` +
+        `Enquiry type: ${enquiryType}\n\n` +
+        `Message:\n${message}\n\n` +
         `Consent: yes`,
       html:
         `<div style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#0e0e0e;line-height:1.6">` +
@@ -57,6 +59,7 @@ export async function POST(req: Request) {
         `<p><strong>E-mail:</strong> ${esc(email)}</p>` +
         `<p><strong>Phone:</strong> ${esc(phone || "—")}</p>` +
         `<p><strong>Enquiry type:</strong> ${esc(enquiryType)}</p>` +
+        `<p><strong>Message:</strong><br>${esc(message).replace(/\n/g, "<br>")}</p>` +
         `<p style="color:#6b6b68">Consent given via website form.</p>` +
         `</div>`,
     });

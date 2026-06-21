@@ -96,6 +96,7 @@
     "phone": "Phone",
     "optional": "optional",
     "enquiryType": "Enquiry type",
+    "message": "Message",
     "enquiry": {
       "general": "General enquiry",
       "purchase": "Purchase enquiry",
