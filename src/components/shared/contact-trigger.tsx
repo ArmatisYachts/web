@@ -13,7 +13,7 @@ export function ContactTrigger({
   className,
   children,
 }: {
-  variant?: "cta" | "link";
+  variant?: "cta" | "link" | "outline";
   className?: string;
   children: React.ReactNode;
 }) {
@@ -25,6 +25,22 @@ export function ContactTrigger({
         className={cn("transition-opacity duration-300 hover:opacity-60", className)}
       >
         {children}
+      </button>
+    );
+  }
+
+  // Light/brand-coloured button with a crisp ink edge that follows the angled
+  // corner (outer clipped layer = border, inner clipped layer = surface).
+  if (variant === "outline") {
+    return (
+      <button
+        type="button"
+        onClick={openContact}
+        className={cn("armatis-cta bg-fg p-px transition-opacity duration-300 hover:opacity-70", className)}
+      >
+        <span className="armatis-cta block bg-surface px-7 py-3.5 font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-fg">
+          {children}
+        </span>
       </button>
     );
   }

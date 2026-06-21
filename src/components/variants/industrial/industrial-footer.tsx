@@ -25,7 +25,7 @@ export function IndustrialFooter() {
           {b("closing")}
         </p>
 
-        <div className="mt-14 grid gap-10 border-t border-white/15 pt-10 md:grid-cols-[1fr_auto] md:items-end">
+        <div className="mt-14 grid gap-10 border-t border-white/15 pt-10 md:grid-cols-[1fr_auto] md:items-start">
           <dl className="grid grid-cols-2 gap-8 sm:grid-cols-3">
             {cols.map(([label, value]) => (
               <div key={label}>
@@ -39,8 +39,10 @@ export function IndustrialFooter() {
             ))}
           </dl>
 
-          <div className="flex flex-col items-start gap-4 md:items-end">
-            <nav className="flex items-center gap-5 font-mono text-[11px] uppercase tracking-[0.18em] text-bone/85">
+          {/* Contact·LinkedIn align with the headings row; EN/IT aligns with the
+              values row below them. */}
+          <div className="text-left md:text-right">
+            <nav className="flex items-center gap-5 font-mono text-[10px] uppercase tracking-[0.2em] text-bone/85 md:justify-end">
               <ContactTrigger variant="link" className="hover:opacity-60">
                 {t("contact")}
               </ContactTrigger>
@@ -54,7 +56,9 @@ export function IndustrialFooter() {
                 {t("linkedin")}
               </a>
             </nav>
-            <LanguageSwitcher />
+            <div className="mt-2 md:flex md:justify-end">
+              <LanguageSwitcher />
+            </div>
           </div>
         </div>
 

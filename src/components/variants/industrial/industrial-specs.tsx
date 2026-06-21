@@ -31,7 +31,7 @@ export function IndustrialSpecs() {
         </div>
 
         <div className="mt-12 grid gap-12 md:grid-cols-2 md:gap-16">
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-12 md:gap-16">
             <div className="relative aspect-[4/3] overflow-hidden border border-hairline">
               <RevealImage
                 src={RENDERS.bowOn}
@@ -40,7 +40,7 @@ export function IndustrialSpecs() {
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
-            <ContactTrigger variant="cta" className="self-start bg-fg text-surface">
+            <ContactTrigger variant="outline" className="self-start">
               {t("requestInfo")}
             </ContactTrigger>
           </div>
