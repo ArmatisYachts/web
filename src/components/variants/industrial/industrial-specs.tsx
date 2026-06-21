@@ -31,7 +31,7 @@ export function IndustrialSpecs() {
         </div>
 
         <div className="mt-12 grid gap-12 md:grid-cols-2 md:gap-16">
-          <div className="flex flex-col gap-12 md:gap-16">
+          <div className="flex flex-col gap-10 md:gap-14">
             <div className="relative aspect-[4/3] overflow-hidden border border-hairline">
               <RevealImage
                 src={RENDERS.bowOn}

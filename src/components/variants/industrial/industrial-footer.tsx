@@ -51,7 +51,7 @@ export function IndustrialFooter() {
                 href={ARMATIS_107.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-opacity hover:opacity-60"
+                className="normal-case tracking-normal transition-opacity hover:opacity-60"
               >
                 {t("linkedin")}
               </a>

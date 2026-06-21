@@ -36,8 +36,7 @@
     "vision": {
       "index": "01",
       "label": "Visione",
-      "titleA": "Progettato & Ingegnerizzato in Italia.",
-      "titleB": "Costruito In-House",
+      "title": "Progettato, Ingegnerizzato & Costruito in Italia",
       "body": "ARMATIS realizza motor yacht di alta qualità con un approccio moderno e industriale — tecnologie compositi avanzate, sviluppo guidato dall'ingegneria e un sistema produttivo scalabile che mantiene la stessa precisione, finitura e affidabilità dal primo yacht a ogni yacht successivo."
     },
     "spec": {
@@ -85,7 +84,7 @@
       "rights": "Tutti i diritti riservati",
       "vat": "P.IVA",
       "contact": "Contatti",
-      "linkedin": "LinkedIn"
+      "linkedin": "Linkedin"
     }
   },
   "contact": {

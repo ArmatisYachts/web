@@ -36,8 +36,7 @@
     "vision": {
       "index": "01",
       "label": "Vision",
-      "titleA": "Designed & Engineered in Italy.",
-      "titleB": "Built In-House",
+      "title": "Designed, Engineered & Built in Italy",
       "body": "ARMATIS creates high-quality motor yachts through a modern, industrial approach — advanced composite technologies, engineering-driven development and a scalable production system that holds the same precision, finish and reliability from the first yacht to every yacht that follows."
     },
     "spec": {
@@ -85,7 +84,7 @@
       "rights": "All rights reserved",
       "vat": "VAT",
       "contact": "Contact",
-      "linkedin": "LinkedIn"
+      "linkedin": "Linkedin"
     }
   },
   "contact": {
