@@ -70,7 +70,7 @@ export function CookieBanner() {
       role="region"
       aria-label={t("title")}
       className={cn(
-        "fixed bottom-5 left-5 z-[90] w-[min(92vw,22rem)] overflow-hidden border shadow-2xl transition-colors duration-500",
+        "fixed bottom-5 left-1/2 z-[90] w-[min(92vw,22rem)] -translate-x-1/2 overflow-hidden border shadow-2xl transition-colors duration-500",
         light ? "border-black/15 bg-bone text-ink" : "border-white/15 bg-[#0a0a0a] text-bone"
       )}
     >
