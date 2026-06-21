@@ -25,7 +25,9 @@ export function IndustrialVision() {
         </div>
 
         <h2 className="mt-10 max-w-3xl font-display text-4xl font-extralight leading-[1.05] tracking-tight md:text-6xl">
-          {t("title")}
+          {t("titleA")}
+          <br />
+          {t("titleB")}
         </h2>
 
         <p className="mt-8 max-w-3xl text-lg font-light leading-relaxed text-fg-soft md:text-xl">
