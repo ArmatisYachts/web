@@ -9,7 +9,7 @@ export const ARMATIS_107 = {
   draught: "1.65 m",
   guests: 10,
   crew: 5,
-  engines: "IPS 4 × 1200 / 4 × 1350",
+  engines: "Quad IPS1200 / Quad IPS1350",
   maxSpeed: "24 / 26 kn",
   fuel: "10 t",
   builtIn: "Italy",
