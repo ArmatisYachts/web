@@ -104,13 +104,46 @@
       "partnership": "Partnership",
       "other": "Altro"
     },
-    "gdpr": "Acconsento al trattamento dei dati sopra indicati da parte di ARMATIS per rispondere alla mia richiesta.",
+    "gdpr": "Acconsento al trattamento dei dati sopra indicati da parte di ARMATIS per rispondere alla mia richiesta, come descritto nella <pp>Privacy Policy</pp>.",
     "submit": "Invia richiesta",
     "sending": "Invio…",
     "success": "Grazie — la tua richiesta è stata inviata. Ti contatteremo a breve.",
     "error": "Si è verificato un errore. Riprova o scrivici direttamente.",
     "close": "Chiudi",
     "required": "Compila i campi obbligatori."
+  },
+  "privacy": {
+    "title": "Privacy & Protezione dei Dati",
+    "updated": "Informativa ai sensi del GDPR",
+    "close": "Chiudi",
+    "controller": {
+      "head": "Titolare del Trattamento",
+      "body": "Il titolare del trattamento è ARMATIS S.R.L., sede legale in Via Dante 4, 20121 Milano (MI), Italia, P.IVA 14497620964. Per qualsiasi questione relativa ai tuoi dati personali puoi scriverci a info@armatisyachts.com."
+    },
+    "collect": {
+      "head": "Dati che Raccogliamo",
+      "body": "Quando invii il modulo di contatto raccogliamo solo i dati che fornisci: nome, cognome, indirizzo e-mail, numero di telefono (facoltativo), tipo di richiesta e il contenuto del messaggio. Non raccogliamo categorie particolari di dati personali e il sito non utilizza cookie di tracciamento o pubblicitari."
+    },
+    "purpose": {
+      "head": "Finalità & Base Giuridica",
+      "body": "I tuoi dati sono trattati al solo scopo di ricevere, gestire e rispondere alla tua richiesta. La base giuridica è il tuo consenso, liberamente prestato spuntando l'apposita casella (art. 6, par. 1, lett. a, del Regolamento (UE) 2016/679, il “GDPR”)."
+    },
+    "processing": {
+      "head": "Trattamento & Conservazione",
+      "body": "La tua richiesta viene recapitata via e-mail tramite il nostro responsabile Resend e questo sito è ospitato da Vercel; entrambi trattano i dati su infrastrutture sicure, con consegna gestita all'interno dell'Unione Europea. I tuoi dati non vengono mai venduti, ceduti o condivisi con terzi per finalità di marketing."
+    },
+    "retention": {
+      "head": "Conservazione dei Dati",
+      "body": "I tuoi dati personali sono conservati solo per il tempo strettamente necessario a gestire la tua richiesta e l'eventuale corrispondenza correlata, dopodiché vengono cancellati o resi anonimi."
+    },
+    "rights": {
+      "head": "I Tuoi Diritti",
+      "body": "Hai il diritto di accedere, rettificare, cancellare o limitare il trattamento dei tuoi dati, di opporti al trattamento, alla portabilità dei dati e di revocare il consenso in qualsiasi momento senza pregiudicare la liceità del trattamento precedente. Hai inoltre il diritto di proporre reclamo all'Autorità Garante per la protezione dei dati personali."
+    },
+    "contact": {
+      "head": "Contatti",
+      "body": "Per esercitare i tuoi diritti o per qualsiasi domanda relativa alla presente informativa, scrivi a info@armatisyachts.com."
+    }
   },
   "common": {
     "back": "Indietro",

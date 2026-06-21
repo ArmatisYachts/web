@@ -104,13 +104,46 @@
       "partnership": "Partnership",
       "other": "Other"
     },
-    "gdpr": "I agree that ARMATIS may store and process the details above in order to respond to my enquiry.",
+    "gdpr": "I agree that ARMATIS may store and process the details above to respond to my enquiry, as set out in the <pp>Privacy Policy</pp>.",
     "submit": "Send enquiry",
     "sending": "Sending…",
     "success": "Thank you — your enquiry has been sent. We will be in touch shortly.",
     "error": "Something went wrong. Please try again or email us directly.",
     "close": "Close",
     "required": "Please complete the required fields."
+  },
+  "privacy": {
+    "title": "Privacy & Data Protection",
+    "updated": "Information notice pursuant to the GDPR",
+    "close": "Close",
+    "controller": {
+      "head": "Data Controller",
+      "body": "The data controller is ARMATIS S.R.L., registered office Via Dante 4, 20121 Milan (MI), Italy, VAT no. 14497620964. For any matter relating to your personal data you may contact us at info@armatisyachts.com."
+    },
+    "collect": {
+      "head": "Information We Collect",
+      "body": "When you submit the enquiry form we collect only the data you provide: first name, last name, e-mail address, telephone number (optional), enquiry type and the content of your message. We do not collect special categories of personal data, and the website does not use tracking or advertising cookies."
+    },
+    "purpose": {
+      "head": "Purpose & Legal Basis",
+      "body": "Your data is processed for the sole purpose of receiving, managing and responding to your enquiry. The legal basis is your consent, freely given when you tick the consent box (Article 6(1)(a) of Regulation (EU) 2016/679, the “GDPR”)."
+    },
+    "processing": {
+      "head": "Processing & Storage",
+      "body": "Your enquiry is delivered by e-mail through our processor Resend, and this website is hosted by Vercel; both process data on secure infrastructure, with delivery handled within the European Union. Your data is never sold, rented or shared with third parties for marketing purposes."
+    },
+    "retention": {
+      "head": "Data Retention",
+      "body": "Your personal data is retained only for the time strictly necessary to handle your enquiry and any related correspondence, after which it is deleted or anonymised."
+    },
+    "rights": {
+      "head": "Your Rights",
+      "body": "You have the right to access, rectify, erase or restrict the processing of your data, to object to processing, to data portability, and to withdraw your consent at any time without affecting the lawfulness of prior processing. You may also lodge a complaint with the Italian Supervisory Authority (Garante per la protezione dei dati personali)."
+    },
+    "contact": {
+      "head": "Contact",
+      "body": "To exercise your rights or for any question regarding this notice, please write to info@armatisyachts.com."
+    }
   },
   "common": {
     "back": "Back",

@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { WavePattern } from "@/components/shared/wave-pattern";
 import { ArmatisWordmark } from "@/components/shared/armatis-wordmark";
+import { openPrivacy } from "@/components/shared/privacy-dialog";
 
 type Status = "idle" | "sending" | "success" | "error";
 const ENQUIRY_KEYS = ["general", "purchase", "press", "partnership", "other"] as const;
@@ -106,7 +107,7 @@ export function ContactDialog() {
 
         <div className="relative z-10 p-6 md:p-8">
           <div className="flex items-start justify-between">
-            <ArmatisWordmark variant="auto" height={13} />
+            <ArmatisWordmark variant="auto" height={20} />
             <button
               type="button"
               onClick={() => setOpen(false)}
@@ -133,7 +134,7 @@ export function ContactDialog() {
             </div>
           ) : (
             <>
-              <h2 className="mt-4 font-display text-2xl font-extralight tracking-tight md:text-3xl">
+              <h2 className="mt-5 font-display text-xl font-extralight tracking-tight md:text-2xl">
                 {t("title")}
               </h2>
               <p className="mt-1.5 max-w-md text-[13px] leading-relaxed text-fg-mute">
@@ -214,7 +215,19 @@ export function ContactDialog() {
 
                 <label className="flex items-start gap-3 text-[11px] leading-snug text-fg-mute">
                   <input name="gdpr" type="checkbox" required className="mt-0.5 h-4 w-4 shrink-0 accent-[var(--fg)]" />
-                  <span>{t("gdpr")}</span>
+                  <span>
+                    {t.rich("gdpr", {
+                      pp: (chunks) => (
+                        <button
+                          type="button"
+                          onClick={(e) => { e.preventDefault(); openPrivacy(); }}
+                          className="text-fg underline underline-offset-2 transition-opacity hover:opacity-60"
+                        >
+                          {chunks}
+                        </button>
+                      ),
+                    })}
+                  </span>
                 </label>
 
                 {invalid && (

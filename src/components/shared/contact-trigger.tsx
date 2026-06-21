@@ -29,18 +29,34 @@ export function ContactTrigger({
     );
   }
 
-  // Light/brand-coloured button with a crisp ink edge that follows the angled
-  // corner (outer clipped layer = border, inner clipped layer = surface).
+  // Light/brand-coloured button with a crisp, EVEN-thickness ink edge that
+  // follows the angled corner. Drawn as an SVG polygon with a non-scaling
+  // stroke so every side (incl. the diagonal) is exactly the same width.
   if (variant === "outline") {
     return (
       <button
         type="button"
         onClick={openContact}
-        className={cn("armatis-cta bg-fg p-px transition-opacity duration-300 hover:opacity-70", className)}
+        className={cn(
+          "relative inline-block px-7 py-3.5 font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-fg transition-opacity duration-300 hover:opacity-70",
+          className
+        )}
       >
-        <span className="armatis-cta block bg-surface px-7 py-3.5 font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-fg">
-          {children}
-        </span>
+        <svg
+          aria-hidden
+          className="absolute inset-0 h-full w-full overflow-visible"
+          preserveAspectRatio="none"
+          viewBox="0 0 100 100"
+        >
+          <polygon
+            points="0,0 100,0 100,70 86,100 0,100"
+            className="fill-surface stroke-fg"
+            strokeWidth={1.25}
+            strokeLinejoin="round"
+            vectorEffect="non-scaling-stroke"
+          />
+        </svg>
+        <span className="relative">{children}</span>
       </button>
     );
   }

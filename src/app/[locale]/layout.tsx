@@ -6,6 +6,7 @@ import { Jost, Geist_Mono } from "next/font/google";
 import { routing } from "@/i18n/routing";
 import { ThemeScript } from "@/components/shared/theme-script";
 import { ContactDialog } from "@/components/shared/contact-dialog";
+import { PrivacyDialog } from "@/components/shared/privacy-dialog";
 import "../globals.css";
 
 const display = Jost({
@@ -63,6 +64,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider>
           {children}
           <ContactDialog />
+          <PrivacyDialog />
         </NextIntlClientProvider>
       </body>
     </html>
