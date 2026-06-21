@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import { ArmatisWordmark } from "@/components/shared/armatis-wordmark";
 import { LanguageSwitcher } from "@/components/shared/language-switcher";
+import { ContactTrigger } from "@/components/shared/contact-trigger";
 import { WavePattern } from "@/components/shared/wave-pattern";
 import { ARMATIS_107 } from "@/lib/yacht";
 
@@ -38,11 +39,28 @@ export function IndustrialFooter() {
             ))}
           </dl>
 
-          <LanguageSwitcher />
+          <div className="flex flex-col items-start gap-4 md:items-end">
+            <nav className="flex items-center gap-5 font-mono text-[11px] uppercase tracking-[0.18em] text-bone/85">
+              <ContactTrigger variant="link" className="hover:opacity-60">
+                {t("contact")}
+              </ContactTrigger>
+              <span className="text-white/20">·</span>
+              <a
+                href={ARMATIS_107.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-opacity hover:opacity-60"
+              >
+                {t("linkedin")}
+              </a>
+            </nav>
+            <LanguageSwitcher />
+          </div>
         </div>
 
         <p className="mt-14 font-mono text-[10px] uppercase tracking-[0.2em] text-bone/40">
-          © {new Date().getFullYear()} {ARMATIS_107.brand} S.R.L · {t("rights")}
+          © {new Date().getFullYear()} {ARMATIS_107.brand} S.R.L · {t("vat")}{" "}
+          {ARMATIS_107.vat} · {t("rights")}
         </p>
       </div>
     </footer>

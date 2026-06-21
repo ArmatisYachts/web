@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "ARMATIS — Motor Yachts",
+    "title": "Armatis Yachts",
     "description": "ARMATIS 107 — an Italian motor yacht engineered for performance, comfort, durability and refined simplicity."
   },
   "brand": {
@@ -24,20 +24,19 @@
   },
   "industrial": {
     "category": "Motor Yachts",
-    "tagline": "Surface tension & engineered light",
+    "tagline": "Defined by Space & Grace",
     "archiveLabel": "Series 2026",
-    "archiveLine": "Designed, engineered & built in-house in Italy",
+    "archiveLine": "In-house composite engineering · Brindisi, Italy",
     "cta": "Discover the 107",
     "scroll": "Scroll",
     "readout": {
-      "latitude": "Latitude",
       "loa": "Length overall",
       "beam": "Max beam"
     },
     "vision": {
       "index": "01",
       "label": "Vision",
-      "title": "Engineered in Italy. Built in-house.",
+      "title": "Designed, engineered & built in-house.",
       "body": "ARMATIS creates high-quality motor yachts through a modern, industrial approach — advanced composite technologies, engineering-driven development and a scalable production system that holds the same precision, finish and reliability from the first yacht to every yacht that follows."
     },
     "spec": {
@@ -54,7 +53,8 @@
         "fuel": "Fuel capacity",
         "built": "Built in",
         "builtValue": "Italy"
-      }
+      },
+      "requestInfo": "Request Info"
     },
     "salon": {
       "label": "Interiors — Main salon",
@@ -81,8 +81,35 @@
       "hq": "Headquarters",
       "yard": "Shipyard",
       "web": "Web",
-      "rights": "All rights reserved"
+      "rights": "All rights reserved",
+      "vat": "VAT",
+      "contact": "Contact",
+      "linkedin": "LinkedIn"
     }
+  },
+  "contact": {
+    "title": "Get in touch",
+    "intro": "Tell us about your enquiry and our team will respond shortly.",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "email": "E-mail",
+    "phone": "Phone",
+    "optional": "optional",
+    "enquiryType": "Enquiry type",
+    "enquiry": {
+      "general": "General enquiry",
+      "purchase": "Purchase enquiry",
+      "press": "Press & media",
+      "partnership": "Partnership",
+      "other": "Other"
+    },
+    "gdpr": "I agree that ARMATIS may store and process the details above in order to respond to my enquiry.",
+    "submit": "Send enquiry",
+    "sending": "Sending…",
+    "success": "Thank you — your enquiry has been sent. We will be in touch shortly.",
+    "error": "Something went wrong. Please try again or email us directly.",
+    "close": "Close",
+    "required": "Please complete the required fields."
   },
   "common": {
     "back": "Back",

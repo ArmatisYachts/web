@@ -28,7 +28,7 @@ export function IndustrialGallery() {
         </div>
 
         <div className="mt-12 space-y-6 md:space-y-10">
-          {items.map(([src, caption], i) => (
+          {items.map(([src, caption]) => (
             <figure key={src}>
               <div className="relative aspect-[16/9] overflow-hidden border border-hairline">
                 <RevealImage
@@ -38,9 +38,8 @@ export function IndustrialGallery() {
                   sizes="(max-width: 768px) 100vw, 1152px"
                 />
               </div>
-              <figcaption className="mt-3 flex justify-between font-mono text-[10px] uppercase tracking-[0.2em] text-fg-mute">
-                <span>{caption}</span>
-                <span className="text-fg-faint">{String(i + 1).padStart(2, "0")}</span>
+              <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.2em] text-fg-mute">
+                {caption}
               </figcaption>
             </figure>
           ))}

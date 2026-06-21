@@ -5,6 +5,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Jost, Geist_Mono } from "next/font/google";
 import { routing } from "@/i18n/routing";
 import { ThemeScript } from "@/components/shared/theme-script";
+import { ContactDialog } from "@/components/shared/contact-dialog";
 import "../globals.css";
 
 const display = Jost({
@@ -59,7 +60,10 @@ export default async function LocaleLayout({
         <ThemeScript />
       </head>
       <body className="min-h-full bg-surface text-fg">
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider>
+          {children}
+          <ContactDialog />
+        </NextIntlClientProvider>
       </body>
     </html>
   );

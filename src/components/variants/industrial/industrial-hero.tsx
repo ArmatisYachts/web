@@ -51,7 +51,6 @@ export function IndustrialHero() {
   }, []);
 
   const readout: [string, string][] = [
-    [t("readout.latitude"), ARMATIS_107.latitude],
     [t("readout.loa"), ARMATIS_107.loa],
     [t("readout.beam"), ARMATIS_107.beam],
   ];

@@ -92,3 +92,8 @@ body {
   background: var(--fg);
   color: var(--surface);
 }
+
+/* Signature angled-corner button (shared by the hero CTA, Request Info, etc.) */
+.armatis-cta {
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 86% 100%, 0 100%);
+}

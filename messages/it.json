@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "ARMATIS — Motor Yacht",
+    "title": "Armatis Yachts",
     "description": "ARMATIS 107 — un motor yacht italiano progettato per prestazioni, comfort, durabilità e una raffinata semplicità."
   },
   "brand": {
@@ -24,20 +24,19 @@
   },
   "industrial": {
     "category": "Motor Yacht",
-    "tagline": "Tensione superficiale & luce ingegnerizzata",
+    "tagline": "Defined by Space & Grace",
     "archiveLabel": "Serie 2026",
-    "archiveLine": "Progettato, ingegnerizzato e costruito in-house in Italia",
+    "archiveLine": "Ingegneria dei compositi in-house · Brindisi, Italia",
     "cta": "Scopri il 107",
     "scroll": "Scorri",
     "readout": {
-      "latitude": "Latitudine",
       "loa": "Lunghezza f.t.",
       "beam": "Baglio massimo"
     },
     "vision": {
       "index": "01",
       "label": "Visione",
-      "title": "Progettati in Italia. Costruiti in-house.",
+      "title": "Progettato, ingegnerizzato e costruito in-house.",
       "body": "ARMATIS realizza motor yacht di alta qualità con un approccio moderno e industriale — tecnologie compositi avanzate, sviluppo guidato dall'ingegneria e un sistema produttivo scalabile che mantiene la stessa precisione, finitura e affidabilità dal primo yacht a ogni yacht successivo."
     },
     "spec": {
@@ -54,7 +53,8 @@
         "fuel": "Capacità carburante",
         "built": "Costruito in",
         "builtValue": "Italia"
-      }
+      },
+      "requestInfo": "Richiedi info"
     },
     "salon": {
       "label": "Interni — Salone",
@@ -81,8 +81,35 @@
       "hq": "Sede legale",
       "yard": "Cantiere",
       "web": "Web",
-      "rights": "Tutti i diritti riservati"
+      "rights": "Tutti i diritti riservati",
+      "vat": "P.IVA",
+      "contact": "Contatti",
+      "linkedin": "LinkedIn"
     }
+  },
+  "contact": {
+    "title": "Get in touch",
+    "intro": "Raccontaci la tua richiesta e il nostro team ti risponderà a breve.",
+    "firstName": "Nome",
+    "lastName": "Cognome",
+    "email": "E-mail",
+    "phone": "Telefono",
+    "optional": "facoltativo",
+    "enquiryType": "Tipo di richiesta",
+    "enquiry": {
+      "general": "Richiesta generale",
+      "purchase": "Richiesta d'acquisto",
+      "press": "Stampa & media",
+      "partnership": "Partnership",
+      "other": "Altro"
+    },
+    "gdpr": "Acconsento al trattamento dei dati sopra indicati da parte di ARMATIS per rispondere alla mia richiesta.",
+    "submit": "Invia richiesta",
+    "sending": "Invio…",
+    "success": "Grazie — la tua richiesta è stata inviata. Ti contatteremo a breve.",
+    "error": "Si è verificato un errore. Riprova o scrivici direttamente.",
+    "close": "Chiudi",
+    "required": "Compila i campi obbligatori."
   },
   "common": {
     "back": "Indietro",

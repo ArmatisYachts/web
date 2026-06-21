@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import { RevealImage } from "@/components/shared/reveal-image";
+import { ContactTrigger } from "@/components/shared/contact-trigger";
 import { ARMATIS_107, RENDERS } from "@/lib/yacht";
 
 export function IndustrialSpecs() {
@@ -30,13 +31,18 @@ export function IndustrialSpecs() {
         </div>
 
         <div className="mt-12 grid gap-12 md:grid-cols-2 md:gap-16">
-          <div className="relative aspect-[4/3] overflow-hidden border border-hairline">
-            <RevealImage
-              src={RENDERS.bowOn}
-              alt={ARMATIS_107.model}
-              fill
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
+          <div className="flex flex-col gap-6">
+            <div className="relative aspect-[4/3] overflow-hidden border border-hairline">
+              <RevealImage
+                src={RENDERS.bowOn}
+                alt={ARMATIS_107.model}
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
+            <ContactTrigger variant="cta" className="self-start bg-fg text-surface">
+              {t("requestInfo")}
+            </ContactTrigger>
           </div>
 
           <dl className="grid grid-cols-1 border-y border-hairline">

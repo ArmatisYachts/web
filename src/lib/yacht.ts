@@ -17,6 +17,10 @@ export const ARMATIS_107 = {
   headquarters: "Milano, IT",
   latitude: "40.63° N",
   web: "armatisyachts.com",
+  email: "info@armatisyachts.com",
+  vat: "14497620964",
+  // TODO: confirm official LinkedIn URL with client (placeholder for now).
+  linkedin: "https://www.linkedin.com/company/armatis-yachts",
 } as const;
 
 // Render library (served from /public/assets).
