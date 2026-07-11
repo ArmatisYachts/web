@@ -40,18 +40,6 @@
     "production": "Rather than relying only on traditional craftsmanship, ARMATIS is developing a scalable production system designed to maintain the same level of precision, finish, and engineering quality from the first yacht to every yacht that follows.",
     "closing": "Based in Italy, ARMATIS combines timeless design, modern engineering, and manufacturing expertise to create yachts that offer performance, comfort, durability, and refined simplicity."
   },
-  "home": {
-    "eyebrow": "Italian Motor Yachts",
-    "subtitle": "Select an experience",
-    "enter": "Enter",
-    "variants": {
-      "industrial": { "name": "Industrial", "note": "Engineering-driven, technical" },
-      "wave": { "name": "Wave", "note": "Interactive signature motion" },
-      "cinematic": { "name": "Cinematic", "note": "Immersive depth gallery" },
-      "voyage": { "name": "Voyage", "note": "Scroll-led composition" },
-      "film": { "name": "Film", "note": "Title sequence" }
-    }
-  },
   "industrial": {
     "category": "Motor Yachts",
     "tagline": "Defined by Space & Grace",
@@ -433,9 +421,5 @@
     "body": "We use only the essential cookies required for language and display preferences — no tracking or advertising. See our Privacy Policy for details.",
     "accept": "Accept",
     "privacy": "Privacy Policy"
-  },
-  "common": {
-    "back": "Back",
-    "language": "Language"
   }
 }

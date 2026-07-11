@@ -40,18 +40,6 @@
     "production": "Piuttosto che affidarsi solo all'artigianato tradizionale, ARMATIS sta sviluppando un sistema produttivo scalabile, concepito per mantenere lo stesso livello di precisione, finitura e qualità ingegneristica dal primo yacht a ogni yacht successivo.",
     "closing": "Con sede in Italia, ARMATIS unisce design senza tempo, ingegneria moderna e competenza manifatturiera per creare yacht che offrono prestazioni, comfort, durabilità e raffinata semplicità."
   },
-  "home": {
-    "eyebrow": "Motor Yacht Italiani",
-    "subtitle": "Seleziona un'esperienza",
-    "enter": "Entra",
-    "variants": {
-      "industrial": { "name": "Industrial", "note": "Tecnico, guidato dall'ingegneria" },
-      "wave": { "name": "Wave", "note": "Movimento interattivo distintivo" },
-      "cinematic": { "name": "Cinematic", "note": "Galleria immersiva in profondità" },
-      "voyage": { "name": "Voyage", "note": "Composizione guidata dallo scorrimento" },
-      "film": { "name": "Film", "note": "Sequenza d'apertura" }
-    }
-  },
   "industrial": {
     "category": "Motor Yacht",
     "tagline": "Defined by Space & Grace",
@@ -433,9 +421,5 @@
     "body": "Utilizziamo solo i cookie essenziali necessari per le preferenze di lingua e visualizzazione — nessun tracciamento o pubblicità. Consulta la nostra Privacy Policy per i dettagli.",
     "accept": "Accetta",
     "privacy": "Privacy Policy"
-  },
-  "common": {
-    "back": "Indietro",
-    "language": "Lingua"
   }
 }

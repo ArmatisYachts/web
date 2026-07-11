@@ -41,18 +41,3 @@ export const RENDERS = {
   interiorGuest: "/assets/renders/GSC1.jpg",
   interiorBeachClub: "/assets/renders/BC1.jpg",
 } as const;
-
-export const GALLERY_ORDER: (keyof typeof RENDERS)[] = [
-  "heroProfile",
-  "profileGolden",
-  "aerial",
-  "foredeckSpa",
-  "beachPlatform",
-  "interiorBeachClub",
-  "interiorSalon",
-  "interiorMaster",
-  "interiorGuest",
-  "sterns",
-  "bowOn",
-  "sideStatic",
-];
