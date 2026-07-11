@@ -1,23 +1,12 @@
-import type { Metadata } from "next";
 import { setRequestLocale, getTranslations } from "next-intl/server";
-import { pageMetadata } from "@/lib/seo";
 import { IndustrialHero } from "@/components/variants/industrial/industrial-hero";
 import { IndustrialVision } from "@/components/variants/industrial/industrial-vision";
 import { IndustrialBand } from "@/components/variants/industrial/industrial-band";
+import { IndustrialSpecs } from "@/components/variants/industrial/industrial-specs";
 import { IndustrialFeature } from "@/components/variants/industrial/industrial-feature";
-import { IndustrialTeaser107 } from "@/components/variants/industrial/industrial-teaser-107";
-import { IndustrialTeaserManufacturing } from "@/components/variants/industrial/industrial-teaser-manufacturing";
-import { IndustrialTeaserCompany } from "@/components/variants/industrial/industrial-teaser-company";
+import { IndustrialGallery } from "@/components/variants/industrial/industrial-gallery";
+import { IndustrialFooter } from "@/components/variants/industrial/industrial-footer";
 import { ARMATIS_107, RENDERS } from "@/lib/yacht";
-
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}): Promise<Metadata> {
-  const { locale } = await params;
-  return pageMetadata(locale, "/", "home");
-}
 
 export default async function HomePage({
   params,
@@ -33,15 +22,21 @@ export default async function HomePage({
       <IndustrialHero />
       <IndustrialVision />
       <IndustrialBand src={RENDERS.aerial} alt={ARMATIS_107.model} />
-      <IndustrialTeaser107 />
+      <IndustrialSpecs />
       <IndustrialFeature
         src={RENDERS.interiorSalon}
         label={t("salon.label")}
         caption={t("salon.caption")}
         ratio="6528 / 2624"
       />
-      <IndustrialTeaserManufacturing />
-      <IndustrialTeaserCompany />
+      <IndustrialGallery />
+      <IndustrialFeature
+        src={RENDERS.interiorBeachClub}
+        label={t("beachclub.label")}
+        caption={t("beachclub.caption")}
+        ratio="6336 / 2688"
+      />
+      <IndustrialFooter />
     </main>
   );
 }

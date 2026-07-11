@@ -1,37 +1,7 @@
 {
   "meta": {
     "title": "Armatis Yachts",
-    "description": "ARMATIS 107 — un motor yacht italiano progettato per prestazioni, comfort, durabilità e una raffinata semplicità.",
-    "pages": {
-      "home": {
-        "title": "Armatis Yachts",
-        "description": "ARMATIS 107 — un motor yacht italiano progettato per prestazioni, comfort, durabilità e una raffinata semplicità."
-      },
-      "yacht107": {
-        "title": "ARMATIS 107",
-        "description": "L'ARMATIS 107 — un motor yacht italiano di 30 metri definito da spazio e grazia. Specifiche complete, interni e galleria."
-      },
-      "company": {
-        "title": "Azienda",
-        "description": "ARMATIS è un cantiere navale italiano che realizza motor yacht di alta qualità con un approccio moderno e industriale — progettati, ingegnerizzati e costruiti in-house in Italia."
-      },
-      "manufacturing": {
-        "title": "Produzione",
-        "description": "Dentro la piattaforma produttiva ARMATIS — strutture dedicate, produzione avanzata di compositi, robotica e R&D in-house."
-      },
-      "contact": {
-        "title": "Contatti",
-        "description": "Contatta ARMATIS — richieste, informazioni e stampa."
-      }
-    }
-  },
-  "nav": {
-    "yacht107": "Il 107",
-    "company": "Azienda",
-    "manufacturing": "Produzione",
-    "contact": "Contatti",
-    "menu": "Menu",
-    "close": "Chiudi"
+    "description": "ARMATIS 107 — un motor yacht italiano progettato per prestazioni, comfort, durabilità e una raffinata semplicità."
   },
   "brand": {
     "positioning": "ARMATIS è un cantiere navale italiano dedicato alla creazione di motor yacht di alta qualità attraverso un approccio moderno e industriale alla produzione nautica.",
@@ -39,6 +9,18 @@
     "spaces": "ARMATIS si dedica inoltre a ripensare gli spazi di vita a bordo. I nostri yacht sono progettati per offrire volumi eccezionali, layout intelligenti e una nuova interpretazione del comfort e della fruibilità — superando gli standard convenzionali della categoria pur mantenendo proporzioni eleganti ed equilibrate.",
     "production": "Piuttosto che affidarsi solo all'artigianato tradizionale, ARMATIS sta sviluppando un sistema produttivo scalabile, concepito per mantenere lo stesso livello di precisione, finitura e qualità ingegneristica dal primo yacht a ogni yacht successivo.",
     "closing": "Con sede in Italia, ARMATIS unisce design senza tempo, ingegneria moderna e competenza manifatturiera per creare yacht che offrono prestazioni, comfort, durabilità e raffinata semplicità."
+  },
+  "home": {
+    "eyebrow": "Motor Yacht Italiani",
+    "subtitle": "Seleziona un'esperienza",
+    "enter": "Entra",
+    "variants": {
+      "industrial": { "name": "Industrial", "note": "Tecnico, guidato dall'ingegneria" },
+      "wave": { "name": "Wave", "note": "Movimento interattivo distintivo" },
+      "cinematic": { "name": "Cinematic", "note": "Galleria immersiva in profondità" },
+      "voyage": { "name": "Voyage", "note": "Composizione guidata dallo scorrimento" },
+      "film": { "name": "Film", "note": "Sequenza d'apertura" }
+    }
   },
   "industrial": {
     "category": "Motor Yacht",
@@ -58,7 +40,7 @@
       "body": "ARMATIS realizza motor yacht di alta qualità con un approccio moderno e industriale — tecnologie compositi avanzate, sviluppo guidato dall'ingegneria e un sistema produttivo scalabile che mantiene la stessa precisione, finitura e affidabilità dal primo yacht a ogni yacht successivo."
     },
     "spec": {
-      "index": "01",
+      "index": "02",
       "label": "Specifiche",
       "items": {
         "loa": "Lunghezza fuori tutto",
@@ -107,248 +89,6 @@
       "design": "Disegno UE registrato n.:"
     }
   },
-  "homeTeasers": {
-    "yacht": {
-      "index": "02",
-      "label": "Il 107",
-      "title": "Trenta metri, ridefiniti",
-      "body": "Volumi ingegnerizzati, layout intelligenti e una presenza discreta e sicura in mare — l'ARMATIS 107 supera le convenzioni della sua categoria mantenendo ogni proporzione in equilibrio.",
-      "cta": "Scopri il 107"
-    },
-    "manufacturing": {
-      "index": "03",
-      "label": "Produzione",
-      "title": "Una piattaforma. Ogni disciplina in-house.",
-      "facilities": {
-        "mould": {
-          "title": "Modelli & Stampi",
-          "blurb": "Lavorazioni CNC a 5 assi e stampa 3D di grande formato producono modelli e stampi in composito ad alta precisione — piena indipendenza nelle attrezzature."
-        },
-        "lamination": {
-          "title": "Laminazione Compositi",
-          "blurb": "Scafo, sovrastruttura e coperta sono realizzati con tecnologie avanzate di laminazione e infusione sottovuoto."
-        },
-        "assembly": {
-          "title": "Assemblaggio & Allestimento",
-          "blurb": "Propulsione, impianti tecnici e interni vengono installati e collaudati in una struttura dedicata all'allestimento."
-        }
-      },
-      "cta": "Esplora la produzione"
-    },
-    "company": {
-      "quote": "Disciplina industriale, tecnologia avanzata e visione a lungo termine — al servizio di yacht italiani senza tempo.",
-      "cta": "L'azienda"
-    }
-  },
-  "yacht107": {
-    "hero": {
-      "label": "Motor Yacht",
-      "title": "ARMATIS 107",
-      "kicker": "Defined by Space & Grace"
-    },
-    "innovation": {
-      "index": "02",
-      "label": "Innovazione a bordo",
-      "title": "Ingegneria oltre le convenzioni",
-      "stats": {
-        "solar": "Impianto solare integrato",
-        "generator": "Riduzione ore generatore",
-        "interiors": "Installazione interni più rapida"
-      },
-      "items": {
-        "solar": {
-          "label": "Energia solare & silenziosa",
-          "body": "Un impianto solare integrato da 7,5 kW con carichi hotel supportati da batterie riduce drasticamente le ore di generatore — notti più silenziose all'ancora, meno emissioni, meno rumore."
-        },
-        "stability": {
-          "label": "Monitoraggio digitale dell'assetto",
-          "body": "Un sistema di bordo brevettato legge continuamente trim e inclinazione, offrendo a ospiti ed equipaggio una consapevolezza in tempo reale dell'equilibrio dell'imbarcazione."
-        },
-        "platform": {
-          "label": "Piattaforma estraibile",
-          "body": "Una piattaforma estraibile brevettata e a ingombro ridotto trasforma volumi interni altrimenti inutilizzati in spazi esterni funzionali."
-        },
-        "interiors": {
-          "label": "Interni modulari",
-          "body": "Strutture interne in alluminio pre-ingegnerizzate sostituiscono la falegnameria tradizionale — costruite con precisione in officina e installate in una frazione del tempo."
-        }
-      }
-    },
-    "ctaBand": {
-      "line": "Vivi l'ARMATIS 107.",
-      "button": "Richiedi informazioni"
-    }
-  },
-  "company": {
-    "hero": {
-      "label": "Azienda",
-      "title": "Un approccio industriale alla nautica italiana",
-      "kicker": "Made in Italy — interamente in-house"
-    },
-    "story": {
-      "index": "01",
-      "label": "L'azienda",
-      "title": "Ogni fase, sotto lo stesso tetto",
-      "body": "ARMATIS progetta, ingegnerizza e costruisce i propri yacht interamente in-house — dalle attrezzature e strutture composite agli impianti, agli interni e al collaudo. Controllare ogni fase fondamentale della produzione all'interno di un'unica struttura operativa è il modo in cui garantiamo qualità costante, consegne affidabili e uno standard costruttivo che non varia da scafo a scafo."
-    },
-    "whyItaly": {
-      "index": "02",
-      "label": "Perché l'Italia",
-      "title": "Radicati dove la nautica prende forma",
-      "items": {
-        "epicentre": {
-          "label": "L'epicentro",
-          "body": "L'Italia è il centro mondiale di eccellenza per il design e la costruzione di yacht — la patria degli standard su cui l'industria si misura."
-        },
-        "ecosystem": {
-          "label": "L'ecosistema",
-          "body": "Una rete unica di fornitori specializzati, maestranze qualificate e know-how nautico accompagna ogni fase della costruzione."
-        },
-        "madeInItaly": {
-          "label": "Made in Italy",
-          "body": "Da Milano al cantiere di Brindisi, ARMATIS costruisce interamente in Italia — contribuendo, nel lungo periodo, all'industria a cui appartiene."
-        }
-      }
-    },
-    "positioning": "ARMATIS rappresenta una nuova interpretazione della produzione nautica italiana — fondata su disciplina industriale, tecnologia avanzata, ricerca e visione a lungo termine.",
-    "ctaBand": {
-      "line": "Incontra ARMATIS.",
-      "button": "Contattaci"
-    }
-  },
-  "manufacturing": {
-    "hero": {
-      "label": "Produzione",
-      "title": "La piattaforma produttiva",
-      "kicker": "Ingegneria dei compositi in-house · Brindisi, Italia",
-      "readout": {
-        "facilities": "Strutture",
-        "platforms": "Piattaforme"
-      }
-    },
-    "facilities": {
-      "index": "01",
-      "label": "Modello produttivo",
-      "title": "Tre strutture. Un unico flusso integrato.",
-      "intro": "Ogni fase fondamentale della costruzione — dalle attrezzature al varo — avviene all'interno del sistema produttivo ARMATIS, sotto un unico standard ingegneristico.",
-      "items": {
-        "mould": {
-          "title": "Modelli & Stampi",
-          "body": "Modelli e stampi in composito ad alta precisione, prodotti con lavorazioni CNC a 5 assi e stampa 3D di grande formato — l'asset strategico che garantisce indipendenza nelle attrezzature e geometrie ripetibili."
-        },
-        "lamination": {
-          "title": "Laminazione Compositi",
-          "body": "Scafo, sovrastruttura e coperta vengono laminati in una struttura dedicata con tecnologie avanzate di infusione, concepita per grandi componenti strutturali."
-        },
-        "assembly": {
-          "title": "Assemblaggio & Allestimento",
-          "body": "Propulsione, impianti meccanici, elettrici e idraulici, interni e collaudo finale — completati in una struttura riservata esclusivamente all'allestimento."
-        }
-      }
-    },
-    "phases": {
-      "index": "02",
-      "label": "Crescita",
-      "title": "Una scala controllata, per fasi",
-      "items": {
-        "one": {
-          "label": "Fase I",
-          "body": "Produzione iniziale — stabilizzazione dei processi, sviluppo del team e integrazione dei fornitori attorno ai primi scafi."
-        },
-        "two": {
-          "label": "Fase II",
-          "body": "Crescita progressiva — la capacità si espande di pari passo con la domanda, la maturità organizzativa e l'efficienza industriale."
-        },
-        "three": {
-          "label": "Fase III",
-          "body": "Pieno regime industriale — linee di produzione parallele e una forza lavoro ottimizzata, con lo stesso standard dello scafo numero uno."
-        }
-      }
-    },
-    "tech": {
-      "index": "03",
-      "label": "Produzione avanzata",
-      "title": "Un ambiente digitale ad alta precisione",
-      "items": {
-        "printing": {
-          "term": "Stampa 3D gantry",
-          "detail": "Grandi modelli, attrezzature e dime"
-        },
-        "robotics": {
-          "term": "Finitura robotizzata",
-          "detail": "Verniciatura e trattamenti superficiali automatizzati"
-        },
-        "cnc": {
-          "term": "CNC gantry a 5 assi",
-          "detail": "Lavorazioni ad alta precisione"
-        },
-        "cadcam": {
-          "term": "CAD/CAM digitale",
-          "detail": "Dal modello allo stampo, senza perdite di traduzione"
-        },
-        "planning": {
-          "term": "Pianificazione digitale della produzione",
-          "detail": "Una produzione monitorata e misurabile"
-        }
-      }
-    },
-    "innovation": {
-      "index": "04",
-      "label": "Innovazione di processo",
-      "title": "Logica industriale, artigianalità nautica",
-      "stats": {
-        "interiors": "Installazione interni più rapida",
-        "weight": "Obiettivo di riduzione del peso strutturale"
-      },
-      "items": {
-        "interiors": {
-          "title": "Interni modulari in alluminio",
-          "body": "Strutture pre-ingegnerizzate e arredi costruiti in officina sostituiscono la falegnameria di bordo — precisione plug-and-install con tempi di installazione drasticamente ridotti."
-        },
-        "harness": {
-          "title": "Architettura elettrica ingegnerizzata",
-          "body": "Sistemi di cablaggio pre-assemblati di ispirazione automotive riducono i tempi di cablaggio a bordo, abbattono i margini di errore e standardizzano la produzione in serie."
-        },
-        "composites": {
-          "title": "R&D sui compositi avanzati",
-          "body": "Un programma di ricerca strutturato verso strutture più leggere e resistenti, attraverso laminati ibridi e infusione ottimizzata."
-        },
-        "lab": {
-          "title": "Laboratorio prove in-house",
-          "body": "Prove di trazione, flessione e validazione dei laminati in sede — ogni scelta strutturale è supportata da dati misurati."
-        }
-      }
-    },
-    "green": {
-      "index": "05",
-      "label": "Produzione sostenibile",
-      "title": "Costruito con energia rinnovabile",
-      "body": "La produzione è alimentata da energia rinnovabile grazie a un impianto fotovoltaico sul tetto, con ventilazione avanzata e filtrazione al carbonio che garantiscono processi compositi puliti e controllati — una struttura allineata al Green Deal europeo.",
-      "productLead": "La stessa filosofia naviga con ogni yacht",
-      "stats": {
-        "solar": "Impianto solare a bordo",
-        "generator": "Riduzione ore generatore"
-      }
-    },
-    "rnd": {
-      "index": "06",
-      "label": "R&D & collaborazione",
-      "title": "Un'ingegneria che non si ferma",
-      "body": "Un centro di ingegneria interno dedicato a carene, strutture composite avanzate, costruzione leggera e simulazione digitale — sviluppato in collaborazione strutturata con università e centri di ricerca italiani, dai progetti congiunti ai programmi per giovani talenti."
-    },
-    "platforms": {
-      "index": "07",
-      "label": "Gamma di piattaforme",
-      "title": "Una famiglia, nata da un unico sistema",
-      "meters": "m",
-      "statusDevelopment": "In sviluppo",
-      "statusProduction": "ARMATIS 107 — in produzione"
-    },
-    "ctaBand": {
-      "line": "Parla di una costruzione con ARMATIS.",
-      "button": "Contattaci"
-    }
-  },
   "contact": {
     "title": "Get in touch",
     "intro": "Raccontaci la tua richiesta e il nostro team ti risponderà a breve.",
@@ -373,15 +113,6 @@
     "error": "Si è verificato un errore. Riprova o scrivici direttamente.",
     "close": "Chiudi",
     "required": "Compila i campi obbligatori."
-  },
-  "contactPage": {
-    "hero": {
-      "label": "Contatti",
-      "title": "Get in touch",
-      "kicker": "Milano — Brindisi"
-    },
-    "detailsLabel": "Dettagli",
-    "emailLabel": "E-mail"
   },
   "privacy": {
     "title": "Privacy & Protezione dei Dati",
@@ -421,5 +152,9 @@
     "body": "Utilizziamo solo i cookie essenziali necessari per le preferenze di lingua e visualizzazione — nessun tracciamento o pubblicità. Consulta la nostra Privacy Policy per i dettagli.",
     "accept": "Accetta",
     "privacy": "Privacy Policy"
+  },
+  "common": {
+    "back": "Indietro",
+    "language": "Lingua"
   }
 }

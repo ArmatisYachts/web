@@ -4,13 +4,10 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Jost, Geist_Mono } from "next/font/google";
 import { routing } from "@/i18n/routing";
-import { SITE_URL } from "@/lib/site";
 import { ThemeScript } from "@/components/shared/theme-script";
-import { SiteHeader } from "@/components/shared/site-header";
 import { ContactDialog } from "@/components/shared/contact-dialog";
 import { PrivacyDialog } from "@/components/shared/privacy-dialog";
 import { CookieBanner } from "@/components/shared/cookie-banner";
-import { IndustrialFooter } from "@/components/variants/industrial/industrial-footer";
 import "../globals.css";
 
 const display = Jost({
@@ -39,20 +36,8 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "meta" });
   return {
-    metadataBase: new URL(SITE_URL),
-    title: {
-      default: t("title"),
-      template: `%s — ${t("title")}`,
-    },
+    title: t("title"),
     description: t("description"),
-    openGraph: {
-      type: "website",
-      siteName: t("title"),
-      images: [
-        { url: "/assets/og/og-default.jpg", width: 1200, height: 630 },
-      ],
-    },
-    twitter: { card: "summary_large_image" },
   };
 }
 
@@ -78,9 +63,7 @@ export default async function LocaleLayout({
       </head>
       <body className="min-h-full bg-surface text-fg">
         <NextIntlClientProvider>
-          <SiteHeader />
           {children}
-          <IndustrialFooter />
           <ContactDialog />
           <PrivacyDialog />
           <CookieBanner />

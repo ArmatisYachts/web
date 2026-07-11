@@ -4,6 +4,8 @@ import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import { LanguageSwitcher } from "@/components/shared/language-switcher";
+import { ArmatisWordmark } from "@/components/shared/armatis-wordmark";
 import { WavePattern } from "@/components/shared/wave-pattern";
 import { ARMATIS_107, RENDERS } from "@/lib/yacht";
 
@@ -121,22 +123,34 @@ export function IndustrialHero() {
         }}
       />
 
-      {/* ---- Interface grid (top padding clears the fixed site header) ---- */}
-      <div className="pointer-events-none absolute inset-0 z-40 grid grid-rows-[auto_1fr_auto] p-6 pt-20 md:p-10 md:pt-24">
+      {/* ---- Interface grid ---- */}
+      <div className="pointer-events-none absolute inset-0 z-40 grid grid-rows-[auto_1fr_auto] p-6 md:p-10">
         {/* Top row */}
         <div className="flex items-start justify-between">
-          <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-white/40">
-            {t("category")}
-          </p>
+          <div>
+            <Link
+              href="/"
+              className="pointer-events-auto inline-block transition-opacity hover:opacity-60"
+              aria-label="ARMATIS"
+            >
+              <ArmatisWordmark variant="light" height={17} priority />
+            </Link>
+            <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.24em] text-white/40">
+              {t("category")}
+            </p>
+          </div>
 
-          <dl className="space-y-1 text-right font-mono text-[10px] uppercase tracking-[0.16em]">
-            {readout.map(([label, value]) => (
-              <div key={label} className="flex justify-end gap-3">
-                <dt className="text-white/35">{label}</dt>
-                <dd className="tabular-nums text-bone">{value}</dd>
-              </div>
-            ))}
-          </dl>
+          <div className="flex flex-col items-end gap-3">
+            <LanguageSwitcher className="text-bone" />
+            <dl className="space-y-1 text-right font-mono text-[10px] uppercase tracking-[0.16em]">
+              {readout.map(([label, value]) => (
+                <div key={label} className="flex justify-end gap-3">
+                  <dt className="text-white/35">{label}</dt>
+                  <dd className="tabular-nums text-bone">{value}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
         </div>
 
         {/* Center — giant model number + tagline */}
@@ -160,12 +174,12 @@ export function IndustrialHero() {
             <p>{t("archiveLine")}</p>
           </div>
 
-          <Link
-            href="/armatis-107"
+          <a
+            href="#specs"
             className="armatis-cta pointer-events-auto bg-bone px-7 py-3.5 font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-ink transition-colors duration-300 hover:bg-white"
           >
             {t("cta")}
-          </Link>
+          </a>
         </div>
       </div>
 

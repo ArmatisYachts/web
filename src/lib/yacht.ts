@@ -28,7 +28,6 @@ export const ARMATIS_107 = {
 export const RENDERS = {
   heroProfile: "/assets/renders/05.jpg", // dramatic low-angle side profile
   profileGolden: "/assets/renders/01_A.jpg",
-  profileGoldenAlt: "/assets/renders/01_B.jpg",
   aerial: "/assets/renders/02.jpg",
   aerialBW: "/assets/renders/02-bw.jpg", // black & white aerial
   sterns: "/assets/renders/07.jpg", // stern with ARMATIS 107 badge
@@ -41,3 +40,18 @@ export const RENDERS = {
   interiorGuest: "/assets/renders/GSC1.jpg",
   interiorBeachClub: "/assets/renders/BC1.jpg",
 } as const;
+
+export const GALLERY_ORDER: (keyof typeof RENDERS)[] = [
+  "heroProfile",
+  "profileGolden",
+  "aerial",
+  "foredeckSpa",
+  "beachPlatform",
+  "interiorBeachClub",
+  "interiorSalon",
+  "interiorMaster",
+  "interiorGuest",
+  "sterns",
+  "bowOn",
+  "sideStatic",
+];
