@@ -3,9 +3,10 @@ import { RevealImage } from "@/components/shared/reveal-image";
 import { RENDERS } from "@/lib/yacht";
 import { cn } from "@/lib/utils";
 
-// Editorial gallery — an asymmetric, staggered composition (wide/portrait
-// pairings, offset columns, one cinematic full-bleed row) instead of a
-// uniform stack. Reveal-on-scroll colourising as everywhere else.
+// Editorial gallery — staggered widths and offsets give the composition its
+// rhythm while every render keeps its native aspect ratio (all sources are
+// ~16:9 landscape), so nothing is ever cropped. Reveal-on-scroll colourising
+// as everywhere else.
 const LAYOUT: {
   src: string;
   captionKey: string;
@@ -18,53 +19,53 @@ const LAYOUT: {
     src: RENDERS.sterns,
     captionKey: "stern",
     span: "md:col-span-7",
-    ratio: "aspect-[4/3]",
-    sizes: "(max-width: 768px) 100vw, 60vw",
+    ratio: "aspect-[2688/1536]",
+    sizes: "(max-width: 768px) 100vw, 660px",
   },
   {
     src: RENDERS.beachPlatform,
     captionKey: "terrace",
     span: "md:col-span-5",
-    ratio: "aspect-[3/4]",
-    offset: "md:mt-24",
-    sizes: "(max-width: 768px) 100vw, 40vw",
+    ratio: "aspect-[2688/1536]",
+    offset: "md:mt-28",
+    sizes: "(max-width: 768px) 100vw, 460px",
   },
   {
     src: RENDERS.profileGolden,
     captionKey: "profile",
     span: "md:col-span-12",
-    ratio: "aspect-[16/9] md:aspect-[21/9]",
-    sizes: "100vw",
-  },
-  {
-    src: RENDERS.interiorMaster,
-    captionKey: "master",
-    span: "md:col-span-5",
-    ratio: "aspect-[3/4]",
-    sizes: "(max-width: 768px) 100vw, 40vw",
+    ratio: "aspect-[2752/1536]",
+    sizes: "(max-width: 768px) 100vw, 1152px",
   },
   {
     src: RENDERS.foredeckSpa,
     captionKey: "foredeck",
-    span: "md:col-span-7",
-    ratio: "aspect-[4/3]",
-    offset: "md:mt-24",
-    sizes: "(max-width: 768px) 100vw, 60vw",
+    span: "md:col-span-5",
+    ratio: "aspect-[2688/1536]",
+    offset: "md:mt-28",
+    sizes: "(max-width: 768px) 100vw, 460px",
   },
   {
     src: RENDERS.heroProfile,
     captionKey: "underway",
     span: "md:col-span-7",
-    ratio: "aspect-[4/3]",
-    sizes: "(max-width: 768px) 100vw, 60vw",
+    ratio: "aspect-[2752/1536]",
+    sizes: "(max-width: 768px) 100vw, 660px",
+  },
+  {
+    src: RENDERS.interiorMaster,
+    captionKey: "master",
+    span: "md:col-span-7",
+    ratio: "aspect-[2752/1536]",
+    sizes: "(max-width: 768px) 100vw, 660px",
   },
   {
     src: RENDERS.interiorGuest,
     captionKey: "guest",
     span: "md:col-span-5",
-    ratio: "aspect-[3/4]",
-    offset: "md:mt-24",
-    sizes: "(max-width: 768px) 100vw, 40vw",
+    ratio: "aspect-[2752/1536]",
+    offset: "md:mt-28",
+    sizes: "(max-width: 768px) 100vw, 460px",
   },
 ];
 
@@ -83,7 +84,7 @@ export function IndustrialGallery() {
           <span>{t("label")}</span>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 items-start gap-10 md:grid-cols-12 md:gap-x-8 md:gap-y-24">
+        <div className="mt-14 grid grid-cols-1 items-start gap-10 md:grid-cols-12 md:gap-x-8 md:gap-y-20">
           {LAYOUT.map((item) => {
             const caption = t(`captions.${item.captionKey}`);
             return (
