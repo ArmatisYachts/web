@@ -7,7 +7,6 @@ import { IndustrialBand } from "@/components/variants/industrial/industrial-band
 import { IndustrialSpecs } from "@/components/variants/industrial/industrial-specs";
 import { IndustrialFeature } from "@/components/variants/industrial/industrial-feature";
 import { IndustrialGallery } from "@/components/variants/industrial/industrial-gallery";
-import { IndustrialFooter } from "@/components/variants/industrial/industrial-footer";
 import { ARMATIS_107, RENDERS } from "@/lib/yacht";
 
 export async function generateMetadata({
@@ -47,7 +46,6 @@ export default async function HomePage({
         caption={t("beachclub.caption")}
         ratio="6336 / 2688"
       />
-      <IndustrialFooter />
     </main>
   );
 }

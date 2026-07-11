@@ -98,6 +98,11 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 70%, 86% 100%, 0 100%);
 }
 
+/* Anchor targets land below the fixed site header */
+section[id] {
+  scroll-margin-top: 5rem;
+}
+
 /* Interactive elements show the hand cursor (native <button> defaults to arrow) */
 button:not(:disabled),
 [role="button"]:not(:disabled),

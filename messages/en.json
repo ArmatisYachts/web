@@ -25,6 +25,14 @@
       }
     }
   },
+  "nav": {
+    "yacht107": "The 107",
+    "company": "Company",
+    "manufacturing": "Manufacturing",
+    "contact": "Contact",
+    "menu": "Menu",
+    "close": "Close"
+  },
   "brand": {
     "positioning": "ARMATIS is an Italian yacht builder focused on creating high-quality motor yachts through a modern and industrial approach to yacht manufacturing.",
     "vision": "Our vision is built around in-house production, process control, and sustainable long-term quality. By combining advanced composite technologies, engineering-driven development, and carefully structured production methods, we aim to deliver yachts with consistent build quality and exceptional reliability.",

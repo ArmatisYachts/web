@@ -6,9 +6,11 @@ import { Jost, Geist_Mono } from "next/font/google";
 import { routing } from "@/i18n/routing";
 import { SITE_URL } from "@/lib/site";
 import { ThemeScript } from "@/components/shared/theme-script";
+import { SiteHeader } from "@/components/shared/site-header";
 import { ContactDialog } from "@/components/shared/contact-dialog";
 import { PrivacyDialog } from "@/components/shared/privacy-dialog";
 import { CookieBanner } from "@/components/shared/cookie-banner";
+import { IndustrialFooter } from "@/components/variants/industrial/industrial-footer";
 import "../globals.css";
 
 const display = Jost({
@@ -76,7 +78,9 @@ export default async function LocaleLayout({
       </head>
       <body className="min-h-full bg-surface text-fg">
         <NextIntlClientProvider>
+          <SiteHeader />
           {children}
+          <IndustrialFooter />
           <ContactDialog />
           <PrivacyDialog />
           <CookieBanner />

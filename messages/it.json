@@ -25,6 +25,14 @@
       }
     }
   },
+  "nav": {
+    "yacht107": "Il 107",
+    "company": "Azienda",
+    "manufacturing": "Produzione",
+    "contact": "Contatti",
+    "menu": "Menu",
+    "close": "Chiudi"
+  },
   "brand": {
     "positioning": "ARMATIS è un cantiere navale italiano dedicato alla creazione di motor yacht di alta qualità attraverso un approccio moderno e industriale alla produzione nautica.",
     "vision": "La nostra visione si fonda sulla produzione in-house, sul controllo dei processi e su una qualità sostenibile nel tempo. Combinando tecnologie compositi avanzate, sviluppo guidato dall'ingegneria e metodi produttivi accuratamente strutturati, vogliamo offrire yacht con una qualità costruttiva costante e un'affidabilità eccezionale.",

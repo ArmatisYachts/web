@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { WavePattern } from "@/components/shared/wave-pattern";
 import { ArmatisWordmark } from "@/components/shared/armatis-wordmark";
 import { openPrivacy } from "@/components/shared/privacy-dialog";
+import { useOverDark } from "@/components/shared/use-over-dark";
 import { cn } from "@/lib/utils";
 
 const KEY = "armatis-cookie-consent";
@@ -12,8 +13,9 @@ const KEY = "armatis-cookie-consent";
 export function CookieBanner() {
   const t = useTranslations("cookies");
   const [show, setShow] = useState(false);
-  const [overDark, setOverDark] = useState(true); // first paint sits over the dark hero
   const ref = useRef<HTMLDivElement>(null);
+  // Take the OPPOSITE colour of whatever is behind the banner (scroll + navigation aware).
+  const overDark = useOverDark(ref);
 
   useEffect(() => {
     try {
@@ -22,36 +24,6 @@ export function CookieBanner() {
       setShow(true);
     }
   }, []);
-
-  // Take the OPPOSITE colour of whatever is behind the banner as the user scrolls.
-  useEffect(() => {
-    if (!show) return;
-    let raf = 0;
-    const update = () => {
-      const el = ref.current;
-      if (!el) return;
-      const r = el.getBoundingClientRect();
-      const y = r.top + r.height / 2;
-      let dark = false;
-      document.querySelectorAll("[data-armatis-dark]").forEach((d) => {
-        const dr = (d as HTMLElement).getBoundingClientRect();
-        if (y >= dr.top && y <= dr.bottom) dark = true;
-      });
-      setOverDark(dark);
-    };
-    const onScroll = () => {
-      cancelAnimationFrame(raf);
-      raf = requestAnimationFrame(update);
-    };
-    update();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll);
-    return () => {
-      cancelAnimationFrame(raf);
-      window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onScroll);
-    };
-  }, [show]);
 
   function accept() {
     try {
