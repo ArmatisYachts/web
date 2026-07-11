@@ -2,19 +2,21 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { RevealImage } from "@/components/shared/reveal-image";
-import { renderRatio } from "@/lib/yacht";
-import { cn } from "@/lib/utils";
+import { renderRatio, renderAspect } from "@/lib/yacht";
 
 export type RailItem = { src: string; caption: string };
 
+// Tallest a frame may get. Below this width the slide is simply full-width, so
+// on phones nothing is constrained; on desktop it keeps the 16:9 frames from
+// towering over the panoramas.
+const MAX_FRAME_HEIGHT = 560;
+
 // A horizontally scrolled card of renders — arrows, snap, progress rail.
-// Nothing is ever cropped, and no frame is ever cut by the card edge:
-//   · below xl the slide takes the card's width (minus a peek) and the native
-//     ratio gives its height — one whole image per view;
-//   · from xl the rail switches to a fixed height and each frame takes the
-//     width its ratio implies, so the panoramas read wider than the rest.
-// The widest render (2.49:1) still fits the scrollport at that height, so every
-// slide is fully visible at every breakpoint.
+// One frame at a time: every slide takes the card's full width, so no part of
+// the next image ever bleeds into view. The frame keeps the file's native ratio
+// (its height simply follows), so nothing is cropped either. Frames are centred
+// vertically, which keeps the card a stable height as the panoramas — shorter
+// than the rest — scroll past.
 export function GalleryRail({
   label,
   items,
@@ -51,7 +53,6 @@ export function GalleryRail({
 
     const offs = offsets();
     if (!offs.length) return;
-    // the slide resting at the scrollport's left edge (last one once we bottom out)
     let index = 0;
     offs.forEach((o, i) => {
       if (o <= x + 4) index = i;
@@ -96,10 +97,10 @@ export function GalleryRail({
 
   // aria-disabled rather than disabled: a disabled button loses focus mid-interaction
   const arrow = (off: boolean) =>
-    cn(
+    [
       "flex h-9 w-9 items-center justify-center border border-hairline-strong text-fg transition-colors duration-300",
-      off ? "opacity-20" : "hover:bg-fg hover:text-surface"
-    );
+      off ? "opacity-20" : "hover:bg-fg hover:text-surface",
+    ].join(" ");
 
   return (
     <div className="border border-hairline bg-surface-2/50">
@@ -157,38 +158,35 @@ export function GalleryRail({
         role="group"
         aria-label={label}
         tabIndex={0}
-        className="armatis-rail flex snap-x snap-mandatory items-end gap-5 overflow-x-auto scroll-px-5 p-5 xl:gap-6 xl:scroll-px-6 xl:p-6"
+        className="armatis-rail flex snap-x snap-mandatory items-center gap-5 overflow-x-auto scroll-px-5 p-5 md:gap-6 md:scroll-px-6 md:p-6"
       >
-        {items.map((item, i) => (
-          <figure
-            key={item.src}
-            className="w-[calc(100%-2.5rem)] flex-none snap-start xl:w-auto"
-          >
+        {items.map((item) => (
+          <div key={item.src} className="w-full flex-none snap-start">
             <div
-              className="relative w-full overflow-hidden border border-hairline xl:h-[420px] xl:w-auto"
-              style={{ aspectRatio: renderRatio(item.src) }}
+              className="relative mx-auto w-full overflow-hidden border border-hairline"
+              style={{
+                aspectRatio: renderRatio(item.src),
+                // cap the height of the taller frames so the panoramas don't sit
+                // in a deep mat — every frame stays inside one calm card height
+                maxWidth: `${Math.round(MAX_FRAME_HEIGHT * renderAspect(item.src))}px`,
+              }}
             >
               <RevealImage
                 src={item.src}
                 alt={item.caption}
                 fill
                 threshold={0.25}
-                sizes="(max-width: 1279px) 92vw, 1060px"
+                sizes="(max-width: 768px) 92vw, 1120px"
               />
             </div>
-            <figcaption
-              className={cn(
-                "mt-3 font-mono text-[10px] uppercase tracking-[0.2em] text-fg-mute transition-opacity duration-300",
-                i === current ? "opacity-100" : "opacity-0"
-              )}
-            >
-              {item.caption}
-            </figcaption>
-          </figure>
+          </div>
         ))}
       </div>
 
       <div className="px-5 pb-5 md:px-6 md:pb-6">
+        <p className="mb-4 font-mono text-[10px] uppercase tracking-[0.2em] text-fg-mute">
+          {items[current]?.caption}
+        </p>
         <div className="relative h-px w-full bg-hairline">
           <div
             className="absolute top-0 h-px bg-fg-mute transition-[margin] duration-500 ease-out"

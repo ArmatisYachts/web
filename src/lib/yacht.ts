@@ -66,3 +66,9 @@ export function renderRatio(src: string): string {
   const d = RENDER_DIMS[src];
   return d ? `${d.w} / ${d.h}` : "16 / 9";
 }
+
+// Native ratio as a number (width ÷ height).
+export function renderAspect(src: string): number {
+  const d = RENDER_DIMS[src];
+  return d ? d.w / d.h : 16 / 9;
+}
