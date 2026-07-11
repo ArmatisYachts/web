@@ -103,6 +103,15 @@ section[id] {
   scroll-margin-top: 5rem;
 }
 
+/* Horizontal gallery rails scroll without a visible scrollbar (arrows + swipe) */
+.armatis-rail {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.armatis-rail::-webkit-scrollbar {
+  display: none;
+}
+
 /* Interactive elements show the hand cursor (native <button> defaults to arrow) */
 button:not(:disabled),
 [role="button"]:not(:disabled),

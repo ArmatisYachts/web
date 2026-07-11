@@ -81,19 +81,30 @@
     "gallery": {
       "index": "03",
       "label": "Galleria",
+      "prev": "Immagine precedente",
+      "next": "Immagine successiva",
       "captions": {
         "profile": "Profilo",
-        "underway": "In navigazione",
         "stern": "Poppa",
-        "foredeck": "Prua",
-        "terrace": "Terrazza beach",
+        "salon": "Salone principale",
         "master": "Suite armatoriale",
-        "guest": "Cabina ospiti"
+        "guest": "Cabina ospiti",
+        "club": "Beach club",
+        "aerial": "Vista aerea",
+        "terrace": "Terrazza sul mare",
+        "foredeck": "Ponte di prua",
+        "underway": "In navigazione"
+      },
+      "interiors": {
+        "label": "Interni",
+        "title": "Il volume, sfruttato con intelligenza",
+        "body": "Un salone principale a tutto baglio, una suite armatoriale che occupa l'intera larghezza dello scafo e un beach club che apre lo scafo direttamente sull'acqua. Gli interni sono ingegnerizzati e allestiti in-house, con le stesse tolleranze della struttura che li sostiene."
+      },
+      "exteriors": {
+        "label": "Esterni",
+        "title": "Un profilo disegnato per il mare",
+        "body": "Lungo, basso e continuo da prua a poppa — con spazi esterni che restano vivibili, non decorativi: la spa di prua, il ponte di poppa ombreggiato e la piattaforma bagno a livello del mare."
       }
-    },
-    "beachclub": {
-      "label": "Interni — Beach club",
-      "caption": "Un beach club a livello del mare che apre lo scafo direttamente all'acqua."
     },
     "footer": {
       "hq": "Sede legale",

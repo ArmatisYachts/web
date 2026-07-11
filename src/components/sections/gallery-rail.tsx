@@ -1,0 +1,204 @@
+"use client";
+
+import { useCallback, useEffect, useRef, useState } from "react";
+import { RevealImage } from "@/components/shared/reveal-image";
+import { renderRatio } from "@/lib/yacht";
+import { cn } from "@/lib/utils";
+
+export type RailItem = { src: string; caption: string };
+
+// A horizontally scrolled card of renders — arrows, snap, progress rail.
+// Nothing is ever cropped, and no frame is ever cut by the card edge:
+//   · below xl the slide takes the card's width (minus a peek) and the native
+//     ratio gives its height — one whole image per view;
+//   · from xl the rail switches to a fixed height and each frame takes the
+//     width its ratio implies, so the panoramas read wider than the rest.
+// The widest render (2.49:1) still fits the scrollport at that height, so every
+// slide is fully visible at every breakpoint.
+export function GalleryRail({
+  label,
+  items,
+  prevLabel,
+  nextLabel,
+}: {
+  label: string;
+  items: RailItem[];
+  prevLabel: string;
+  nextLabel: string;
+}) {
+  const railRef = useRef<HTMLDivElement>(null);
+  const frame = useRef(0);
+  const [current, setCurrent] = useState(0);
+  const [atStart, setAtStart] = useState(true);
+  const [atEnd, setAtEnd] = useState(false);
+
+  const offsets = () => {
+    const el = railRef.current;
+    if (!el) return [];
+    const slides = Array.from(el.children) as HTMLElement[];
+    if (!slides.length) return [];
+    const base = slides[0].offsetLeft;
+    return slides.map((s) => s.offsetLeft - base);
+  };
+
+  const sync = useCallback(() => {
+    const el = railRef.current;
+    if (!el) return;
+    const max = el.scrollWidth - el.clientWidth;
+    const x = el.scrollLeft;
+    setAtStart(x <= 2);
+    setAtEnd(x >= max - 2);
+
+    const offs = offsets();
+    if (!offs.length) return;
+    // the slide resting at the scrollport's left edge (last one once we bottom out)
+    let index = 0;
+    offs.forEach((o, i) => {
+      if (o <= x + 4) index = i;
+    });
+    if (max - x <= 2) index = offs.length - 1;
+    setCurrent(index);
+  }, []);
+
+  const onScroll = () => {
+    if (frame.current) return;
+    frame.current = requestAnimationFrame(() => {
+      frame.current = 0;
+      sync();
+    });
+  };
+
+  useEffect(() => {
+    sync();
+    const el = railRef.current;
+    if (!el) return;
+    const ro = new ResizeObserver(sync);
+    ro.observe(el);
+    return () => {
+      ro.disconnect();
+      if (frame.current) cancelAnimationFrame(frame.current);
+    };
+  }, [sync]);
+
+  const step = (dir: -1 | 1) => {
+    const el = railRef.current;
+    if (!el) return;
+    if (dir === -1 ? atStart : atEnd) return;
+    const offs = offsets();
+    const next = Math.min(Math.max(current + dir, 0), offs.length - 1);
+    const max = el.scrollWidth - el.clientWidth;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    el.scrollTo({
+      left: Math.min(offs[next], max),
+      behavior: reduce ? "auto" : "smooth",
+    });
+  };
+
+  // aria-disabled rather than disabled: a disabled button loses focus mid-interaction
+  const arrow = (off: boolean) =>
+    cn(
+      "flex h-9 w-9 items-center justify-center border border-hairline-strong text-fg transition-colors duration-300",
+      off ? "opacity-20" : "hover:bg-fg hover:text-surface"
+    );
+
+  return (
+    <div className="border border-hairline bg-surface-2/50">
+      <div className="flex items-center justify-between gap-4 border-b border-hairline px-5 py-4 md:gap-6 md:px-6">
+        <div className="flex items-center gap-4 whitespace-nowrap font-mono text-[11px] uppercase tracking-[0.22em] text-fg-mute">
+          <span className="hidden h-px w-8 bg-hairline-strong sm:block" />
+          <span>{label}</span>
+        </div>
+
+        <div className="flex items-center gap-3 md:gap-4">
+          <span className="whitespace-nowrap font-mono text-[10px] tabular-nums tracking-[0.2em] text-fg-faint">
+            {String(current + 1).padStart(2, "0")} /{" "}
+            {String(items.length).padStart(2, "0")}
+          </span>
+          <div className="flex gap-2">
+            <button
+              type="button"
+              onClick={() => step(-1)}
+              aria-disabled={atStart}
+              aria-label={prevLabel}
+              className={arrow(atStart)}
+            >
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden>
+                <path
+                  d="M9 2 4 7l5 5"
+                  stroke="currentColor"
+                  strokeWidth="1"
+                  strokeLinecap="square"
+                />
+              </svg>
+            </button>
+            <button
+              type="button"
+              onClick={() => step(1)}
+              aria-disabled={atEnd}
+              aria-label={nextLabel}
+              className={arrow(atEnd)}
+            >
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden>
+                <path
+                  d="M5 2l5 5-5 5"
+                  stroke="currentColor"
+                  strokeWidth="1"
+                  strokeLinecap="square"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        ref={railRef}
+        onScroll={onScroll}
+        role="group"
+        aria-label={label}
+        tabIndex={0}
+        className="armatis-rail flex snap-x snap-mandatory items-end gap-5 overflow-x-auto scroll-px-5 p-5 xl:gap-6 xl:scroll-px-6 xl:p-6"
+      >
+        {items.map((item, i) => (
+          <figure
+            key={item.src}
+            className="w-[calc(100%-2.5rem)] flex-none snap-start xl:w-auto"
+          >
+            <div
+              className="relative w-full overflow-hidden border border-hairline xl:h-[420px] xl:w-auto"
+              style={{ aspectRatio: renderRatio(item.src) }}
+            >
+              <RevealImage
+                src={item.src}
+                alt={item.caption}
+                fill
+                threshold={0.25}
+                sizes="(max-width: 1279px) 92vw, 1060px"
+              />
+            </div>
+            <figcaption
+              className={cn(
+                "mt-3 font-mono text-[10px] uppercase tracking-[0.2em] text-fg-mute transition-opacity duration-300",
+                i === current ? "opacity-100" : "opacity-0"
+              )}
+            >
+              {item.caption}
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+
+      <div className="px-5 pb-5 md:px-6 md:pb-6">
+        <div className="relative h-px w-full bg-hairline">
+          <div
+            className="absolute top-0 h-px bg-fg-mute transition-[margin] duration-500 ease-out"
+            style={{
+              width: `${100 / items.length}%`,
+              marginLeft: `${(current * 100) / items.length}%`,
+            }}
+          />
+        </div>
+      </div>
+    </div>
+  );
+}

@@ -9,8 +9,9 @@ import { cn } from "@/lib/utils";
 // so the effect repeats every time — no permanent "revealed" state).
 export function RevealImage({
   className,
+  threshold = 0.45,
   ...imageProps
-}: ImageProps & { className?: string }) {
+}: ImageProps & { className?: string; threshold?: number }) {
   const ref = useRef<HTMLDivElement>(null);
   const [inView, setInView] = useState(false);
 
@@ -25,11 +26,11 @@ export function RevealImage({
 
     const io = new IntersectionObserver(
       ([entry]) => setInView(entry.isIntersecting),
-      { threshold: 0.45, rootMargin: "0px 0px -8% 0px" }
+      { threshold, rootMargin: "0px 0px -8% 0px" }
     );
     io.observe(el);
     return () => io.disconnect();
-  }, []);
+  }, [threshold]);
 
   return (
     <div ref={ref} className="absolute inset-0">

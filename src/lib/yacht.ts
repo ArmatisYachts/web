@@ -41,3 +41,28 @@ export const RENDERS = {
   interiorGuest: "/assets/renders/GSC1.jpg",
   interiorBeachClub: "/assets/renders/BC1.jpg",
 } as const;
+
+// Intrinsic pixel dimensions of every render. Layouts derive their aspect
+// ratio from here instead of guessing one — a forced ratio crops the yacht.
+export const RENDER_DIMS: Record<string, { w: number; h: number }> = {
+  [RENDERS.heroProfile]: { w: 2752, h: 1536 },
+  [RENDERS.profileGolden]: { w: 2752, h: 1536 },
+  [RENDERS.profileGoldenAlt]: { w: 2752, h: 1536 },
+  [RENDERS.aerial]: { w: 2624, h: 1472 },
+  [RENDERS.aerialBW]: { w: 2624, h: 1472 },
+  [RENDERS.sterns]: { w: 2688, h: 1536 },
+  [RENDERS.beachPlatform]: { w: 2688, h: 1536 },
+  [RENDERS.foredeckSpa]: { w: 2688, h: 1536 },
+  [RENDERS.bowOn]: { w: 2752, h: 1536 },
+  [RENDERS.sideStatic]: { w: 2688, h: 1536 },
+  [RENDERS.interiorSalon]: { w: 6528, h: 2624 },
+  [RENDERS.interiorMaster]: { w: 5504, h: 3072 },
+  [RENDERS.interiorGuest]: { w: 5504, h: 3072 },
+  [RENDERS.interiorBeachClub]: { w: 6336, h: 2688 },
+};
+
+// CSS `aspect-ratio` value for a render — always its native ratio.
+export function renderRatio(src: string): string {
+  const d = RENDER_DIMS[src];
+  return d ? `${d.w} / ${d.h}` : "16 / 9";
+}

@@ -81,19 +81,30 @@
     "gallery": {
       "index": "03",
       "label": "Gallery",
+      "prev": "Previous image",
+      "next": "Next image",
       "captions": {
         "profile": "Profile",
-        "underway": "Underway",
         "stern": "Stern",
-        "foredeck": "Foredeck",
-        "terrace": "Beach terrace",
+        "salon": "Main salon",
         "master": "Master suite",
-        "guest": "Guest cabin"
+        "guest": "Guest cabin",
+        "club": "Beach club",
+        "aerial": "Aerial",
+        "terrace": "Beach terrace",
+        "foredeck": "Foredeck",
+        "underway": "Underway"
+      },
+      "interiors": {
+        "label": "Interiors",
+        "title": "Volume, used with intent",
+        "body": "A full-beam main salon, a master suite that runs the width of the hull, and a beach club that opens the hull directly onto the water. Interiors are engineered and fitted in-house, held to the same tolerances as the structure behind them."
+      },
+      "exteriors": {
+        "label": "Exteriors",
+        "title": "A profile drawn for the sea",
+        "body": "Long, low and unbroken from bow to stern — with deck spaces that stay usable rather than decorative: a foredeck spa, a shaded aft deck, and a bathing platform at sea level."
       }
-    },
-    "beachclub": {
-      "label": "Interiors — Beach club",
-      "caption": "A sea-level beach club that opens the hull directly to the water."
     },
     "footer": {
       "hq": "Headquarters",

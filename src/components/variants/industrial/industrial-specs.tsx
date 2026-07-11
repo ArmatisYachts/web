@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
 import { RevealImage } from "@/components/shared/reveal-image";
 import { ContactTrigger } from "@/components/shared/contact-trigger";
-import { ARMATIS_107, RENDERS } from "@/lib/yacht";
+import { ARMATIS_107, RENDERS, renderRatio } from "@/lib/yacht";
 
 export function IndustrialSpecs() {
   const t = useTranslations("industrial.spec");
@@ -32,7 +32,10 @@ export function IndustrialSpecs() {
 
         <div className="mt-12 grid gap-12 md:grid-cols-2 md:gap-16">
           <div className="flex flex-col gap-10 md:gap-14">
-            <div className="relative aspect-[4/3] overflow-hidden border border-hairline">
+            <div
+              className="relative overflow-hidden border border-hairline"
+              style={{ aspectRatio: renderRatio(RENDERS.bowOn) }}
+            >
               <RevealImage
                 src={RENDERS.bowOn}
                 alt={ARMATIS_107.model}

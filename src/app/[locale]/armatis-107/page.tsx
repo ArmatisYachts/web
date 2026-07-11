@@ -4,7 +4,6 @@ import { pageMetadata } from "@/lib/seo";
 import { PageHero } from "@/components/sections/page-hero";
 import { CtaBand } from "@/components/sections/cta-band";
 import { IndustrialSpecs } from "@/components/variants/industrial/industrial-specs";
-import { IndustrialFeature } from "@/components/variants/industrial/industrial-feature";
 import { IndustrialGallery } from "@/components/variants/industrial/industrial-gallery";
 import { IndustrialInnovation } from "@/components/variants/industrial/industrial-innovation";
 import { ARMATIS_107, RENDERS } from "@/lib/yacht";
@@ -42,20 +41,10 @@ export default async function Yacht107Page({
         ]}
       />
       <IndustrialSpecs />
-      <IndustrialFeature
-        src={RENDERS.interiorSalon}
-        label={ti("salon.label")}
-        caption={ti("salon.caption")}
-        ratio="6528 / 2624"
-      />
       <IndustrialInnovation />
+      {/* The salon and beach-club panoramas now live inside the gallery's
+          Interiors rail — showing them twice on one page would read as filler. */}
       <IndustrialGallery />
-      <IndustrialFeature
-        src={RENDERS.interiorBeachClub}
-        label={ti("beachclub.label")}
-        caption={ti("beachclub.caption")}
-        ratio="6336 / 2688"
-      />
       <CtaBand line={t("ctaBand.line")} button={t("ctaBand.button")} />
     </main>
   );
