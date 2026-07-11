@@ -70,7 +70,7 @@
       "body": "ARMATIS realizza motor yacht di alta qualità con un approccio moderno e industriale — tecnologie compositi avanzate, sviluppo guidato dall'ingegneria e un sistema produttivo scalabile che mantiene la stessa precisione, finitura e affidabilità dal primo yacht a ogni yacht successivo."
     },
     "spec": {
-      "index": "02",
+      "index": "01",
       "label": "Specifiche",
       "items": {
         "loa": "Lunghezza fuori tutto",
@@ -117,6 +117,78 @@
       "linkedin": "Linkedin",
       "privacy": "Privacy Policy",
       "design": "Disegno UE registrato n.:"
+    }
+  },
+  "homeTeasers": {
+    "yacht": {
+      "index": "02",
+      "label": "Il 107",
+      "title": "Trenta metri, ridefiniti",
+      "body": "Volumi ingegnerizzati, layout intelligenti e una presenza discreta e sicura in mare — l'ARMATIS 107 supera le convenzioni della sua categoria mantenendo ogni proporzione in equilibrio.",
+      "cta": "Scopri il 107"
+    },
+    "manufacturing": {
+      "index": "03",
+      "label": "Produzione",
+      "title": "Una piattaforma. Ogni disciplina in-house.",
+      "facilities": {
+        "mould": {
+          "title": "Modelli & Stampi",
+          "blurb": "Lavorazioni CNC a 5 assi e stampa 3D di grande formato producono modelli e stampi in composito ad alta precisione — piena indipendenza nelle attrezzature."
+        },
+        "lamination": {
+          "title": "Laminazione Compositi",
+          "blurb": "Scafo, sovrastruttura e coperta sono realizzati con tecnologie avanzate di laminazione e infusione sottovuoto."
+        },
+        "assembly": {
+          "title": "Assemblaggio & Allestimento",
+          "blurb": "Propulsione, impianti tecnici e interni vengono installati e collaudati in una struttura dedicata all'allestimento."
+        }
+      },
+      "cta": "Esplora la produzione"
+    },
+    "company": {
+      "quote": "Disciplina industriale, tecnologia avanzata e visione a lungo termine — al servizio di yacht italiani senza tempo.",
+      "cta": "L'azienda"
+    }
+  },
+  "yacht107": {
+    "hero": {
+      "label": "Motor Yacht",
+      "title": "ARMATIS 107",
+      "kicker": "Defined by Space & Grace"
+    },
+    "innovation": {
+      "index": "02",
+      "label": "Innovazione a bordo",
+      "title": "Ingegneria oltre le convenzioni",
+      "stats": {
+        "solar": "Impianto solare integrato",
+        "generator": "Riduzione ore generatore",
+        "interiors": "Installazione interni più rapida"
+      },
+      "items": {
+        "solar": {
+          "label": "Energia solare & silenziosa",
+          "body": "Un impianto solare integrato da 7,5 kW con carichi hotel supportati da batterie riduce drasticamente le ore di generatore — notti più silenziose all'ancora, meno emissioni, meno rumore."
+        },
+        "stability": {
+          "label": "Monitoraggio digitale dell'assetto",
+          "body": "Un sistema di bordo brevettato legge continuamente trim e inclinazione, offrendo a ospiti ed equipaggio una consapevolezza in tempo reale dell'equilibrio dell'imbarcazione."
+        },
+        "platform": {
+          "label": "Piattaforma estraibile",
+          "body": "Una piattaforma estraibile brevettata e a ingombro ridotto trasforma volumi interni altrimenti inutilizzati in spazi esterni funzionali."
+        },
+        "interiors": {
+          "label": "Interni modulari",
+          "body": "Strutture interne in alluminio pre-ingegnerizzate sostituiscono la falegnameria tradizionale — costruite con precisione in officina e installate in una frazione del tempo."
+        }
+      }
+    },
+    "ctaBand": {
+      "line": "Vivi l'ARMATIS 107.",
+      "button": "Richiedi informazioni"
     }
   },
   "contact": {

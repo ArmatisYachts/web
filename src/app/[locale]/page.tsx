@@ -4,9 +4,10 @@ import { pageMetadata } from "@/lib/seo";
 import { IndustrialHero } from "@/components/variants/industrial/industrial-hero";
 import { IndustrialVision } from "@/components/variants/industrial/industrial-vision";
 import { IndustrialBand } from "@/components/variants/industrial/industrial-band";
-import { IndustrialSpecs } from "@/components/variants/industrial/industrial-specs";
 import { IndustrialFeature } from "@/components/variants/industrial/industrial-feature";
-import { IndustrialGallery } from "@/components/variants/industrial/industrial-gallery";
+import { IndustrialTeaser107 } from "@/components/variants/industrial/industrial-teaser-107";
+import { IndustrialTeaserManufacturing } from "@/components/variants/industrial/industrial-teaser-manufacturing";
+import { IndustrialTeaserCompany } from "@/components/variants/industrial/industrial-teaser-company";
 import { ARMATIS_107, RENDERS } from "@/lib/yacht";
 
 export async function generateMetadata({
@@ -32,20 +33,15 @@ export default async function HomePage({
       <IndustrialHero />
       <IndustrialVision />
       <IndustrialBand src={RENDERS.aerial} alt={ARMATIS_107.model} />
-      <IndustrialSpecs />
+      <IndustrialTeaser107 />
       <IndustrialFeature
         src={RENDERS.interiorSalon}
         label={t("salon.label")}
         caption={t("salon.caption")}
         ratio="6528 / 2624"
       />
-      <IndustrialGallery />
-      <IndustrialFeature
-        src={RENDERS.interiorBeachClub}
-        label={t("beachclub.label")}
-        caption={t("beachclub.caption")}
-        ratio="6336 / 2688"
-      />
+      <IndustrialTeaserManufacturing />
+      <IndustrialTeaserCompany />
     </main>
   );
 }
