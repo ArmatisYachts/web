@@ -191,6 +191,139 @@
       "button": "Richiedi informazioni"
     }
   },
+  "manufacturing": {
+    "hero": {
+      "label": "Produzione",
+      "title": "La piattaforma produttiva",
+      "kicker": "Ingegneria dei compositi in-house · Brindisi, Italia",
+      "readout": {
+        "facilities": "Strutture",
+        "platforms": "Piattaforme"
+      }
+    },
+    "facilities": {
+      "index": "01",
+      "label": "Modello produttivo",
+      "title": "Tre strutture. Un unico flusso integrato.",
+      "intro": "Ogni fase fondamentale della costruzione — dalle attrezzature al varo — avviene all'interno del sistema produttivo ARMATIS, sotto un unico standard ingegneristico.",
+      "items": {
+        "mould": {
+          "title": "Modelli & Stampi",
+          "body": "Modelli e stampi in composito ad alta precisione, prodotti con lavorazioni CNC a 5 assi e stampa 3D di grande formato — l'asset strategico che garantisce indipendenza nelle attrezzature e geometrie ripetibili."
+        },
+        "lamination": {
+          "title": "Laminazione Compositi",
+          "body": "Scafo, sovrastruttura e coperta vengono laminati in una struttura dedicata con tecnologie avanzate di infusione, concepita per grandi componenti strutturali."
+        },
+        "assembly": {
+          "title": "Assemblaggio & Allestimento",
+          "body": "Propulsione, impianti meccanici, elettrici e idraulici, interni e collaudo finale — completati in una struttura riservata esclusivamente all'allestimento."
+        }
+      }
+    },
+    "phases": {
+      "index": "02",
+      "label": "Crescita",
+      "title": "Una scala controllata, per fasi",
+      "items": {
+        "one": {
+          "label": "Fase I",
+          "body": "Produzione iniziale — stabilizzazione dei processi, sviluppo del team e integrazione dei fornitori attorno ai primi scafi."
+        },
+        "two": {
+          "label": "Fase II",
+          "body": "Crescita progressiva — la capacità si espande di pari passo con la domanda, la maturità organizzativa e l'efficienza industriale."
+        },
+        "three": {
+          "label": "Fase III",
+          "body": "Pieno regime industriale — linee di produzione parallele e una forza lavoro ottimizzata, con lo stesso standard dello scafo numero uno."
+        }
+      }
+    },
+    "tech": {
+      "index": "03",
+      "label": "Produzione avanzata",
+      "title": "Un ambiente digitale ad alta precisione",
+      "items": {
+        "printing": {
+          "term": "Stampa 3D gantry",
+          "detail": "Grandi modelli, attrezzature e dime"
+        },
+        "robotics": {
+          "term": "Finitura robotizzata",
+          "detail": "Verniciatura e trattamenti superficiali automatizzati"
+        },
+        "cnc": {
+          "term": "CNC gantry a 5 assi",
+          "detail": "Lavorazioni ad alta precisione"
+        },
+        "cadcam": {
+          "term": "CAD/CAM digitale",
+          "detail": "Dal modello allo stampo, senza perdite di traduzione"
+        },
+        "planning": {
+          "term": "Pianificazione digitale della produzione",
+          "detail": "Una produzione monitorata e misurabile"
+        }
+      }
+    },
+    "innovation": {
+      "index": "04",
+      "label": "Innovazione di processo",
+      "title": "Logica industriale, artigianalità nautica",
+      "stats": {
+        "interiors": "Installazione interni più rapida",
+        "weight": "Obiettivo di riduzione del peso strutturale"
+      },
+      "items": {
+        "interiors": {
+          "title": "Interni modulari in alluminio",
+          "body": "Strutture pre-ingegnerizzate e arredi costruiti in officina sostituiscono la falegnameria di bordo — precisione plug-and-install con tempi di installazione drasticamente ridotti."
+        },
+        "harness": {
+          "title": "Architettura elettrica ingegnerizzata",
+          "body": "Sistemi di cablaggio pre-assemblati di ispirazione automotive riducono i tempi di cablaggio a bordo, abbattono i margini di errore e standardizzano la produzione in serie."
+        },
+        "composites": {
+          "title": "R&D sui compositi avanzati",
+          "body": "Un programma di ricerca strutturato verso strutture più leggere e resistenti, attraverso laminati ibridi e infusione ottimizzata."
+        },
+        "lab": {
+          "title": "Laboratorio prove in-house",
+          "body": "Prove di trazione, flessione e validazione dei laminati in sede — ogni scelta strutturale è supportata da dati misurati."
+        }
+      }
+    },
+    "green": {
+      "index": "05",
+      "label": "Produzione sostenibile",
+      "title": "Costruito con energia rinnovabile",
+      "body": "La produzione è alimentata da energia rinnovabile grazie a un impianto fotovoltaico sul tetto, con ventilazione avanzata e filtrazione al carbonio che garantiscono processi compositi puliti e controllati — una struttura allineata al Green Deal europeo.",
+      "productLead": "La stessa filosofia naviga con ogni yacht",
+      "stats": {
+        "solar": "Impianto solare a bordo",
+        "generator": "Riduzione ore generatore"
+      }
+    },
+    "rnd": {
+      "index": "06",
+      "label": "R&D & collaborazione",
+      "title": "Un'ingegneria che non si ferma",
+      "body": "Un centro di ingegneria interno dedicato a carene, strutture composite avanzate, costruzione leggera e simulazione digitale — sviluppato in collaborazione strutturata con università e centri di ricerca italiani, dai progetti congiunti ai programmi per giovani talenti."
+    },
+    "platforms": {
+      "index": "07",
+      "label": "Gamma di piattaforme",
+      "title": "Una famiglia, nata da un unico sistema",
+      "meters": "m",
+      "statusDevelopment": "In sviluppo",
+      "statusProduction": "ARMATIS 107 — in produzione"
+    },
+    "ctaBand": {
+      "line": "Parla di una costruzione con ARMATIS.",
+      "button": "Contattaci"
+    }
+  },
   "contact": {
     "title": "Get in touch",
     "intro": "Raccontaci la tua richiesta e il nostro team ti risponderà a breve.",

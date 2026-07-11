@@ -191,6 +191,139 @@
       "button": "Request information"
     }
   },
+  "manufacturing": {
+    "hero": {
+      "label": "Manufacturing",
+      "title": "The production platform",
+      "kicker": "In-house composite engineering · Brindisi, Italy",
+      "readout": {
+        "facilities": "Facilities",
+        "platforms": "Platforms"
+      }
+    },
+    "facilities": {
+      "index": "01",
+      "label": "Production model",
+      "title": "Three facilities. One integrated flow.",
+      "intro": "Every core stage of construction — from tooling to launch — is carried out within ARMATIS' own production system, under one engineering standard.",
+      "items": {
+        "mould": {
+          "title": "Model & Mould Manufacturing",
+          "body": "High-precision plugs and composite moulds produced with five-axis CNC machining and large-format 3D printing — the strategic asset that guarantees tooling independence and repeatable geometry."
+        },
+        "lamination": {
+          "title": "Composite Lamination",
+          "body": "Hull, superstructure and deck are laminated in a dedicated facility using advanced infusion technologies, engineered for large structural components."
+        },
+        "assembly": {
+          "title": "Assembly & Outfitting",
+          "body": "Propulsion, mechanical, electrical and hydraulic systems, interiors and final commissioning — completed in a facility reserved exclusively for outfitting."
+        }
+      }
+    },
+    "phases": {
+      "index": "02",
+      "label": "Growth",
+      "title": "Controlled, phased scale",
+      "items": {
+        "one": {
+          "label": "Phase I",
+          "body": "Initial production — process stabilisation, team development and supplier integration around the first hulls."
+        },
+        "two": {
+          "label": "Phase II",
+          "body": "Progressive growth — capacity expands in step with demand, organisational maturity and industrial efficiency."
+        },
+        "three": {
+          "label": "Phase III",
+          "body": "Full industrial regime — parallel production lines and an optimised workforce, holding the same standard as hull number one."
+        }
+      }
+    },
+    "tech": {
+      "index": "03",
+      "label": "Advanced manufacturing",
+      "title": "A digital, high-precision environment",
+      "items": {
+        "printing": {
+          "term": "Gantry 3D printing",
+          "detail": "Large plugs, tooling and patterns"
+        },
+        "robotics": {
+          "term": "Robotic finishing",
+          "detail": "Automated painting and surface systems"
+        },
+        "cnc": {
+          "term": "5-axis gantry CNC",
+          "detail": "High-precision machining"
+        },
+        "cadcam": {
+          "term": "Digital CAD/CAM",
+          "detail": "From model to mould, without translation loss"
+        },
+        "planning": {
+          "term": "Digital production planning",
+          "detail": "Monitored, measurable manufacturing"
+        }
+      }
+    },
+    "innovation": {
+      "index": "04",
+      "label": "Process innovation",
+      "title": "Industrial logic, yacht craftsmanship",
+      "stats": {
+        "interiors": "Faster interior installation",
+        "weight": "Structural weight-reduction target"
+      },
+      "items": {
+        "interiors": {
+          "title": "Modular aluminium interiors",
+          "body": "Pre-engineered structural frameworks and workshop-built furniture replace onboard carpentry — plug-and-install precision with dramatically shorter installation times."
+        },
+        "harness": {
+          "title": "Engineered electrical architecture",
+          "body": "Automotive-inspired, fully pre-assembled harness systems reduce onboard wiring time, lower error rates and standardise serial production."
+        },
+        "composites": {
+          "title": "Advanced composite R&D",
+          "body": "A structured research programme pursuing lighter, stronger structures through hybrid laminates and optimised infusion."
+        },
+        "lab": {
+          "title": "In-house testing laboratory",
+          "body": "Tensile, flexural and laminate validation on site — every structural decision backed by measured data."
+        }
+      }
+    },
+    "green": {
+      "index": "05",
+      "label": "Sustainable manufacturing",
+      "title": "Built with renewable energy",
+      "body": "Production runs on renewable energy from a rooftop photovoltaic system, with advanced ventilation and carbon filtration ensuring clean, controlled composite processes — a facility aligned with the European Green Deal.",
+      "productLead": "The same philosophy sails with every yacht",
+      "stats": {
+        "solar": "Solar array on board",
+        "generator": "Generator-hour reduction"
+      }
+    },
+    "rnd": {
+      "index": "06",
+      "label": "R&D & collaboration",
+      "title": "Engineering that never stands still",
+      "body": "An in-house engineering centre dedicated to hull forms, advanced composite structures, lightweight construction and digital simulation — developed in structured collaboration with Italian universities and research centres, from joint projects to talent programmes."
+    },
+    "platforms": {
+      "index": "07",
+      "label": "Platform range",
+      "title": "A family, engineered from one system",
+      "meters": "m",
+      "statusDevelopment": "In development",
+      "statusProduction": "ARMATIS 107 — in production"
+    },
+    "ctaBand": {
+      "line": "Discuss a build with ARMATIS.",
+      "button": "Get in touch"
+    }
+  },
   "contact": {
     "title": "Get in touch",
     "intro": "Tell us about your enquiry and our team will respond shortly.",

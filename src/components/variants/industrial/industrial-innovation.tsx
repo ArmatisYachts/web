@@ -17,7 +17,6 @@ export function IndustrialInnovation() {
 
         <div className="mt-12">
           <StatStrip
-            className="grid-cols-1 sm:grid-cols-3"
             items={[
               { value: SUSTAINABILITY.solar, label: t("stats.solar") },
               { value: SUSTAINABILITY.generatorReduction, label: t("stats.generator") },

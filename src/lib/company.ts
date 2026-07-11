@@ -19,6 +19,23 @@ export const FACILITIES = [
   { key: "assembly", index: "03", tags: ["PROPULSION", "SYSTEMS", "INTERIORS"] },
 ] as const;
 
+// Industry 4.0 capabilities. Keys index `manufacturing.tech.items`.
+export const TECHNOLOGIES = [
+  "printing",
+  "robotics",
+  "cnc",
+  "cadcam",
+  "planning",
+] as const;
+
+// Process-innovation pillars. Keys index `manufacturing.innovation.items`.
+export const PROCESS_INNOVATIONS = [
+  "interiors",
+  "harness",
+  "composites",
+  "lab",
+] as const;
+
 // Platform range (the 30 is the ARMATIS 107, in production).
 export const PLATFORMS = [
   { key: "p24", size: "24", status: "development" },

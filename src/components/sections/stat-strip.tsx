@@ -1,6 +1,14 @@
 import { cn } from "@/lib/utils";
 
 // Hairline-gridded band of key figures: big extralight value, mono micro-label.
+// Columns follow the item count so the hairline grid never shows empty tracks.
+const COLS: Record<number, string> = {
+  1: "grid-cols-1",
+  2: "grid-cols-1 sm:grid-cols-2",
+  3: "grid-cols-1 sm:grid-cols-3",
+  4: "grid-cols-2 lg:grid-cols-4",
+};
+
 export function StatStrip({
   items,
   className,
@@ -11,7 +19,8 @@ export function StatStrip({
   return (
     <dl
       className={cn(
-        "grid grid-cols-2 gap-px overflow-hidden border border-hairline bg-hairline lg:grid-cols-4",
+        "grid gap-px overflow-hidden border border-hairline bg-hairline",
+        COLS[items.length] ?? "grid-cols-2 lg:grid-cols-4",
         className
       )}
     >
