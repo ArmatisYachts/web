@@ -191,6 +191,43 @@
       "button": "Request information"
     }
   },
+  "company": {
+    "hero": {
+      "label": "Company",
+      "title": "An industrial approach to Italian yacht building",
+      "kicker": "Made in Italy — entirely in-house"
+    },
+    "story": {
+      "index": "01",
+      "label": "The company",
+      "title": "Every stage, under one roof",
+      "body": "ARMATIS designs, engineers and builds its yachts entirely in-house — from tooling and composite structures to systems, interiors and commissioning. Controlling every core stage of production within one operational structure is how we guarantee consistent quality, dependable delivery and a build standard that does not vary from hull to hull."
+    },
+    "whyItaly": {
+      "index": "02",
+      "label": "Why Italy",
+      "title": "Rooted where yachting is engineered",
+      "items": {
+        "epicentre": {
+          "label": "The epicentre",
+          "body": "Italy is the global centre of excellence for yacht design and construction — home to the standards the industry measures itself against."
+        },
+        "ecosystem": {
+          "label": "The ecosystem",
+          "body": "A unique network of specialised suppliers, skilled craftspeople and nautical know-how surrounds every stage of the build."
+        },
+        "madeInItaly": {
+          "label": "Made in Italy",
+          "body": "From Milano to the shipyard in Brindisi, ARMATIS builds fully in Italy — contributing to the industry it belongs to, for the long term."
+        }
+      }
+    },
+    "positioning": "ARMATIS stands for a new interpretation of Italian yacht manufacturing — built on industrial discipline, advanced technology, research and long-term vision.",
+    "ctaBand": {
+      "line": "Meet ARMATIS.",
+      "button": "Get in touch"
+    }
+  },
   "manufacturing": {
     "hero": {
       "label": "Manufacturing",
@@ -348,6 +385,15 @@
     "error": "Something went wrong. Please try again or email us directly.",
     "close": "Close",
     "required": "Please complete the required fields."
+  },
+  "contactPage": {
+    "hero": {
+      "label": "Contact",
+      "title": "Get in touch",
+      "kicker": "Milano — Brindisi"
+    },
+    "detailsLabel": "Details",
+    "emailLabel": "E-mail"
   },
   "privacy": {
     "title": "Privacy & Data Protection",

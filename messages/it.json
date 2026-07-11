@@ -191,6 +191,43 @@
       "button": "Richiedi informazioni"
     }
   },
+  "company": {
+    "hero": {
+      "label": "Azienda",
+      "title": "Un approccio industriale alla nautica italiana",
+      "kicker": "Made in Italy — interamente in-house"
+    },
+    "story": {
+      "index": "01",
+      "label": "L'azienda",
+      "title": "Ogni fase, sotto lo stesso tetto",
+      "body": "ARMATIS progetta, ingegnerizza e costruisce i propri yacht interamente in-house — dalle attrezzature e strutture composite agli impianti, agli interni e al collaudo. Controllare ogni fase fondamentale della produzione all'interno di un'unica struttura operativa è il modo in cui garantiamo qualità costante, consegne affidabili e uno standard costruttivo che non varia da scafo a scafo."
+    },
+    "whyItaly": {
+      "index": "02",
+      "label": "Perché l'Italia",
+      "title": "Radicati dove la nautica prende forma",
+      "items": {
+        "epicentre": {
+          "label": "L'epicentro",
+          "body": "L'Italia è il centro mondiale di eccellenza per il design e la costruzione di yacht — la patria degli standard su cui l'industria si misura."
+        },
+        "ecosystem": {
+          "label": "L'ecosistema",
+          "body": "Una rete unica di fornitori specializzati, maestranze qualificate e know-how nautico accompagna ogni fase della costruzione."
+        },
+        "madeInItaly": {
+          "label": "Made in Italy",
+          "body": "Da Milano al cantiere di Brindisi, ARMATIS costruisce interamente in Italia — contribuendo, nel lungo periodo, all'industria a cui appartiene."
+        }
+      }
+    },
+    "positioning": "ARMATIS rappresenta una nuova interpretazione della produzione nautica italiana — fondata su disciplina industriale, tecnologia avanzata, ricerca e visione a lungo termine.",
+    "ctaBand": {
+      "line": "Incontra ARMATIS.",
+      "button": "Contattaci"
+    }
+  },
   "manufacturing": {
     "hero": {
       "label": "Produzione",
@@ -348,6 +385,15 @@
     "error": "Si è verificato un errore. Riprova o scrivici direttamente.",
     "close": "Chiudi",
     "required": "Compila i campi obbligatori."
+  },
+  "contactPage": {
+    "hero": {
+      "label": "Contatti",
+      "title": "Get in touch",
+      "kicker": "Milano — Brindisi"
+    },
+    "detailsLabel": "Dettagli",
+    "emailLabel": "E-mail"
   },
   "privacy": {
     "title": "Privacy & Protezione dei Dati",
