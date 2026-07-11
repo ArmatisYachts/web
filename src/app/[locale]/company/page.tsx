@@ -33,10 +33,7 @@ export default async function CompanyPage({
         label={t("hero.label")}
         title={t("hero.title")}
         kicker={t("hero.kicker")}
-        readout={[
-          [tf("hq"), ARMATIS_107.headquarters],
-          [tf("yard"), ARMATIS_107.shipyard],
-        ]}
+        readout={[[tf("yard"), ARMATIS_107.shipyard]]}
       />
 
       {/* 01 — the company */}

@@ -26,7 +26,6 @@ export default async function ContactPage({
   const tf = await getTranslations("industrial.footer");
 
   const details: [string, string, string?][] = [
-    [tf("hq"), ARMATIS_107.headquarters],
     [tf("yard"), ARMATIS_107.shipyard],
     [t("emailLabel"), ARMATIS_107.email, `mailto:${ARMATIS_107.email}`],
     [tf("linkedin"), "linkedin.com/company/armatis-yachts", ARMATIS_107.linkedin],

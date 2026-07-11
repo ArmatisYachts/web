@@ -206,7 +206,7 @@
         },
         "madeInItaly": {
           "label": "Made in Italy",
-          "body": "From Milano to the shipyard in Brindisi, ARMATIS builds fully in Italy — contributing to the industry it belongs to, for the long term."
+          "body": "At its shipyard in Brindisi, ARMATIS builds fully in Italy — contributing to the industry it belongs to, for the long term."
         }
       }
     },
@@ -378,7 +378,7 @@
     "hero": {
       "label": "Contact",
       "title": "Get in touch",
-      "kicker": "Milano — Brindisi"
+      "kicker": "Brindisi, Italy"
     },
     "detailsLabel": "Details",
     "emailLabel": "E-mail"

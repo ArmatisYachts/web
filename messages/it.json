@@ -206,7 +206,7 @@
         },
         "madeInItaly": {
           "label": "Made in Italy",
-          "body": "Da Milano al cantiere di Brindisi, ARMATIS costruisce interamente in Italia — contribuendo, nel lungo periodo, all'industria a cui appartiene."
+          "body": "Nel suo cantiere di Brindisi, ARMATIS costruisce interamente in Italia — contribuendo, nel lungo periodo, all'industria a cui appartiene."
         }
       }
     },
@@ -378,7 +378,7 @@
     "hero": {
       "label": "Contatti",
       "title": "Get in touch",
-      "kicker": "Milano — Brindisi"
+      "kicker": "Brindisi, Italia"
     },
     "detailsLabel": "Dettagli",
     "emailLabel": "E-mail"
