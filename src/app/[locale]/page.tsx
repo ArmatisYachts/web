@@ -1,4 +1,6 @@
+import type { Metadata } from "next";
 import { setRequestLocale, getTranslations } from "next-intl/server";
+import { pageMetadata } from "@/lib/seo";
 import { IndustrialHero } from "@/components/variants/industrial/industrial-hero";
 import { IndustrialVision } from "@/components/variants/industrial/industrial-vision";
 import { IndustrialBand } from "@/components/variants/industrial/industrial-band";
@@ -7,6 +9,15 @@ import { IndustrialFeature } from "@/components/variants/industrial/industrial-f
 import { IndustrialGallery } from "@/components/variants/industrial/industrial-gallery";
 import { IndustrialFooter } from "@/components/variants/industrial/industrial-footer";
 import { ARMATIS_107, RENDERS } from "@/lib/yacht";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return pageMetadata(locale, "/", "home");
+}
 
 export default async function HomePage({
   params,

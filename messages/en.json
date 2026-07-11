@@ -1,7 +1,29 @@
 {
   "meta": {
     "title": "Armatis Yachts",
-    "description": "ARMATIS 107 — an Italian motor yacht engineered for performance, comfort, durability and refined simplicity."
+    "description": "ARMATIS 107 — an Italian motor yacht engineered for performance, comfort, durability and refined simplicity.",
+    "pages": {
+      "home": {
+        "title": "Armatis Yachts",
+        "description": "ARMATIS 107 — an Italian motor yacht engineered for performance, comfort, durability and refined simplicity."
+      },
+      "yacht107": {
+        "title": "ARMATIS 107",
+        "description": "The ARMATIS 107 — a 30-metre Italian motor yacht defined by space and grace. Full specifications, interiors and gallery."
+      },
+      "company": {
+        "title": "Company",
+        "description": "ARMATIS is an Italian yacht builder creating high-quality motor yachts through a modern, industrial approach — designed, engineered and built in-house in Italy."
+      },
+      "manufacturing": {
+        "title": "Manufacturing",
+        "description": "Inside the ARMATIS production platform — dedicated facilities, advanced composite manufacturing, robotics and in-house R&D."
+      },
+      "contact": {
+        "title": "Contact",
+        "description": "Get in touch with ARMATIS — enquiries, information requests and press."
+      }
+    }
   },
   "brand": {
     "positioning": "ARMATIS is an Italian yacht builder focused on creating high-quality motor yachts through a modern and industrial approach to yacht manufacturing.",

@@ -4,6 +4,7 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Jost, Geist_Mono } from "next/font/google";
 import { routing } from "@/i18n/routing";
+import { SITE_URL } from "@/lib/site";
 import { ThemeScript } from "@/components/shared/theme-script";
 import { ContactDialog } from "@/components/shared/contact-dialog";
 import { PrivacyDialog } from "@/components/shared/privacy-dialog";
@@ -36,8 +37,20 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "meta" });
   return {
-    title: t("title"),
+    metadataBase: new URL(SITE_URL),
+    title: {
+      default: t("title"),
+      template: `%s — ${t("title")}`,
+    },
     description: t("description"),
+    openGraph: {
+      type: "website",
+      siteName: t("title"),
+      images: [
+        { url: "/assets/og/og-default.jpg", width: 1200, height: 630 },
+      ],
+    },
+    twitter: { card: "summary_large_image" },
   };
 }
 

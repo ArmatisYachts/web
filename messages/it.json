@@ -1,7 +1,29 @@
 {
   "meta": {
     "title": "Armatis Yachts",
-    "description": "ARMATIS 107 — un motor yacht italiano progettato per prestazioni, comfort, durabilità e una raffinata semplicità."
+    "description": "ARMATIS 107 — un motor yacht italiano progettato per prestazioni, comfort, durabilità e una raffinata semplicità.",
+    "pages": {
+      "home": {
+        "title": "Armatis Yachts",
+        "description": "ARMATIS 107 — un motor yacht italiano progettato per prestazioni, comfort, durabilità e una raffinata semplicità."
+      },
+      "yacht107": {
+        "title": "ARMATIS 107",
+        "description": "L'ARMATIS 107 — un motor yacht italiano di 30 metri definito da spazio e grazia. Specifiche complete, interni e galleria."
+      },
+      "company": {
+        "title": "Azienda",
+        "description": "ARMATIS è un cantiere navale italiano che realizza motor yacht di alta qualità con un approccio moderno e industriale — progettati, ingegnerizzati e costruiti in-house in Italia."
+      },
+      "manufacturing": {
+        "title": "Produzione",
+        "description": "Dentro la piattaforma produttiva ARMATIS — strutture dedicate, produzione avanzata di compositi, robotica e R&D in-house."
+      },
+      "contact": {
+        "title": "Contatti",
+        "description": "Contatta ARMATIS — richieste, informazioni e stampa."
+      }
+    }
   },
   "brand": {
     "positioning": "ARMATIS è un cantiere navale italiano dedicato alla creazione di motor yacht di alta qualità attraverso un approccio moderno e industriale alla produzione nautica.",
