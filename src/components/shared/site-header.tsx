@@ -22,7 +22,7 @@ export function SiteHeader() {
   const overDark = useOverDark(ref);
   const [open, setOpen] = useState(false);
 
-  // close the menu on navigation
+  // close the drawer on navigation
   useEffect(() => setOpen(false), [pathname]);
 
   // Escape to close + body scroll lock (scrollbar-width compensated)
@@ -69,34 +69,47 @@ export function SiteHeader() {
             />
           </Link>
 
-          <div className="flex items-center gap-6 md:gap-8">
+          <nav className="hidden items-center gap-8 md:flex">
+            {NAV_ITEMS.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                aria-current={isActive(item.href) ? "page" : undefined}
+                className={cn(
+                  "relative py-1 font-mono text-[10px] uppercase tracking-[0.2em] transition-opacity duration-300",
+                  isActive(item.href)
+                    ? "opacity-100 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-current"
+                    : "opacity-50 hover:opacity-100"
+                )}
+              >
+                {t(item.key)}
+              </Link>
+            ))}
+          </nav>
+
+          <div className="flex items-center gap-5">
             <LanguageSwitcher className="hidden md:flex" />
             <button
               type="button"
               onClick={() => setOpen(true)}
               aria-label={t("menu")}
               aria-expanded={open}
-              className="group -m-2 flex items-center gap-3 p-2"
+              className="-m-2 flex h-10 w-10 flex-col items-center justify-center gap-1.5 p-2 md:hidden"
             >
-              <span className="hidden font-mono text-[10px] uppercase tracking-[0.2em] md:inline">
-                {t("menu")}
-              </span>
-              <span className="flex w-6 flex-col gap-1.5">
-                <span className="block h-px w-6 bg-current transition-all duration-300 group-hover:w-4" />
-                <span className="block h-px w-6 bg-current" />
-              </span>
+              <span className="block h-px w-5 bg-current" />
+              <span className="block h-px w-5 bg-current" />
             </button>
           </div>
         </div>
       </header>
 
-      {/* full-screen menu — cinematic dark, all viewports */}
+      {/* mobile drawer — full-screen, cinematic dark */}
       {open && (
         <div
           role="dialog"
           aria-modal="true"
           aria-label={t("menu")}
-          className="fixed inset-0 z-[95] overflow-y-auto bg-[#0a0a0a] text-bone"
+          className="fixed inset-0 z-[95] overflow-y-auto bg-[#0a0a0a] text-bone md:hidden"
         >
           <WavePattern variant="light" className="z-0 opacity-[0.06]" />
           <div
@@ -105,7 +118,7 @@ export function SiteHeader() {
           />
 
           <div className="relative z-20 flex min-h-svh flex-col">
-            <div className="flex h-16 items-center justify-between px-6 md:px-10">
+            <div className="flex h-16 items-center justify-between px-6">
               <Link href="/" aria-label="ARMATIS" onClick={() => setOpen(false)}>
                 <ArmatisWordmark variant="light" height={15} />
               </Link>
@@ -113,36 +126,33 @@ export function SiteHeader() {
                 type="button"
                 onClick={() => setOpen(false)}
                 aria-label={t("close")}
-                className="group -m-2 flex items-center gap-3 p-2 text-bone/70 transition-colors hover:text-bone"
+                className="-m-2 p-2 font-mono text-[11px] uppercase tracking-[0.18em] text-bone/70 transition-opacity hover:opacity-60"
               >
-                <span className="hidden font-mono text-[10px] uppercase tracking-[0.2em] md:inline">
-                  {t("close")}
-                </span>
-                <span className="font-mono text-[13px]">✕</span>
+                ✕
               </button>
             </div>
 
-            <nav className="mx-auto flex w-full max-w-5xl flex-1 flex-col justify-center px-6 md:px-10">
+            <nav className="flex flex-1 flex-col justify-center px-6">
               {NAV_ITEMS.map((item, i) => (
                 <Link
                   key={item.href}
                   href={item.href}
                   className={cn(
-                    "group flex items-baseline gap-6 border-b border-white/10 py-6 transition-opacity duration-300 md:gap-10 md:py-8",
+                    "flex items-baseline gap-5 border-b border-white/10 py-5 transition-opacity duration-300",
                     isActive(item.href) ? "opacity-100" : "opacity-60 hover:opacity-100"
                   )}
                 >
                   <span className="font-mono text-[10px] tracking-[0.2em] text-bone/40">
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <span className="font-display text-4xl font-extralight tracking-tight transition-transform duration-500 ease-[var(--ease-out-luxe)] group-hover:translate-x-3 md:text-6xl">
+                  <span className="font-display text-4xl font-extralight tracking-tight">
                     {t(item.key)}
                   </span>
                 </Link>
               ))}
             </nav>
 
-            <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-6 pb-10 font-mono text-[10px] uppercase tracking-[0.18em] text-bone/45 md:px-10">
+            <div className="flex items-center justify-between px-6 pb-8 font-mono text-[10px] uppercase tracking-[0.18em] text-bone/45">
               <LanguageSwitcher />
               <span>{ARMATIS_107.web}</span>
             </div>
