@@ -42,6 +42,62 @@ export const RENDERS = {
   interiorBeachClub: "/assets/renders/BC1.jpg",
 } as const;
 
+// AI-assisted campaign renders. These are deliberately isolated from the
+// source render library so the complete experiment can be removed or reverted
+// without touching the original yacht imagery.
+//
+// Every scene has true art-directed desktop and mobile compositions. The
+// mobile files are not automatic crops: they were composed around a 9:16
+// viewport so the yacht/room remains legible under edge-to-edge `object-cover`.
+export const HQ_GALLERY = {
+  exteriors: [
+    {
+      desktop:
+        "/assets/generated/hq-gallery/external/desktop/external-running-starboard-01.png",
+      mobile:
+        "/assets/generated/hq-gallery/external/mobile/external-running-starboard-01-mobile.png",
+      captionKey: "underway",
+    },
+    {
+      desktop:
+        "/assets/generated/hq-gallery/external/desktop/external-aerial-starboard-02.png",
+      mobile:
+        "/assets/generated/hq-gallery/external/mobile/external-aerial-starboard-02-mobile.png",
+      captionKey: "aerial",
+    },
+    {
+      desktop:
+        "/assets/generated/hq-gallery/external/desktop/external-bluehour-stern-03.png",
+      mobile:
+        "/assets/generated/hq-gallery/external/mobile/external-bluehour-stern-03-mobile.png",
+      captionKey: "stern",
+    },
+  ],
+  interiors: [
+    {
+      desktop:
+        "/assets/generated/hq-gallery/internal/desktop/internal-main-salon-01.png",
+      mobile:
+        "/assets/generated/hq-gallery/internal/mobile/internal-main-salon-01-mobile.png",
+      captionKey: "salon",
+    },
+    {
+      desktop:
+        "/assets/generated/hq-gallery/internal/desktop/internal-master-suite-02.png",
+      mobile:
+        "/assets/generated/hq-gallery/internal/mobile/internal-master-suite-02-mobile.png",
+      captionKey: "master",
+    },
+    {
+      desktop:
+        "/assets/generated/hq-gallery/internal/desktop/internal-beach-club-03.png",
+      mobile:
+        "/assets/generated/hq-gallery/internal/mobile/internal-beach-club-03-mobile.png",
+      captionKey: "club",
+    },
+  ],
+} as const;
+
 // Intrinsic pixel dimensions of every render. Layouts derive their aspect
 // ratio from here instead of guessing one — a forced ratio crops the yacht.
 export const RENDER_DIMS: Record<string, { w: number; h: number }> = {

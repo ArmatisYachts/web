@@ -1,22 +1,67 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
-import { RevealImage } from "@/components/shared/reveal-image";
-import { renderRatio, renderAspect } from "@/lib/yacht";
+import { getImageProps } from "next/image";
+import {
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+  type KeyboardEvent,
+} from "react";
 
-export type RailItem = { src: string; caption: string };
+export type RailItem = {
+  desktopSrc: string;
+  mobileSrc: string;
+  caption: string;
+};
 
-// Tallest a frame may get. Below this width the slide is simply full-width, so
-// on phones nothing is constrained; on desktop it keeps the 16:9 frames from
-// towering over the panoramas.
-const MAX_FRAME_HEIGHT = 560;
+const DESKTOP_IMAGE = { width: 1672, height: 941 } as const;
+const MOBILE_IMAGE = { width: 941, height: 1672 } as const;
 
-// A horizontally scrolled card of renders — arrows, snap, progress rail.
-// One frame at a time: every slide takes the card's full width, so no part of
-// the next image ever bleeds into view. The frame keeps the file's native ratio
-// (its height simply follows), so nothing is cropped either. Frames are centred
-// vertically, which keeps the card a stable height as the panoramas — shorter
-// than the rest — scroll past.
+function ArtDirectedImage({ item }: { item: RailItem }) {
+  const common = {
+    alt: item.caption,
+    sizes: "100vw",
+    quality: 90,
+    loading: "lazy" as const,
+  };
+
+  const {
+    props: { srcSet: desktopSrcSet },
+  } = getImageProps({
+    ...common,
+    src: item.desktopSrc,
+    width: DESKTOP_IMAGE.width,
+    height: DESKTOP_IMAGE.height,
+  });
+
+  const { props: mobileProps } = getImageProps({
+    ...common,
+    src: item.mobileSrc,
+    width: MOBILE_IMAGE.width,
+    height: MOBILE_IMAGE.height,
+  });
+
+  return (
+    <picture className="absolute inset-0">
+      <source
+        media="(min-width: 768px)"
+        srcSet={desktopSrcSet}
+        sizes="100vw"
+      />
+      <img
+        {...mobileProps}
+        alt={item.caption}
+        draggable={false}
+        className="h-full w-full object-cover"
+      />
+    </picture>
+  );
+}
+
+// A true edge-to-edge image sequence: every slide owns one complete viewport,
+// uses desktop/mobile art direction, and supports touch, trackpad, keyboard and
+// explicit arrow navigation. No gallery chrome takes space away from the image.
 export function GalleryRail({
   label,
   items,
@@ -24,111 +69,171 @@ export function GalleryRail({
   nextLabel,
 }: {
   label: string;
-  items: RailItem[];
+  items: readonly RailItem[];
   prevLabel: string;
   nextLabel: string;
 }) {
   const railRef = useRef<HTMLDivElement>(null);
-  const frame = useRef(0);
+  const animationFrame = useRef(0);
+  const currentRef = useRef(0);
   const [current, setCurrent] = useState(0);
-  const [atStart, setAtStart] = useState(true);
-  const [atEnd, setAtEnd] = useState(false);
-
-  const offsets = () => {
-    const el = railRef.current;
-    if (!el) return [];
-    const slides = Array.from(el.children) as HTMLElement[];
-    if (!slides.length) return [];
-    const base = slides[0].offsetLeft;
-    return slides.map((s) => s.offsetLeft - base);
-  };
 
   const sync = useCallback(() => {
-    const el = railRef.current;
-    if (!el) return;
-    const max = el.scrollWidth - el.clientWidth;
-    const x = el.scrollLeft;
-    setAtStart(x <= 2);
-    setAtEnd(x >= max - 2);
+    const rail = railRef.current;
+    if (!rail || rail.clientWidth === 0) return;
 
-    const offs = offsets();
-    if (!offs.length) return;
-    let index = 0;
-    offs.forEach((o, i) => {
-      if (o <= x + 4) index = i;
-    });
-    if (max - x <= 2) index = offs.length - 1;
+    const index = Math.min(
+      Math.max(Math.round(rail.scrollLeft / rail.clientWidth), 0),
+      items.length - 1
+    );
+    currentRef.current = index;
     setCurrent(index);
-  }, []);
+  }, [items.length]);
 
   const onScroll = () => {
-    if (frame.current) return;
-    frame.current = requestAnimationFrame(() => {
-      frame.current = 0;
+    if (animationFrame.current) return;
+    animationFrame.current = requestAnimationFrame(() => {
+      animationFrame.current = 0;
       sync();
     });
   };
 
   useEffect(() => {
     sync();
-    const el = railRef.current;
-    if (!el) return;
-    const ro = new ResizeObserver(sync);
-    ro.observe(el);
+    const rail = railRef.current;
+    if (!rail) return;
+
+    const observer = new ResizeObserver(() => {
+      rail.scrollTo({
+        left: currentRef.current * rail.clientWidth,
+        behavior: "auto",
+      });
+      sync();
+    });
+    observer.observe(rail);
+
     return () => {
-      ro.disconnect();
-      if (frame.current) cancelAnimationFrame(frame.current);
+      observer.disconnect();
+      if (animationFrame.current) {
+        cancelAnimationFrame(animationFrame.current);
+      }
     };
   }, [sync]);
 
-  const step = (dir: -1 | 1) => {
-    const el = railRef.current;
-    if (!el) return;
-    if (dir === -1 ? atStart : atEnd) return;
-    const offs = offsets();
-    const next = Math.min(Math.max(current + dir, 0), offs.length - 1);
-    const max = el.scrollWidth - el.clientWidth;
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    el.scrollTo({
-      left: Math.min(offs[next], max),
-      behavior: reduce ? "auto" : "smooth",
-    });
+  const step = useCallback(
+    (direction: -1 | 1) => {
+      const rail = railRef.current;
+      if (!rail) return;
+
+      const next = Math.min(
+        Math.max(currentRef.current + direction, 0),
+        items.length - 1
+      );
+      const reduceMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+
+      rail.scrollTo({
+        left: next * rail.clientWidth,
+        behavior: reduceMotion ? "auto" : "smooth",
+      });
+      currentRef.current = next;
+      setCurrent(next);
+    },
+    [items.length]
+  );
+
+  const onKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      step(-1);
+    }
+    if (event.key === "ArrowRight") {
+      event.preventDefault();
+      step(1);
+    }
   };
 
-  // aria-disabled rather than disabled: a disabled button loses focus mid-interaction
-  const arrow = (off: boolean) =>
-    [
-      "flex h-9 w-9 items-center justify-center border border-hairline-strong text-fg transition-colors duration-300",
-      off ? "opacity-20" : "hover:bg-fg hover:text-surface",
-    ].join(" ");
+  const atStart = current === 0;
+  const atEnd = current === items.length - 1;
 
   return (
-    <div className="border border-hairline bg-surface-2/50">
-      <div className="flex items-center justify-between gap-4 border-b border-hairline px-5 py-4 md:gap-6 md:px-6">
-        <div className="flex items-center gap-4 whitespace-nowrap font-mono text-[11px] uppercase tracking-[0.22em] text-fg-mute">
-          <span className="hidden h-px w-8 bg-hairline-strong sm:block" />
+    <div
+      data-armatis-dark
+      className="relative h-[100svh] w-full overflow-hidden bg-ink text-bone"
+    >
+      <div
+        ref={railRef}
+        role="region"
+        aria-label={label}
+        tabIndex={0}
+        onKeyDown={onKeyDown}
+        onScroll={onScroll}
+        className="armatis-rail flex h-full w-full snap-x snap-mandatory overflow-x-auto overscroll-x-contain scroll-smooth outline-none"
+      >
+        {items.map((item, index) => (
+          <figure
+            key={item.desktopSrc}
+            role="group"
+            aria-roledescription="slide"
+            aria-label={`${index + 1} / ${items.length}`}
+            className="relative h-full w-full flex-none snap-start snap-always overflow-hidden bg-ink"
+          >
+            <ArtDirectedImage item={item} />
+            <figcaption className="sr-only">{item.caption}</figcaption>
+          </figure>
+        ))}
+      </div>
+
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 z-10 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.38),transparent_24%,transparent_60%,rgba(0,0,0,0.62))]"
+      />
+
+      <div className="pointer-events-none absolute inset-x-0 top-0 z-20 flex items-center justify-between p-6 pt-7 md:p-10">
+        <div className="flex items-center gap-4 font-mono text-[10px] uppercase tracking-[0.24em] text-white/90">
+          <span className="h-px w-8 bg-white/55" />
           <span>{label}</span>
         </div>
+        <span className="font-mono text-[10px] tabular-nums tracking-[0.22em] text-white/70">
+          {String(current + 1).padStart(2, "0")} /{" "}
+          {String(items.length).padStart(2, "0")}
+        </span>
+      </div>
 
-        <div className="flex items-center gap-3 md:gap-4">
-          <span className="whitespace-nowrap font-mono text-[10px] tabular-nums tracking-[0.2em] text-fg-faint">
-            {String(current + 1).padStart(2, "0")} /{" "}
-            {String(items.length).padStart(2, "0")}
-          </span>
-          <div className="flex gap-2">
+      <div className="absolute inset-x-0 bottom-0 z-20 p-6 pb-[max(1.5rem,env(safe-area-inset-bottom))] md:p-10">
+        <div className="flex items-end justify-between gap-6">
+          <p
+            aria-live="polite"
+            className="max-w-[65vw] font-display text-2xl font-extralight tracking-tight text-white md:text-4xl"
+          >
+            {items[current]?.caption}
+          </p>
+
+          <div className="flex shrink-0 gap-2">
             <button
               type="button"
               onClick={() => step(-1)}
               aria-disabled={atStart}
               aria-label={prevLabel}
-              className={arrow(atStart)}
+              className={[
+                "grid h-11 w-11 place-items-center rounded-full border border-white/45 bg-black/15 text-white backdrop-blur-sm transition duration-300 md:h-12 md:w-12",
+                atStart
+                  ? "pointer-events-none opacity-30"
+                  : "hover:border-white hover:bg-white hover:text-ink",
+              ].join(" ")}
             >
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden>
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                aria-hidden
+              >
                 <path
-                  d="M9 2 4 7l5 5"
+                  d="M10.5 2.5 5 8l5.5 5.5"
                   stroke="currentColor"
-                  strokeWidth="1"
-                  strokeLinecap="square"
+                  strokeWidth="1.25"
                 />
               </svg>
             </button>
@@ -137,64 +242,40 @@ export function GalleryRail({
               onClick={() => step(1)}
               aria-disabled={atEnd}
               aria-label={nextLabel}
-              className={arrow(atEnd)}
+              className={[
+                "grid h-11 w-11 place-items-center rounded-full border border-white/45 bg-black/15 text-white backdrop-blur-sm transition duration-300 md:h-12 md:w-12",
+                atEnd
+                  ? "pointer-events-none opacity-30"
+                  : "hover:border-white hover:bg-white hover:text-ink",
+              ].join(" ")}
             >
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden>
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                aria-hidden
+              >
                 <path
-                  d="M5 2l5 5-5 5"
+                  d="m5.5 2.5 5.5 5.5-5.5 5.5"
                   stroke="currentColor"
-                  strokeWidth="1"
-                  strokeLinecap="square"
+                  strokeWidth="1.25"
                 />
               </svg>
             </button>
           </div>
         </div>
-      </div>
 
-      <div
-        ref={railRef}
-        onScroll={onScroll}
-        role="group"
-        aria-label={label}
-        tabIndex={0}
-        className="armatis-rail flex snap-x snap-mandatory items-center gap-5 overflow-x-auto scroll-px-5 p-5 md:gap-6 md:scroll-px-6 md:p-6"
-      >
-        {items.map((item) => (
-          <div key={item.src} className="w-full flex-none snap-start">
-            <div
-              className="relative mx-auto w-full overflow-hidden border border-hairline"
-              style={{
-                aspectRatio: renderRatio(item.src),
-                // cap the height of the taller frames so the panoramas don't sit
-                // in a deep mat — every frame stays inside one calm card height
-                maxWidth: `${Math.round(MAX_FRAME_HEIGHT * renderAspect(item.src))}px`,
-              }}
-            >
-              <RevealImage
-                src={item.src}
-                alt={item.caption}
-                fill
-                threshold={0.25}
-                sizes="(max-width: 768px) 92vw, 1120px"
-              />
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <div className="px-5 pb-5 md:px-6 md:pb-6">
-        <p className="mb-4 font-mono text-[10px] uppercase tracking-[0.2em] text-fg-mute">
-          {items[current]?.caption}
-        </p>
-        <div className="relative h-px w-full bg-hairline">
-          <div
-            className="absolute top-0 h-px bg-fg-mute transition-[margin] duration-500 ease-out"
-            style={{
-              width: `${100 / items.length}%`,
-              marginLeft: `${(current * 100) / items.length}%`,
-            }}
-          />
+        <div className="mt-6 flex gap-2" aria-hidden>
+          {items.map((item, index) => (
+            <span
+              key={item.desktopSrc}
+              className={[
+                "h-px flex-1 transition-colors duration-500",
+                index === current ? "bg-white" : "bg-white/25",
+              ].join(" ")}
+            />
+          ))}
         </div>
       </div>
     </div>
