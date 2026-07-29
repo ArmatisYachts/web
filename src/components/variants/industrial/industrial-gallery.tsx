@@ -1,23 +1,41 @@
 import { useTranslations } from "next-intl";
 import { GalleryRail } from "@/components/sections/gallery-rail";
-import { HQ_GALLERY } from "@/lib/yacht";
+import { RENDERS } from "@/lib/yacht";
 
 type GalleryCategory = "exteriors" | "interiors";
+
+const EXTERIORS = [
+  { src: RENDERS.profileGolden, captionKey: "profile" },
+  { src: RENDERS.profileGoldenAlt, captionKey: "profile" },
+  { src: RENDERS.aerial, captionKey: "aerial" },
+  { src: RENDERS.sterns, captionKey: "stern" },
+  { src: RENDERS.beachPlatform, captionKey: "terrace" },
+  { src: RENDERS.foredeckSpa, captionKey: "foredeck" },
+  { src: RENDERS.bowOn, captionKey: "foredeck" },
+  { src: RENDERS.sideStatic, captionKey: "underway" },
+] as const;
+
+const INTERIORS = [
+  { src: RENDERS.interiorSalon, captionKey: "salon" },
+  { src: RENDERS.interiorMaster, captionKey: "master" },
+  { src: RENDERS.interiorGuest, captionKey: "guest" },
+  { src: RENDERS.interiorBeachClub, captionKey: "club" },
+] as const;
 
 export function IndustrialGallery() {
   const t = useTranslations("industrial.gallery");
 
   const rail = (
     items: readonly {
-      desktop: string;
-      mobile: string;
+      src: string;
       captionKey: string;
+      position?: string;
     }[]
   ) =>
     items.map((item) => ({
-      desktopSrc: item.desktop,
-      mobileSrc: item.mobile,
+      src: item.src,
       caption: t(`captions.${item.captionKey}`),
+      position: item.position,
     }));
 
   const introduction = (category: GalleryCategory, index: string) => (
@@ -45,7 +63,7 @@ export function IndustrialGallery() {
       {introduction("exteriors", "03.1")}
       <GalleryRail
         label={t("exteriors.label")}
-        items={rail(HQ_GALLERY.exteriors)}
+        items={rail(EXTERIORS)}
         prevLabel={t("prev")}
         nextLabel={t("next")}
       />
@@ -53,7 +71,7 @@ export function IndustrialGallery() {
       {introduction("interiors", "03.2")}
       <GalleryRail
         label={t("interiors.label")}
-        items={rail(HQ_GALLERY.interiors)}
+        items={rail(INTERIORS)}
         prevLabel={t("prev")}
         nextLabel={t("next")}
       />

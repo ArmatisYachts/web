@@ -1,6 +1,6 @@
 "use client";
 
-import { getImageProps } from "next/image";
+import Image from "next/image";
 import {
   useCallback,
   useEffect,
@@ -10,58 +10,29 @@ import {
 } from "react";
 
 export type RailItem = {
-  desktopSrc: string;
-  mobileSrc: string;
+  src: string;
   caption: string;
+  position?: string;
 };
 
-const DESKTOP_IMAGE = { width: 1672, height: 941 } as const;
-const MOBILE_IMAGE = { width: 941, height: 1672 } as const;
-
-function ArtDirectedImage({ item }: { item: RailItem }) {
-  const common = {
-    alt: item.caption,
-    sizes: "100vw",
-    quality: 90,
-    loading: "lazy" as const,
-  };
-
-  const {
-    props: { srcSet: desktopSrcSet },
-  } = getImageProps({
-    ...common,
-    src: item.desktopSrc,
-    width: DESKTOP_IMAGE.width,
-    height: DESKTOP_IMAGE.height,
-  });
-
-  const { props: mobileProps } = getImageProps({
-    ...common,
-    src: item.mobileSrc,
-    width: MOBILE_IMAGE.width,
-    height: MOBILE_IMAGE.height,
-  });
-
+function FullscreenImage({ item }: { item: RailItem }) {
   return (
-    <picture className="absolute inset-0">
-      <source
-        media="(min-width: 768px)"
-        srcSet={desktopSrcSet}
-        sizes="100vw"
-      />
-      <img
-        {...mobileProps}
-        alt={item.caption}
-        draggable={false}
-        className="h-full w-full object-cover"
-      />
-    </picture>
+    <Image
+      src={item.src}
+      alt={item.caption}
+      fill
+      quality={90}
+      sizes="100vw"
+      draggable={false}
+      className="object-cover"
+      style={{ objectPosition: item.position ?? "center" }}
+    />
   );
 }
 
-// A true edge-to-edge image sequence: every slide owns one complete viewport,
-// uses desktop/mobile art direction, and supports touch, trackpad, keyboard and
-// explicit arrow navigation. No gallery chrome takes space away from the image.
+// Edge-to-edge full-screen gallery using only the original ARMATIS renders.
+// Touch, trackpad, keyboard and explicit arrow navigation all move exactly one
+// viewport at a time.
 export function GalleryRail({
   label,
   items,
@@ -92,6 +63,7 @@ export function GalleryRail({
 
   const onScroll = () => {
     if (animationFrame.current) return;
+
     animationFrame.current = requestAnimationFrame(() => {
       animationFrame.current = 0;
       sync();
@@ -173,13 +145,13 @@ export function GalleryRail({
       >
         {items.map((item, index) => (
           <figure
-            key={item.desktopSrc}
+            key={item.src}
             role="group"
             aria-roledescription="slide"
             aria-label={`${index + 1} / ${items.length}`}
             className="relative h-full w-full flex-none snap-start snap-always overflow-hidden bg-ink"
           >
-            <ArtDirectedImage item={item} />
+            <FullscreenImage item={item} />
             <figcaption className="sr-only">{item.caption}</figcaption>
           </figure>
         ))}
@@ -199,6 +171,63 @@ export function GalleryRail({
           {String(current + 1).padStart(2, "0")} /{" "}
           {String(items.length).padStart(2, "0")}
         </span>
+      </div>
+
+      <div className="pointer-events-none absolute inset-0 z-20 flex items-center justify-between px-4 md:px-8">
+        <button
+          type="button"
+          onClick={() => step(-1)}
+          aria-disabled={atStart}
+          aria-label={`${prevLabel} — ${label}`}
+          title={prevLabel}
+          className={[
+            "pointer-events-auto grid h-12 w-12 place-items-center rounded-full border border-white/70 bg-black/45 text-white shadow-[0_10px_35px_rgba(0,0,0,0.28)] backdrop-blur-md transition duration-300 md:h-14 md:w-14",
+            atStart
+              ? "pointer-events-none opacity-30"
+              : "hover:border-white hover:bg-white hover:text-ink",
+          ].join(" ")}
+        >
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 18 18"
+            fill="none"
+            aria-hidden
+          >
+            <path
+              d="M11.75 2.75 5.5 9l6.25 6.25"
+              stroke="currentColor"
+              strokeWidth="1.35"
+            />
+          </svg>
+        </button>
+        <button
+          type="button"
+          onClick={() => step(1)}
+          aria-disabled={atEnd}
+          aria-label={`${nextLabel} — ${label}`}
+          title={nextLabel}
+          className={[
+            "pointer-events-auto grid h-12 w-12 place-items-center rounded-full border border-white/70 bg-black/45 text-white shadow-[0_10px_35px_rgba(0,0,0,0.28)] backdrop-blur-md transition duration-300 md:h-14 md:w-14",
+            atEnd
+              ? "pointer-events-none opacity-30"
+              : "hover:border-white hover:bg-white hover:text-ink",
+          ].join(" ")}
+        >
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 18 18"
+            fill="none"
+            aria-hidden
+          >
+            <path
+              d="m6.25 2.75 6.25 6.25-6.25 6.25"
+              stroke="currentColor"
+              strokeWidth="1.35"
+            />
+          </svg>
+        </button>
       </div>
 
       <div className="absolute inset-x-0 bottom-0 z-20 p-6 pb-[max(1.5rem,env(safe-area-inset-bottom))] md:p-10">
@@ -269,7 +298,7 @@ export function GalleryRail({
         <div className="mt-6 flex gap-2" aria-hidden>
           {items.map((item, index) => (
             <span
-              key={item.desktopSrc}
+              key={item.src}
               className={[
                 "h-px flex-1 transition-colors duration-500",
                 index === current ? "bg-white" : "bg-white/25",
