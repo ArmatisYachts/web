@@ -186,15 +186,17 @@ export function GalleryRail({
           ].join(" ")}
         >
           <svg
-            viewBox="0 0 112 16"
+            viewBox="0 0 24 64"
             fill="none"
             aria-hidden
-            className="h-4 w-16 transition-transform duration-300 group-hover:-translate-x-1.5 md:w-28"
+            className="h-12 w-auto transition-transform duration-300 group-hover:-translate-x-1 md:h-16"
           >
             <path
-              d="M112 8H2M9 1.5 2.5 8 9 14.5"
+              d="M19 4 6 32l13 28"
               stroke="currentColor"
-              strokeWidth="1.1"
+              strokeWidth="1.2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               vectorEffect="non-scaling-stroke"
             />
           </svg>
@@ -211,15 +213,17 @@ export function GalleryRail({
           ].join(" ")}
         >
           <svg
-            viewBox="0 0 112 16"
+            viewBox="0 0 24 64"
             fill="none"
             aria-hidden
-            className="h-4 w-16 transition-transform duration-300 group-hover:translate-x-1.5 md:w-28"
+            className="h-12 w-auto transition-transform duration-300 group-hover:translate-x-1 md:h-16"
           >
             <path
-              d="M0 8h110M103 1.5l6.5 6.5-6.5 6.5"
+              d="m5 4 13 28L5 60"
               stroke="currentColor"
-              strokeWidth="1.1"
+              strokeWidth="1.2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               vectorEffect="non-scaling-stroke"
             />
           </svg>
