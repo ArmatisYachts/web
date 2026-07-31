@@ -285,30 +285,11 @@
         }
       }
     },
-    "green": {
-      "index": "04",
-      "label": "Produzione sostenibile",
-      "title": "Costruito con energia rinnovabile",
-      "body": "La produzione è alimentata da energia rinnovabile grazie a un impianto fotovoltaico sul tetto, con ventilazione avanzata e filtrazione al carbonio che garantiscono processi compositi puliti e controllati — una struttura allineata al Green Deal europeo.",
-      "productLead": "La stessa filosofia naviga con ogni yacht",
-      "stats": {
-        "solar": "Impianto solare a bordo",
-        "generator": "Riduzione ore generatore"
-      }
-    },
     "rnd": {
-      "index": "05",
+      "index": "04",
       "label": "R&D & collaborazione",
       "title": "Un'ingegneria che non si ferma",
       "body": "Un centro di ingegneria interno dedicato a carene, strutture composite avanzate, costruzione leggera e simulazione digitale — sviluppato in collaborazione strutturata con università e centri di ricerca italiani, dai progetti congiunti ai programmi per giovani talenti."
-    },
-    "platforms": {
-      "index": "06",
-      "label": "Gamma di piattaforme",
-      "title": "Una famiglia, nata da un unico sistema",
-      "meters": "m",
-      "statusDevelopment": "In sviluppo",
-      "statusProduction": "ARMATIS 107 — in produzione"
     },
     "ctaBand": {
       "line": "Parla di una costruzione con ARMATIS.",

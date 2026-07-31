@@ -6,14 +6,12 @@ import { SectionIntro } from "@/components/sections/section-intro";
 import { NumberedRows } from "@/components/sections/numbered-rows";
 import { StatStrip } from "@/components/sections/stat-strip";
 import { EditorialSplit } from "@/components/sections/editorial-split";
-import { PlatformRange } from "@/components/sections/platform-range";
 import { CtaBand } from "@/components/sections/cta-band";
 import { IndustrialBand } from "@/components/variants/industrial/industrial-band";
 import {
   FACILITIES,
   TECHNOLOGIES,
   PROCESS_INNOVATIONS,
-  SUSTAINABILITY,
   INNOVATION_METRICS,
 } from "@/lib/company";
 import { RENDERS } from "@/lib/yacht";
@@ -138,37 +136,9 @@ export default async function ManufacturingPage({
         </div>
       </section>
 
-      {/* 04 — sustainable manufacturing */}
-      <section className="border-t border-hairline bg-surface-2 px-6 py-24 md:px-12 md:py-32">
-        <div className="mx-auto max-w-6xl">
-          <SectionIntro
-            index={t("green.index")}
-            label={t("green.label")}
-            title={t("green.title")}
-          />
-          <p className="mt-8 max-w-2xl text-base font-light leading-relaxed text-fg-soft md:text-lg">
-            {t("green.body")}
-          </p>
-          <p className="mt-10 font-mono text-[10px] uppercase tracking-[0.2em] text-fg-faint">
-            {t("green.productLead")}
-          </p>
-          <div className="mt-4">
-            <StatStrip
-              items={[
-                { value: SUSTAINABILITY.solar, label: t("green.stats.solar") },
-                {
-                  value: SUSTAINABILITY.generatorReduction,
-                  label: t("green.stats.generator"),
-                },
-              ]}
-            />
-          </div>
-        </div>
-      </section>
-
       <IndustrialBand src={RENDERS.beachPlatform} alt={t("hero.title")} />
 
-      {/* 05 — R&D & university collaboration */}
+      {/* 04 — R&D & university collaboration */}
       <EditorialSplit
         index={t("rnd.index")}
         label={t("rnd.label")}
@@ -177,9 +147,6 @@ export default async function ManufacturingPage({
         src={RENDERS.profileGoldenAlt}
         flip
       />
-
-      {/* 06 — platform range */}
-      <PlatformRange />
 
       <CtaBand line={t("ctaBand.line")} button={t("ctaBand.button")} />
     </main>

@@ -285,30 +285,11 @@
         }
       }
     },
-    "green": {
-      "index": "04",
-      "label": "Sustainable manufacturing",
-      "title": "Built with renewable energy",
-      "body": "Production runs on renewable energy from a rooftop photovoltaic system, with advanced ventilation and carbon filtration ensuring clean, controlled composite processes — a facility aligned with the European Green Deal.",
-      "productLead": "The same philosophy sails with every yacht",
-      "stats": {
-        "solar": "Solar array on board",
-        "generator": "Generator-hour reduction"
-      }
-    },
     "rnd": {
-      "index": "05",
+      "index": "04",
       "label": "R&D & collaboration",
       "title": "Engineering that never stands still",
       "body": "An in-house engineering centre dedicated to hull forms, advanced composite structures, lightweight construction and digital simulation — developed in structured collaboration with Italian universities and research centres, from joint projects to talent programmes."
-    },
-    "platforms": {
-      "index": "06",
-      "label": "Platform range",
-      "title": "A family, engineered from one system",
-      "meters": "m",
-      "statusDevelopment": "In development",
-      "statusProduction": "ARMATIS 107 — in production"
     },
     "ctaBand": {
       "line": "Discuss a build with ARMATIS.",
