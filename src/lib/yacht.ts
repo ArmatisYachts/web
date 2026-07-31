@@ -11,7 +11,7 @@ export const ARMATIS_107 = {
   crew: 5,
   designer: "Massimo Verme",
   engineering: "Verme Projects",
-  engines: "4x IPS 1200 / 4x IPS 1350",
+  engines: "4x 1200 / 4x 1350",
   maxSpeed: "24 / 26 kn",
   fuel: "10 t",
   builtIn: "Italy",
