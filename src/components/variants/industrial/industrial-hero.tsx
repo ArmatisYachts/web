@@ -124,11 +124,7 @@ export function IndustrialHero() {
       {/* ---- Interface grid (top padding clears the fixed site header) ---- */}
       <div className="pointer-events-none absolute inset-0 z-40 grid grid-rows-[auto_1fr_auto] p-6 pt-20 md:p-10 md:pt-24">
         {/* Top row */}
-        <div className="flex items-start justify-between">
-          <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-white/40">
-            {t("category")}
-          </p>
-
+        <div className="flex items-start justify-end">
           <dl className="space-y-1 text-right font-mono text-[10px] uppercase tracking-[0.16em]">
             {credits.map(([label, value]) => (
               <div key={label} className="flex justify-end gap-3 whitespace-nowrap">
