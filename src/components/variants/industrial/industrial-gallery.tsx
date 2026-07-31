@@ -6,10 +6,10 @@ type GalleryCategory = "exteriors" | "interiors";
 
 const EXTERIORS = [
   { src: RENDERS.profileGolden, captionKey: "profile" },
-  { src: RENDERS.profileGoldenAlt, captionKey: "profile" },
+  { src: RENDERS.beachPlatform, captionKey: "terrace" },
   { src: RENDERS.aerial, captionKey: "aerial" },
   { src: RENDERS.sterns, captionKey: "stern" },
-  { src: RENDERS.beachPlatform, captionKey: "terrace" },
+  { src: RENDERS.profileGoldenAlt, captionKey: "profile" },
   { src: RENDERS.foredeckSpa, captionKey: "foredeck" },
   { src: RENDERS.bowOn, captionKey: "foredeck" },
   { src: RENDERS.sideStatic, captionKey: "underway" },

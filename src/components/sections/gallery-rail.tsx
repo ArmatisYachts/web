@@ -97,10 +97,9 @@ export function GalleryRail({
       const rail = railRef.current;
       if (!rail) return;
 
-      const next = Math.min(
-        Math.max(currentRef.current + direction, 0),
-        items.length - 1
-      );
+      // Loop: past the last frame wraps to the first, and vice versa.
+      const next =
+        (currentRef.current + direction + items.length) % items.length;
       const reduceMotion = window.matchMedia(
         "(prefers-reduced-motion: reduce)"
       ).matches;
@@ -125,9 +124,6 @@ export function GalleryRail({
       step(1);
     }
   };
-
-  const atStart = current === 0;
-  const atEnd = current === items.length - 1;
 
   return (
     <div
@@ -177,13 +173,9 @@ export function GalleryRail({
         <button
           type="button"
           onClick={() => step(-1)}
-          aria-disabled={atStart}
           aria-label={`${prevLabel} — ${label}`}
           title={prevLabel}
-          className={[
-            "group pointer-events-auto px-2 py-8 text-white drop-shadow-[0_1px_10px_rgba(0,0,0,0.55)] transition duration-300",
-            atStart ? "pointer-events-none opacity-25" : "opacity-80 hover:opacity-100",
-          ].join(" ")}
+          className="group pointer-events-auto px-2 py-8 text-white opacity-80 drop-shadow-[0_1px_10px_rgba(0,0,0,0.55)] transition duration-300 hover:opacity-100"
         >
           <svg
             viewBox="0 0 24 64"
@@ -204,13 +196,9 @@ export function GalleryRail({
         <button
           type="button"
           onClick={() => step(1)}
-          aria-disabled={atEnd}
           aria-label={`${nextLabel} — ${label}`}
           title={nextLabel}
-          className={[
-            "group pointer-events-auto px-2 py-8 text-white drop-shadow-[0_1px_10px_rgba(0,0,0,0.55)] transition duration-300",
-            atEnd ? "pointer-events-none opacity-25" : "opacity-80 hover:opacity-100",
-          ].join(" ")}
+          className="group pointer-events-auto px-2 py-8 text-white opacity-80 drop-shadow-[0_1px_10px_rgba(0,0,0,0.55)] transition duration-300 hover:opacity-100"
         >
           <svg
             viewBox="0 0 24 64"
