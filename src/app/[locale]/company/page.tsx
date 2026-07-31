@@ -32,6 +32,8 @@ export default async function CompanyPage({
         label={t("hero.label")}
         title={t("hero.title")}
         kicker={t("hero.kicker")}
+        src={RENDERS.sterns}
+        alt={ARMATIS_107.model}
         readout={[[tf("yard"), ARMATIS_107.shipyard]]}
       />
 
@@ -54,7 +56,7 @@ export default async function CompanyPage({
         </div>
       </section>
 
-      <IndustrialBand src={RENDERS.sterns} alt={ARMATIS_107.model} />
+      <IndustrialBand src={RENDERS.beachPlatform} alt={ARMATIS_107.model} />
 
       <CtaBand line={t("ctaBand.line")} button={t("ctaBand.button")} />
     </main>
