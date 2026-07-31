@@ -17,7 +17,7 @@ export function PageHero({
   readout,
   compact = false,
 }: {
-  label: string;
+  label?: string;
   title: string;
   kicker?: string;
   src?: string;
@@ -62,10 +62,12 @@ export function PageHero({
       <div className="relative z-20 px-6 pb-14 pt-32 md:px-10 md:pb-20 md:pt-40">
         <div className="flex items-end justify-between gap-8">
           <div>
-            <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-white/45">
-              {label}
-            </p>
-            <h1 className="mt-4 font-display text-[clamp(3rem,9vw,7.5rem)] font-extralight leading-[0.92] tracking-tight">
+            {label && (
+              <p className="mb-4 font-mono text-[10px] uppercase tracking-[0.24em] text-white/45">
+                {label}
+              </p>
+            )}
+            <h1 className="font-display text-[clamp(3rem,9vw,7.5rem)] font-extralight leading-[0.92] tracking-tight">
               {title}
             </h1>
             {kicker && (

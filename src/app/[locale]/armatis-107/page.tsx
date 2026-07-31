@@ -30,7 +30,6 @@ export default async function Yacht107Page({
   return (
     <main>
       <PageHero
-        label={t("hero.label")}
         title={t("hero.title")}
         kicker={t("hero.kicker")}
         src={RENDERS.heroProfile}

@@ -24,7 +24,9 @@ function FullscreenImage({ item }: { item: RailItem }) {
       quality={90}
       sizes="100vw"
       draggable={false}
-      className="object-cover"
+      // Portrait phones would crop a landscape render brutally with `cover`;
+      // contain shows the whole frame on the dark stage. Desktop stays full-bleed.
+      className="object-contain md:object-cover"
       style={{ objectPosition: item.position ?? "center" }}
     />
   );
@@ -164,7 +166,7 @@ export function GalleryRail({
         className="pointer-events-none absolute inset-0 z-10 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.38),transparent_24%,transparent_60%,rgba(0,0,0,0.62))]"
       />
 
-      <div className="pointer-events-none absolute inset-x-0 top-0 z-20 flex items-center justify-between p-6 pt-7 md:p-10">
+      <div className="pointer-events-none absolute inset-x-0 top-0 z-20 flex items-center justify-between p-6 pt-20 md:p-10 md:pt-24">
         <div className="flex items-center gap-4 font-mono text-[10px] uppercase tracking-[0.24em] text-white/90">
           <span className="h-px w-8 bg-white/55" />
           <span>{label}</span>
