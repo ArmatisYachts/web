@@ -66,6 +66,8 @@ export default async function ManufacturingPage({
         </div>
       </section>
 
+      <IndustrialBand src={RENDERS.beachPlatform} alt={t("hero.title")} />
+
       {/* 02 — Industry 4.0 capabilities */}
       <section className="border-t border-hairline bg-surface px-6 py-24 md:px-12 md:py-32">
         <div className="mx-auto max-w-6xl">
@@ -93,6 +95,8 @@ export default async function ManufacturingPage({
           </dl>
         </div>
       </section>
+
+      <IndustrialBand src={RENDERS.bowOn} alt={t("hero.title")} />
 
       {/* 03 — process innovation */}
       <section className="border-t border-hairline bg-surface px-6 py-24 md:px-12 md:py-32">
@@ -126,8 +130,6 @@ export default async function ManufacturingPage({
         src={RENDERS.profileGoldenAlt}
         flip
       />
-
-      <IndustrialBand src={RENDERS.beachPlatform} alt={t("hero.title")} />
 
       <CtaBand line={t("ctaBand.line")} button={t("ctaBand.button")} />
     </main>
