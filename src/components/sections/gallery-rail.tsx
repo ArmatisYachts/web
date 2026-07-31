@@ -234,65 +234,10 @@ export function GalleryRail({
         <div className="flex items-end justify-between gap-6">
           <p
             aria-live="polite"
-            className="max-w-[65vw] font-display text-2xl font-extralight tracking-tight text-white md:text-4xl"
+            className="max-w-[80vw] font-display text-2xl font-extralight tracking-tight text-white md:text-4xl"
           >
             {items[current]?.caption}
           </p>
-
-          <div className="flex shrink-0 gap-2">
-            <button
-              type="button"
-              onClick={() => step(-1)}
-              aria-disabled={atStart}
-              aria-label={prevLabel}
-              className={[
-                "grid h-11 w-11 place-items-center rounded-full border border-white/45 bg-black/15 text-white backdrop-blur-sm transition duration-300 md:h-12 md:w-12",
-                atStart
-                  ? "pointer-events-none opacity-30"
-                  : "hover:border-white hover:bg-white hover:text-ink",
-              ].join(" ")}
-            >
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-                aria-hidden
-              >
-                <path
-                  d="M10.5 2.5 5 8l5.5 5.5"
-                  stroke="currentColor"
-                  strokeWidth="1.25"
-                />
-              </svg>
-            </button>
-            <button
-              type="button"
-              onClick={() => step(1)}
-              aria-disabled={atEnd}
-              aria-label={nextLabel}
-              className={[
-                "grid h-11 w-11 place-items-center rounded-full border border-white/45 bg-black/15 text-white backdrop-blur-sm transition duration-300 md:h-12 md:w-12",
-                atEnd
-                  ? "pointer-events-none opacity-30"
-                  : "hover:border-white hover:bg-white hover:text-ink",
-              ].join(" ")}
-            >
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-                aria-hidden
-              >
-                <path
-                  d="m5.5 2.5 5.5 5.5-5.5 5.5"
-                  stroke="currentColor"
-                  strokeWidth="1.25"
-                />
-              </svg>
-            </button>
-          </div>
         </div>
 
         <div className="mt-6 flex gap-2" aria-hidden>
