@@ -1,12 +1,12 @@
 import { useTranslations } from "next-intl";
 import { SectionIntro } from "@/components/sections/section-intro";
 import { StatStrip } from "@/components/sections/stat-strip";
-import { SUSTAINABILITY, INNOVATION_METRICS } from "@/lib/company";
+import { SUSTAINABILITY } from "@/lib/company";
 
-const ITEMS = ["solar", "stability", "platform", "interiors"] as const;
+const ITEMS = ["solar", "stability", "platform"] as const;
 
 // "Innovation on board" — the 107's technology story: solar & silent power,
-// patented stability monitoring, deployable platform, modular interiors.
+// patented stability monitoring, deployable platform.
 export function IndustrialInnovation() {
   const t = useTranslations("yacht107.innovation");
 
@@ -20,7 +20,6 @@ export function IndustrialInnovation() {
             items={[
               { value: SUSTAINABILITY.solar, label: t("stats.solar") },
               { value: SUSTAINABILITY.generatorReduction, label: t("stats.generator") },
-              { value: INNOVATION_METRICS.interiorInstallReduction, label: t("stats.interiors") },
             ]}
           />
         </div>

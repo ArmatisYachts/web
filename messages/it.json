@@ -100,7 +100,7 @@
       "interiors": {
         "label": "Interni",
         "title": "Il volume, sfruttato con intelligenza",
-        "body": "Un salone principale a tutto baglio, una suite armatoriale che occupa l'intera larghezza dello scafo e un beach club che apre lo scafo direttamente sull'acqua. Gli interni sono ingegnerizzati e allestiti in-house, con le stesse tolleranze della struttura che li sostiene."
+        "body": "Un salone principale a tutto baglio, una suite armatoriale che occupa l'intera larghezza dello scafo e un beach club che apre lo scafo direttamente sull'acqua."
       },
       "exteriors": {
         "label": "Esterni",
@@ -165,8 +165,7 @@
       "title": "Ingegneria oltre le convenzioni",
       "stats": {
         "solar": "Impianto solare integrato",
-        "generator": "Riduzione ore generatore",
-        "interiors": "Installazione interni più rapida"
+        "generator": "Riduzione ore generatore"
       },
       "items": {
         "solar": {
@@ -180,10 +179,6 @@
         "platform": {
           "label": "Piattaforma estraibile",
           "body": "Una piattaforma estraibile brevettata e a ingombro ridotto trasforma volumi interni altrimenti inutilizzati in spazi esterni funzionali."
-        },
-        "interiors": {
-          "label": "Interni modulari",
-          "body": "Strutture interne in alluminio pre-ingegnerizzate sostituiscono la falegnameria tradizionale — costruite con precisione in officina e installate in una frazione del tempo."
         }
       }
     },

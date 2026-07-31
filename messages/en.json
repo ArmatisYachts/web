@@ -100,7 +100,7 @@
       "interiors": {
         "label": "Interiors",
         "title": "Volume, used with intent",
-        "body": "A full-beam main salon, a master suite that runs the width of the hull, and a beach club that opens the hull directly onto the water. Interiors are engineered and fitted in-house, held to the same tolerances as the structure behind them."
+        "body": "A full-beam main salon, a master suite that runs the width of the hull, and a beach club that opens the hull directly onto the water."
       },
       "exteriors": {
         "label": "Exteriors",
@@ -165,8 +165,7 @@
       "title": "Engineered beyond convention",
       "stats": {
         "solar": "Integrated solar array",
-        "generator": "Generator-hour reduction",
-        "interiors": "Faster interior installation"
+        "generator": "Generator-hour reduction"
       },
       "items": {
         "solar": {
@@ -180,10 +179,6 @@
         "platform": {
           "label": "Deployable platform",
           "body": "A patented, space-efficient deployable platform transforms otherwise unused internal volume into functional exterior living space."
-        },
-        "interiors": {
-          "label": "Modular interiors",
-          "body": "Pre-engineered aluminium interior structures replace traditional carpentry — precision-built in the workshop and installed in a fraction of the time."
         }
       }
     },
