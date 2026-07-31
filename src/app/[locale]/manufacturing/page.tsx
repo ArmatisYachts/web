@@ -117,8 +117,6 @@ export default async function ManufacturingPage({
         </div>
       </section>
 
-      <IndustrialBand src={RENDERS.beachPlatform} alt={t("hero.title")} />
-
       {/* 04 — R&D & university collaboration */}
       <EditorialSplit
         index={t("rnd.index")}
@@ -128,6 +126,8 @@ export default async function ManufacturingPage({
         src={RENDERS.profileGoldenAlt}
         flip
       />
+
+      <IndustrialBand src={RENDERS.beachPlatform} alt={t("hero.title")} />
 
       <CtaBand line={t("ctaBand.line")} button={t("ctaBand.button")} />
     </main>
