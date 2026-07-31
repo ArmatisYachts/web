@@ -189,7 +189,7 @@ export function GalleryRail({
             viewBox="0 0 24 64"
             fill="none"
             aria-hidden
-            className="h-12 w-auto transition-transform duration-300 group-hover:-translate-x-1 md:h-16"
+            className="h-18 w-auto transition-transform duration-300 group-hover:-translate-x-1 md:h-24"
           >
             <path
               d="M19 4 6 32l13 28"
@@ -216,7 +216,7 @@ export function GalleryRail({
             viewBox="0 0 24 64"
             fill="none"
             aria-hidden
-            className="h-12 w-auto transition-transform duration-300 group-hover:translate-x-1 md:h-16"
+            className="h-18 w-auto transition-transform duration-300 group-hover:translate-x-1 md:h-24"
           >
             <path
               d="m5 4 13 28L5 60"

@@ -15,7 +15,7 @@ export const INNOVATION_METRICS = {
 // (homeTeasers.manufacturing.facilities / manufacturing.facilities.items).
 export const FACILITIES = [
   { key: "mould", index: "01", tags: ["5-AXIS CNC", "3D PRINTING", "COMPOSITE MOULDS"] },
-  { key: "lamination", index: "02", tags: ["HULL", "SUPERSTRUCTURE", "VACUUM INFUSION"] },
+  { key: "lamination", index: "02", tags: ["HULL", "SUPERSTRUCTURE", "DECK"] },
   { key: "assembly", index: "03", tags: ["PROPULSION", "SYSTEMS", "INTERIORS"] },
 ] as const;
 
