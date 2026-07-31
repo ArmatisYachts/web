@@ -189,12 +189,12 @@ export function GalleryRail({
             viewBox="0 0 24 64"
             fill="none"
             aria-hidden
-            className="h-18 w-auto transition-transform duration-300 group-hover:-translate-x-1 md:h-24"
+            className="h-[84px] w-auto transition-transform duration-300 group-hover:-translate-x-1 md:h-[110px]"
           >
             <path
               d="M19 4 6 32l13 28"
               stroke="currentColor"
-              strokeWidth="1.2"
+              strokeWidth="2.5"
               strokeLinecap="round"
               strokeLinejoin="round"
               vectorEffect="non-scaling-stroke"
@@ -216,12 +216,12 @@ export function GalleryRail({
             viewBox="0 0 24 64"
             fill="none"
             aria-hidden
-            className="h-18 w-auto transition-transform duration-300 group-hover:translate-x-1 md:h-24"
+            className="h-[84px] w-auto transition-transform duration-300 group-hover:translate-x-1 md:h-[110px]"
           >
             <path
               d="m5 4 13 28L5 60"
               stroke="currentColor"
-              strokeWidth="1.2"
+              strokeWidth="2.5"
               strokeLinecap="round"
               strokeLinejoin="round"
               vectorEffect="non-scaling-stroke"
