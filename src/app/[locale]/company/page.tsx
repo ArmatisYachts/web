@@ -32,7 +32,7 @@ export default async function CompanyPage({
         label={t("hero.label")}
         title={t("hero.title")}
         kicker={t("hero.kicker")}
-        src={RENDERS.sterns}
+        src={RENDERS.sideStatic}
         alt={ARMATIS_107.model}
         readout={[[tf("yard"), ARMATIS_107.shipyard]]}
       />
@@ -43,7 +43,7 @@ export default async function CompanyPage({
         label={t("story.label")}
         title={t("story.title")}
         body={t("story.body")}
-        src={RENDERS.sideStatic}
+        src={RENDERS.sterns}
         alt={ARMATIS_107.model}
       />
 

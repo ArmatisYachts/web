@@ -81,7 +81,7 @@
       "caption": "Un salone sul ponte principale incorniciato da vetrate panoramiche a tutta altezza."
     },
     "gallery": {
-      "index": "03",
+      "index": "02",
       "label": "Galleria",
       "prev": "Immagine precedente",
       "next": "Immagine successiva",
@@ -129,7 +129,7 @@
       "cta": "Scopri il 107"
     },
     "manufacturing": {
-      "index": "03",
+      "index": "02",
       "label": "Produzione",
       "title": "Una piattaforma. Ogni disciplina in-house.",
       "facilities": {
@@ -235,27 +235,8 @@
         }
       }
     },
-    "phases": {
-      "index": "02",
-      "label": "Crescita",
-      "title": "Una scala controllata, per fasi",
-      "items": {
-        "one": {
-          "label": "Fase I",
-          "body": "Produzione iniziale — stabilizzazione dei processi, sviluppo del team e integrazione dei fornitori attorno ai primi scafi."
-        },
-        "two": {
-          "label": "Fase II",
-          "body": "Crescita progressiva — la capacità si espande di pari passo con la domanda, la maturità organizzativa e l'efficienza industriale."
-        },
-        "three": {
-          "label": "Fase III",
-          "body": "Pieno regime industriale — linee di produzione parallele e una forza lavoro ottimizzata, con lo stesso standard dello scafo numero uno."
-        }
-      }
-    },
     "tech": {
-      "index": "03",
+      "index": "02",
       "label": "Produzione avanzata",
       "title": "Un ambiente digitale ad alta precisione",
       "items": {
@@ -282,7 +263,7 @@
       }
     },
     "innovation": {
-      "index": "04",
+      "index": "03",
       "label": "Innovazione di processo",
       "title": "Logica industriale, artigianalità nautica",
       "stats": {
@@ -290,10 +271,6 @@
         "weight": "Obiettivo di riduzione del peso strutturale"
       },
       "items": {
-        "interiors": {
-          "title": "Interni modulari in alluminio",
-          "body": "Strutture pre-ingegnerizzate e arredi costruiti in officina sostituiscono la falegnameria di bordo — precisione plug-and-install con tempi di installazione drasticamente ridotti."
-        },
         "harness": {
           "title": "Architettura elettrica ingegnerizzata",
           "body": "Sistemi di cablaggio pre-assemblati di ispirazione automotive riducono i tempi di cablaggio a bordo, abbattono i margini di errore e standardizzano la produzione in serie."
@@ -309,7 +286,7 @@
       }
     },
     "green": {
-      "index": "05",
+      "index": "04",
       "label": "Produzione sostenibile",
       "title": "Costruito con energia rinnovabile",
       "body": "La produzione è alimentata da energia rinnovabile grazie a un impianto fotovoltaico sul tetto, con ventilazione avanzata e filtrazione al carbonio che garantiscono processi compositi puliti e controllati — una struttura allineata al Green Deal europeo.",
@@ -320,13 +297,13 @@
       }
     },
     "rnd": {
-      "index": "06",
+      "index": "05",
       "label": "R&D & collaborazione",
       "title": "Un'ingegneria che non si ferma",
       "body": "Un centro di ingegneria interno dedicato a carene, strutture composite avanzate, costruzione leggera e simulazione digitale — sviluppato in collaborazione strutturata con università e centri di ricerca italiani, dai progetti congiunti ai programmi per giovani talenti."
     },
     "platforms": {
-      "index": "07",
+      "index": "06",
       "label": "Gamma di piattaforme",
       "title": "Una famiglia, nata da un unico sistema",
       "meters": "m",

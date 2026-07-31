@@ -73,30 +73,7 @@ export default async function ManufacturingPage({
         </div>
       </section>
 
-      {/* 02 — controlled, phased growth (qualitative) */}
-      <section className="border-t border-hairline bg-surface-2 px-6 py-24 md:px-12 md:py-32">
-        <div className="mx-auto max-w-6xl">
-          <SectionIntro
-            index={t("phases.index")}
-            label={t("phases.label")}
-            title={t("phases.title")}
-          />
-          <div className="mt-14 grid gap-10 border-t border-hairline pt-12 md:grid-cols-3 md:gap-12">
-            {(["one", "two", "three"] as const).map((k) => (
-              <div key={k}>
-                <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-fg-faint">
-                  {t(`phases.items.${k}.label`)}
-                </p>
-                <p className="mt-4 text-sm leading-relaxed text-fg-mute md:text-[15px]">
-                  {t(`phases.items.${k}.body`)}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 03 — Industry 4.0 capabilities */}
+      {/* 02 — Industry 4.0 capabilities */}
       <section className="border-t border-hairline bg-surface px-6 py-24 md:px-12 md:py-32">
         <div className="mx-auto max-w-6xl">
           <SectionIntro
@@ -124,7 +101,7 @@ export default async function ManufacturingPage({
         </div>
       </section>
 
-      {/* 04 — process innovation */}
+      {/* 03 — process innovation */}
       <section className="border-t border-hairline bg-surface px-6 py-24 md:px-12 md:py-32">
         <div className="mx-auto max-w-6xl">
           <SectionIntro
@@ -146,7 +123,7 @@ export default async function ManufacturingPage({
               ]}
             />
           </div>
-          <div className="mt-14 grid gap-10 md:grid-cols-2 md:gap-x-16">
+          <div className="mt-14 grid gap-10 md:grid-cols-3 md:gap-x-12">
             {PROCESS_INNOVATIONS.map((k) => (
               <div key={k} className="border-t border-hairline pt-6">
                 <h3 className="font-mono text-[10px] uppercase tracking-[0.2em] text-fg">
@@ -161,7 +138,7 @@ export default async function ManufacturingPage({
         </div>
       </section>
 
-      {/* 05 — sustainable manufacturing */}
+      {/* 04 — sustainable manufacturing */}
       <section className="border-t border-hairline bg-surface-2 px-6 py-24 md:px-12 md:py-32">
         <div className="mx-auto max-w-6xl">
           <SectionIntro
@@ -191,7 +168,7 @@ export default async function ManufacturingPage({
 
       <IndustrialBand src={RENDERS.beachPlatform} alt={t("hero.title")} />
 
-      {/* 06 — R&D & university collaboration */}
+      {/* 05 — R&D & university collaboration */}
       <EditorialSplit
         index={t("rnd.index")}
         label={t("rnd.label")}
@@ -201,7 +178,7 @@ export default async function ManufacturingPage({
         flip
       />
 
-      {/* 07 — platform range */}
+      {/* 06 — platform range */}
       <PlatformRange />
 
       <CtaBand line={t("ctaBand.line")} button={t("ctaBand.button")} />

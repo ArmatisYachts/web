@@ -81,7 +81,7 @@
       "caption": "An open main-deck salon framed by full-height panoramic glazing."
     },
     "gallery": {
-      "index": "03",
+      "index": "02",
       "label": "Gallery",
       "prev": "Previous image",
       "next": "Next image",
@@ -129,7 +129,7 @@
       "cta": "Discover the 107"
     },
     "manufacturing": {
-      "index": "03",
+      "index": "02",
       "label": "Manufacturing",
       "title": "One platform. Every discipline in-house.",
       "facilities": {
@@ -235,27 +235,8 @@
         }
       }
     },
-    "phases": {
-      "index": "02",
-      "label": "Growth",
-      "title": "Controlled, phased scale",
-      "items": {
-        "one": {
-          "label": "Phase I",
-          "body": "Initial production — process stabilisation, team development and supplier integration around the first hulls."
-        },
-        "two": {
-          "label": "Phase II",
-          "body": "Progressive growth — capacity expands in step with demand, organisational maturity and industrial efficiency."
-        },
-        "three": {
-          "label": "Phase III",
-          "body": "Full industrial regime — parallel production lines and an optimised workforce, holding the same standard as hull number one."
-        }
-      }
-    },
     "tech": {
-      "index": "03",
+      "index": "02",
       "label": "Advanced manufacturing",
       "title": "A digital, high-precision environment",
       "items": {
@@ -282,7 +263,7 @@
       }
     },
     "innovation": {
-      "index": "04",
+      "index": "03",
       "label": "Process innovation",
       "title": "Industrial logic, yacht craftsmanship",
       "stats": {
@@ -290,10 +271,6 @@
         "weight": "Structural weight-reduction target"
       },
       "items": {
-        "interiors": {
-          "title": "Modular aluminium interiors",
-          "body": "Pre-engineered structural frameworks and workshop-built furniture replace onboard carpentry — plug-and-install precision with dramatically shorter installation times."
-        },
         "harness": {
           "title": "Engineered electrical architecture",
           "body": "Automotive-inspired, fully pre-assembled harness systems reduce onboard wiring time, lower error rates and standardise serial production."
@@ -309,7 +286,7 @@
       }
     },
     "green": {
-      "index": "05",
+      "index": "04",
       "label": "Sustainable manufacturing",
       "title": "Built with renewable energy",
       "body": "Production runs on renewable energy from a rooftop photovoltaic system, with advanced ventilation and carbon filtration ensuring clean, controlled composite processes — a facility aligned with the European Green Deal.",
@@ -320,13 +297,13 @@
       }
     },
     "rnd": {
-      "index": "06",
+      "index": "05",
       "label": "R&D & collaboration",
       "title": "Engineering that never stands still",
       "body": "An in-house engineering centre dedicated to hull forms, advanced composite structures, lightweight construction and digital simulation — developed in structured collaboration with Italian universities and research centres, from joint projects to talent programmes."
     },
     "platforms": {
-      "index": "07",
+      "index": "06",
       "label": "Platform range",
       "title": "A family, engineered from one system",
       "meters": "m",

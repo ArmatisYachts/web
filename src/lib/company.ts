@@ -30,7 +30,6 @@ export const TECHNOLOGIES = [
 
 // Process-innovation pillars. Keys index `manufacturing.innovation.items`.
 export const PROCESS_INNOVATIONS = [
-  "interiors",
   "harness",
   "composites",
   "lab",
