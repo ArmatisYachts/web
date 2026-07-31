@@ -24,7 +24,7 @@ export function IndustrialInnovation() {
           />
         </div>
 
-        <div className="mt-14 grid gap-10 md:grid-cols-2 md:gap-x-16">
+        <div className="mt-14 grid gap-10 md:grid-cols-3 md:gap-x-12">
           {ITEMS.map((k) => (
             <div key={k} className="border-t border-hairline pt-6">
               <h3 className="font-mono text-[10px] uppercase tracking-[0.2em] text-fg">
