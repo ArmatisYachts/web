@@ -49,7 +49,9 @@
     "scroll": "Scorri",
     "readout": {
       "loa": "Lunghezza f.t.",
-      "beam": "Baglio massimo"
+      "beam": "Baglio massimo",
+      "designedBy": "Design di",
+      "engineeredBy": "Ingegneria di"
     },
     "vision": {
       "index": "01",

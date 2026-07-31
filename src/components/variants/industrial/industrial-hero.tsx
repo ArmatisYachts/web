@@ -53,6 +53,11 @@ export function IndustrialHero() {
     [t("readout.beam"), ARMATIS_107.beam],
   ];
 
+  const credits: [string, string][] = [
+    [t("readout.designedBy"), ARMATIS_107.designer],
+    [t("readout.engineeredBy"), ARMATIS_107.engineering],
+  ];
+
   return (
     <section data-armatis-dark className="relative h-svh w-full overflow-hidden bg-[#0a0a0a] text-bone select-none">
       {/* brand wave texture (light lines on the dark stage) */}
@@ -129,14 +134,24 @@ export function IndustrialHero() {
             {t("category")}
           </p>
 
-          <dl className="space-y-1 text-right font-mono text-[10px] uppercase tracking-[0.16em]">
-            {readout.map(([label, value]) => (
-              <div key={label} className="flex justify-end gap-3">
-                <dt className="text-white/35">{label}</dt>
-                <dd className="tabular-nums text-bone">{value}</dd>
-              </div>
-            ))}
-          </dl>
+          <div className="flex flex-col items-end gap-3">
+            <dl className="space-y-1 text-right font-mono text-[10px] uppercase tracking-[0.16em]">
+              {readout.map(([label, value]) => (
+                <div key={label} className="flex justify-end gap-3">
+                  <dt className="text-white/35">{label}</dt>
+                  <dd className="tabular-nums text-bone">{value}</dd>
+                </div>
+              ))}
+            </dl>
+            <dl className="space-y-1 border-t border-white/15 pt-3 text-right font-mono text-[10px] uppercase tracking-[0.16em]">
+              {credits.map(([label, value]) => (
+                <div key={label} className="flex justify-end gap-3 whitespace-nowrap">
+                  <dt className="text-white/35">{label}</dt>
+                  <dd className="text-bone">{value}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
         </div>
 
         {/* Center — giant model number + tagline */}

@@ -49,7 +49,9 @@
     "scroll": "Scroll",
     "readout": {
       "loa": "Length overall",
-      "beam": "Max beam"
+      "beam": "Max beam",
+      "designedBy": "Designed by",
+      "engineeredBy": "Engineered by"
     },
     "vision": {
       "index": "01",
