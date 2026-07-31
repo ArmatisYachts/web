@@ -6,10 +6,6 @@ export const SUSTAINABILITY = {
   generatorReduction: "75–80%",
 } as const;
 
-export const INNOVATION_METRICS = {
-  weightReductionTarget: "8–10%",
-} as const;
-
 // Three-facility production model. `key` indexes the messages namespaces
 // (homeTeasers.manufacturing.facilities / manufacturing.facilities.items).
 export const FACILITIES = [

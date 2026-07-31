@@ -4,7 +4,6 @@ import { pageMetadata } from "@/lib/seo";
 import { PageHero } from "@/components/sections/page-hero";
 import { SectionIntro } from "@/components/sections/section-intro";
 import { NumberedRows } from "@/components/sections/numbered-rows";
-import { StatStrip } from "@/components/sections/stat-strip";
 import { EditorialSplit } from "@/components/sections/editorial-split";
 import { CtaBand } from "@/components/sections/cta-band";
 import { IndustrialBand } from "@/components/variants/industrial/industrial-band";
@@ -12,7 +11,6 @@ import {
   FACILITIES,
   TECHNOLOGIES,
   PROCESS_INNOVATIONS,
-  INNOVATION_METRICS,
 } from "@/lib/company";
 import { RENDERS } from "@/lib/yacht";
 
@@ -104,16 +102,6 @@ export default async function ManufacturingPage({
             label={t("innovation.label")}
             title={t("innovation.title")}
           />
-          <div className="mt-12">
-            <StatStrip
-              items={[
-                {
-                  value: INNOVATION_METRICS.weightReductionTarget,
-                  label: t("innovation.stats.weight"),
-                },
-              ]}
-            />
-          </div>
           <div className="mt-14 grid gap-10 md:grid-cols-3 md:gap-x-12">
             {PROCESS_INNOVATIONS.map((k) => (
               <div key={k} className="border-t border-hairline pt-6">
