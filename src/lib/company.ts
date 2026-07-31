@@ -7,7 +7,6 @@ export const SUSTAINABILITY = {
 } as const;
 
 export const INNOVATION_METRICS = {
-  interiorInstallReduction: ">70%",
   weightReductionTarget: "8–10%",
 } as const;
 

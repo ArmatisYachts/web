@@ -211,8 +211,7 @@
       "title": "The production platform",
       "kicker": "In-house composite engineering · Brindisi, Italy",
       "readout": {
-        "facilities": "Facilities",
-        "platforms": "Platforms"
+        "facilities": "Facilities"
       }
     },
     "facilities": {
@@ -267,7 +266,6 @@
       "label": "Process innovation",
       "title": "Industrial logic, yacht craftsmanship",
       "stats": {
-        "interiors": "Faster interior installation",
         "weight": "Structural weight-reduction target"
       },
       "items": {

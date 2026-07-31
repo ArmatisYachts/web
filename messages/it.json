@@ -211,8 +211,7 @@
       "title": "La piattaforma produttiva",
       "kicker": "Ingegneria dei compositi in-house · Brindisi, Italia",
       "readout": {
-        "facilities": "Strutture",
-        "platforms": "Piattaforme"
+        "facilities": "Strutture"
       }
     },
     "facilities": {
@@ -267,7 +266,6 @@
       "label": "Innovazione di processo",
       "title": "Logica industriale, artigianalità nautica",
       "stats": {
-        "interiors": "Installazione interni più rapida",
         "weight": "Obiettivo di riduzione del peso strutturale"
       },
       "items": {

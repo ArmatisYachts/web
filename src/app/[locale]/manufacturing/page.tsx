@@ -41,10 +41,7 @@ export default async function ManufacturingPage({
         title={t("hero.title")}
         kicker={t("hero.kicker")}
         src={RENDERS.aerialBW}
-        readout={[
-          [t("hero.readout.facilities"), "03"],
-          [t("hero.readout.platforms"), "24–38 m"],
-        ]}
+        readout={[[t("hero.readout.facilities"), "03"]]}
       />
 
       {/* 01 — three-facility production model */}
@@ -110,10 +107,6 @@ export default async function ManufacturingPage({
           <div className="mt-12">
             <StatStrip
               items={[
-                {
-                  value: INNOVATION_METRICS.interiorInstallReduction,
-                  label: t("innovation.stats.interiors"),
-                },
                 {
                   value: INNOVATION_METRICS.weightReductionTarget,
                   label: t("innovation.stats.weight"),
