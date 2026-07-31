@@ -75,7 +75,13 @@ export function GalleryRail({
     const rail = railRef.current;
     if (!rail) return;
 
+    // Mobile browsers fire resize when the URL bar collapses (height only) —
+    // re-aligning then would yank the rail mid-swipe. Only realign on a real
+    // width change.
+    let lastWidth = rail.clientWidth;
     const observer = new ResizeObserver(() => {
+      if (rail.clientWidth === lastWidth) return;
+      lastWidth = rail.clientWidth;
       rail.scrollTo({
         left: currentRef.current * rail.clientWidth,
         behavior: "auto",
@@ -137,7 +143,7 @@ export function GalleryRail({
         tabIndex={0}
         onKeyDown={onKeyDown}
         onScroll={onScroll}
-        className="armatis-rail flex h-full w-full snap-x snap-mandatory overflow-x-auto overscroll-x-contain scroll-smooth outline-none"
+        className="armatis-rail flex h-full w-full snap-x snap-mandatory overflow-x-auto overscroll-x-contain outline-none"
       >
         {items.map((item, index) => (
           <figure
