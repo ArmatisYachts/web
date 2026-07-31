@@ -1,4 +1,5 @@
 import { RevealImage } from "@/components/shared/reveal-image";
+import { renderRatio } from "@/lib/yacht";
 import { cn } from "@/lib/utils";
 
 // Two-column editorial row: eyebrow + title + copy beside a reveal image.
@@ -40,9 +41,10 @@ export function EditorialSplit({
         {src && (
           <div
             className={cn(
-              "relative aspect-[4/3] overflow-hidden border border-hairline",
+              "relative overflow-hidden border border-hairline",
               flip && "md:order-1"
             )}
+            style={{ aspectRatio: renderRatio(src) }}
           >
             <RevealImage
               src={src}
