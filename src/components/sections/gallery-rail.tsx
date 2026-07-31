@@ -181,23 +181,21 @@ export function GalleryRail({
           aria-label={`${prevLabel} — ${label}`}
           title={prevLabel}
           className={[
-            "pointer-events-auto grid h-12 w-12 place-items-center rounded-full border border-white/70 bg-black/45 text-white shadow-[0_10px_35px_rgba(0,0,0,0.28)] backdrop-blur-md transition duration-300 md:h-14 md:w-14",
-            atStart
-              ? "pointer-events-none opacity-30"
-              : "hover:border-white hover:bg-white hover:text-ink",
+            "group pointer-events-auto px-2 py-8 text-white drop-shadow-[0_1px_10px_rgba(0,0,0,0.55)] transition duration-300",
+            atStart ? "pointer-events-none opacity-25" : "opacity-80 hover:opacity-100",
           ].join(" ")}
         >
           <svg
-            width="18"
-            height="18"
-            viewBox="0 0 18 18"
+            viewBox="0 0 112 16"
             fill="none"
             aria-hidden
+            className="h-4 w-16 transition-transform duration-300 group-hover:-translate-x-1.5 md:w-28"
           >
             <path
-              d="M11.75 2.75 5.5 9l6.25 6.25"
+              d="M112 8H2M9 1.5 2.5 8 9 14.5"
               stroke="currentColor"
-              strokeWidth="1.35"
+              strokeWidth="1.1"
+              vectorEffect="non-scaling-stroke"
             />
           </svg>
         </button>
@@ -208,23 +206,21 @@ export function GalleryRail({
           aria-label={`${nextLabel} — ${label}`}
           title={nextLabel}
           className={[
-            "pointer-events-auto grid h-12 w-12 place-items-center rounded-full border border-white/70 bg-black/45 text-white shadow-[0_10px_35px_rgba(0,0,0,0.28)] backdrop-blur-md transition duration-300 md:h-14 md:w-14",
-            atEnd
-              ? "pointer-events-none opacity-30"
-              : "hover:border-white hover:bg-white hover:text-ink",
+            "group pointer-events-auto px-2 py-8 text-white drop-shadow-[0_1px_10px_rgba(0,0,0,0.55)] transition duration-300",
+            atEnd ? "pointer-events-none opacity-25" : "opacity-80 hover:opacity-100",
           ].join(" ")}
         >
           <svg
-            width="18"
-            height="18"
-            viewBox="0 0 18 18"
+            viewBox="0 0 112 16"
             fill="none"
             aria-hidden
+            className="h-4 w-16 transition-transform duration-300 group-hover:translate-x-1.5 md:w-28"
           >
             <path
-              d="m6.25 2.75 6.25 6.25-6.25 6.25"
+              d="M0 8h110M103 1.5l6.5 6.5-6.5 6.5"
               stroke="currentColor"
-              strokeWidth="1.35"
+              strokeWidth="1.1"
+              vectorEffect="non-scaling-stroke"
             />
           </svg>
         </button>
