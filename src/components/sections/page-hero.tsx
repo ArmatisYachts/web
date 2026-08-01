@@ -5,6 +5,14 @@ import { cn } from "@/lib/utils";
 const GRAIN =
   "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")";
 
+// Title sizes. Phones always keep the full clamp — the reductions are
+// desktop-only, where the headline would otherwise dominate the render.
+const TITLE_SIZE = {
+  full: "text-[clamp(3rem,9vw,7.5rem)]",
+  reduced: "text-[clamp(3rem,9vw,7.5rem)] md:text-[clamp(2.5rem,6.3vw,5.25rem)]",
+  small: "text-[clamp(3rem,9vw,7.5rem)] md:text-[clamp(2rem,4.5vw,3.75rem)]",
+} as const;
+
 // Dark cinematic hero for sub-pages: shorter than the home hero (a chapter
 // opening, not a repeat), optional full-bleed render, optional data readout.
 // `data-armatis-dark` drives the header/cookie-banner inversion.
@@ -17,6 +25,8 @@ export function PageHero({
   alt,
   readout,
   compact = false,
+  titleSize = "full",
+  lowered = false,
 }: {
   label?: string;
   title: string;
@@ -26,6 +36,8 @@ export function PageHero({
   alt?: string;
   readout?: [string, string][];
   compact?: boolean;
+  titleSize?: keyof typeof TITLE_SIZE;
+  lowered?: boolean;
 }) {
   return (
     <section
@@ -61,7 +73,12 @@ export function PageHero({
         style={{ backgroundImage: GRAIN }}
       />
 
-      <div className="relative z-20 px-6 pb-14 pt-32 md:px-10 md:pb-20 md:pt-40">
+      <div
+        className={cn(
+          "relative z-20 px-6 pb-14 pt-32 md:pt-40",
+          lowered ? "md:px-8 md:pb-10" : "md:px-10 md:pb-20"
+        )}
+      >
         <div className="flex items-end justify-between gap-8">
           <div>
             {label && (
@@ -69,7 +86,12 @@ export function PageHero({
                 {label}
               </p>
             )}
-            <h1 className="font-display text-[clamp(3rem,9vw,7.5rem)] font-extralight leading-[0.92] tracking-tight">
+            <h1
+              className={cn(
+                "font-display font-extralight leading-[0.92] tracking-tight",
+                TITLE_SIZE[titleSize]
+              )}
+            >
               {title}
             </h1>
             {kicker && (

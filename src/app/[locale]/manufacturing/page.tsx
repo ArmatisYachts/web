@@ -38,6 +38,8 @@ export default async function ManufacturingPage({
         label={t("hero.label")}
         title={t("hero.title")}
         kicker={t("hero.kicker")}
+        titleSize="small"
+        lowered
         src={RENDERS.aerialBW}
         readout={[[t("hero.readout.facilities"), "03"]]}
       />

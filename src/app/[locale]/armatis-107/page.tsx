@@ -33,6 +33,7 @@ export default async function Yacht107Page({
         title={t("hero.title")}
         kicker={t("hero.kicker")}
         credit={[ti("readout.designedBy"), ARMATIS_107.designer]}
+        titleSize="reduced"
         src={RENDERS.heroProfile}
         alt={ARMATIS_107.model}
         readout={[
