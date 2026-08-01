@@ -71,6 +71,7 @@
         "engines": "Engines",
         "speed": "Maximum speed",
         "fuel": "Fuel capacity",
+        "engineeredBy": "Engineered by",
         "built": "Built in",
         "builtValue": "Italy"
       },

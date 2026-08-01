@@ -71,6 +71,7 @@
         "engines": "Motori",
         "speed": "Velocità massima",
         "fuel": "Capacità carburante",
+        "engineeredBy": "Ingegneria di",
         "built": "Costruito in",
         "builtValue": "Italia"
       },

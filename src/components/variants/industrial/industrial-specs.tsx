@@ -15,6 +15,7 @@ export function IndustrialSpecs() {
     [t("items.engines"), ARMATIS_107.engines],
     [t("items.speed"), ARMATIS_107.maxSpeed],
     [t("items.fuel"), ARMATIS_107.fuel],
+    [t("items.engineeredBy"), ARMATIS_107.engineering],
     [t("items.built"), t("items.builtValue")],
   ];
 

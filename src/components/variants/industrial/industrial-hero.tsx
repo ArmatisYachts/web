@@ -48,9 +48,9 @@ export function IndustrialHero() {
     };
   }, []);
 
-  const credits: [string, string][] = [
-    [t("readout.designedBy"), ARMATIS_107.designer],
-    [t("readout.engineeredBy"), ARMATIS_107.engineering],
+  const readout: [string, string][] = [
+    [t("readout.loa"), ARMATIS_107.loa],
+    [t("readout.beam"), ARMATIS_107.beam],
   ];
 
   return (
@@ -126,10 +126,10 @@ export function IndustrialHero() {
         {/* Top row */}
         <div className="flex items-start justify-end">
           <dl className="space-y-1 text-right font-mono text-[10px] uppercase tracking-[0.16em]">
-            {credits.map(([label, value]) => (
+            {readout.map(([label, value]) => (
               <div key={label} className="flex justify-end gap-3 whitespace-nowrap">
                 <dt className="text-white/35">{label}</dt>
-                <dd className="text-bone">{value}</dd>
+                <dd className="tabular-nums text-bone">{value}</dd>
               </div>
             ))}
           </dl>

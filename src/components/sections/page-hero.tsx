@@ -12,6 +12,7 @@ export function PageHero({
   label,
   title,
   kicker,
+  credit,
   src,
   alt,
   readout,
@@ -20,6 +21,7 @@ export function PageHero({
   label?: string;
   title: string;
   kicker?: string;
+  credit?: [string, string];
   src?: string;
   alt?: string;
   readout?: [string, string][];
@@ -73,6 +75,12 @@ export function PageHero({
             {kicker && (
               <p className="mt-5 font-mono text-[10px] uppercase tracking-[0.28em] text-white/55 md:text-[11px]">
                 {kicker}
+              </p>
+            )}
+            {credit && (
+              <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.24em]">
+                <span className="text-white/40">{credit[0]}</span>{" "}
+                <span className="text-white/80">{credit[1]}</span>
               </p>
             )}
           </div>
