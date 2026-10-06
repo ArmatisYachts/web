@@ -60,7 +60,7 @@ export function IndustrialGallery() {
 
   return (
     <section id="gallery" className="border-t border-hairline bg-surface">
-      {introduction("exteriors", "03.1")}
+      {introduction("exteriors", `${t("index")}.1`)}
       <GalleryRail
         label={t("exteriors.label")}
         items={rail(EXTERIORS)}
@@ -68,7 +68,7 @@ export function IndustrialGallery() {
         nextLabel={t("next")}
       />
 
-      {introduction("interiors", "03.2")}
+      {introduction("interiors", `${t("index")}.2`)}
       <GalleryRail
         label={t("interiors.label")}
         items={rail(INTERIORS)}

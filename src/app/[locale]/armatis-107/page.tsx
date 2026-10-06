@@ -41,11 +41,9 @@ export default async function Yacht107Page({
           [ti("readout.beam"), ARMATIS_107.beam],
         ]}
       />
+      <IndustrialGallery />
       <IndustrialSpecs />
       <IndustrialInnovation />
-      {/* The salon and beach-club panoramas now live inside the gallery's
-          Interiors rail — showing them twice on one page would read as filler. */}
-      <IndustrialGallery />
       <CtaBand line={t("ctaBand.line")} button={t("ctaBand.button")} />
     </main>
   );

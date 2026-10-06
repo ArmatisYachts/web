@@ -60,7 +60,7 @@
       "body": "ARMATIS creates high-quality motor yachts through a modern, industrial approach — advanced composite technologies, engineering-driven development and a scalable production system that holds the same precision, finish and reliability from the first yacht to every yacht that follows."
     },
     "spec": {
-      "index": "01",
+      "index": "02",
       "label": "Specifications",
       "items": {
         "loa": "Length overall",
@@ -82,7 +82,7 @@
       "caption": "An open main-deck salon framed by full-height panoramic glazing."
     },
     "gallery": {
-      "index": "02",
+      "index": "01",
       "label": "Gallery",
       "prev": "Previous image",
       "next": "Next image",
@@ -161,7 +161,7 @@
       "kicker": "Defined by Space & Grace"
     },
     "innovation": {
-      "index": "02",
+      "index": "03",
       "label": "Innovation on board",
       "title": "Engineered beyond convention",
       "stats": {
